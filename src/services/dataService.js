@@ -489,7 +489,8 @@ export function getCoordinatorDashboardData(coordinatorEmail) {
     return {
       id: q.id,
       category: q.category,
-      question: q.text,
+      question: q.text || q.question || '',
+      text: q.text || q.question || '',
       average: parseFloat(avg),
       count,
       isSubjectSpecific: !!q.isSubjectSpecific
@@ -568,7 +569,12 @@ export function updateCoordinatorAssignments(coordinatorId, assignedDivisions, s
 }
 
 export function getFeedbackQuestions() {
-  return getStoredItem(KEY_QUESTIONS, FEEDBACK_QUESTIONS);
+  const qs = getStoredItem(KEY_QUESTIONS, FEEDBACK_QUESTIONS);
+  return (qs || []).map(q => ({
+    ...q,
+    text: q.text || q.question || '',
+    question: q.text || q.question || ''
+  }));
 }
 
 export function saveFeedbackQuestions(questions) {
@@ -891,6 +897,8 @@ export function getAllQuestionsForSubject(courseCode, courseName = '') {
   const subjectConfig = getSubjectConfig(courseCode, courseName);
   const subjectQuestions = (subjectConfig.subjectQuestions || []).map(q => ({
     ...q,
+    text: q.text || q.question || '',
+    question: q.text || q.question || '',
     isSubjectSpecific: true
   }));
   return [...institutionalQuestions, ...subjectQuestions];

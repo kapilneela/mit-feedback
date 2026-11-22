@@ -16,7 +16,7 @@ export default function FormBuilder() {
   const handleStartEdit = (q) => {
     setEditingId(q.id);
     setEditCategory(q.category);
-    setEditText(q.text);
+    setEditText(q.text || q.question || '');
   };
 
   const handleSaveEdit = (qId) => {
@@ -219,7 +219,7 @@ export default function FormBuilder() {
                           {q.type === 'rating_5' ? '1-5 Rating Scale' : 'Open Text'}
                         </span>
                       </div>
-                      <p className="text-xs sm:text-sm font-medium text-slate-900">{q.text}</p>
+                      <p className="text-xs sm:text-sm font-medium text-slate-900">{q.text || q.question}</p>
                     </div>
                   </div>
 

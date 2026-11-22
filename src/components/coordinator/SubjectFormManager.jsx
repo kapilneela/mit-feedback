@@ -390,7 +390,7 @@ export default function SubjectFormManager({ coordinator, assignedSubjects = [] 
                         </span>
                       </div>
                       <p className="text-xs text-slate-800 font-medium leading-relaxed">
-                        {sq.text}
+                        {sq.text || sq.question}
                       </p>
                       <div className="flex items-center gap-1 text-[10px] text-amber-500 pt-0.5">
                         <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
@@ -488,7 +488,7 @@ export default function SubjectFormManager({ coordinator, assignedSubjects = [] 
                       </span>
                     )}
                   </div>
-                  <p className="text-slate-800">{q.text}</p>
+                  <p className="text-slate-800">{q.text || q.question}</p>
                 </div>
               ))}
             </div>

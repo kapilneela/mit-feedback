@@ -22,7 +22,7 @@ import {
 
 export default function SubjectFeedbackModal({ subject, student, isOpen, onClose, onFeedbackSubmitted }) {
   const [ratings, setRatings] = useState({});
-  const [comment, setComment] = useState(subject?.submissionData?.comment || '');
+  const [textAnswers, setTextAnswers] = useState({});
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
   const [hasReadCO, setHasReadCO] = useState(false);
@@ -46,7 +46,9 @@ export default function SubjectFeedbackModal({ subject, student, isOpen, onClose
       setRatings(prev => {
         const next = { ...prev };
         qs.forEach(q => {
-          if (!next[q.id]) next[q.id] = 5;
+          if (q.type !== 'text' && !next[q.id]) {
+            next[q.id] = 5;
+          }
         });
         return next;
       });
@@ -58,7 +60,20 @@ export default function SubjectFeedbackModal({ subject, student, isOpen, onClose
       reloadSubjectConfig();
       setHasReadCO(false);
       setCoError('');
-      setComment(subject?.submissionData?.comment || '');
+
+      // Load existing answers if available
+      const subData = subject?.submissionData;
+      if (subData?.textAnswers && typeof subData.textAnswers === 'object') {
+        setTextAnswers(subData.textAnswers);
+      } else if (subData?.comment) {
+        setTextAnswers({ general: subData.comment });
+      } else {
+        setTextAnswers({});
+      }
+
+      if (subData?.ratings && typeof subData.ratings === 'object') {
+        setRatings(subData.ratings);
+      }
     }
   }, [isOpen, subject?.code, subject?.name]);
 
@@ -94,6 +109,13 @@ export default function SubjectFeedbackModal({ subject, student, isOpen, onClose
     setSubmitting(true);
 
     try {
+      const activeTextEntries = Object.entries(textAnswers).filter(([_, v]) => v && typeof v === 'string' && v.trim());
+      const combinedComment = activeTextEntries.map(([k, v]) => {
+        const matchingQ = questions.find(q => q.id === k);
+        const prefix = matchingQ ? `[${matchingQ.category}]: ` : '';
+        return `${prefix}${v.trim()}`;
+      }).join('\n\n');
+
       await submitStudentFeedback({
         studentPrn: student.prn,
         studentName: student.name,
@@ -103,7 +125,8 @@ export default function SubjectFeedbackModal({ subject, student, isOpen, onClose
         courseName: subject.name,
         faculty: subject.faculty,
         ratings,
-        comment
+        textAnswers,
+        comment: combinedComment
       });
 
       try {
@@ -259,6 +282,7 @@ export default function SubjectFeedbackModal({ subject, student, isOpen, onClose
               </div>
 
               {questions.map((q, idx) => {
+                const questionText = q.text || q.question || '';
                 if (q.type === 'text') {
                   return (
                     <div key={q.id} className="p-4 bg-slate-50 rounded-lg border border-slate-200">
@@ -268,11 +292,17 @@ export default function SubjectFeedbackModal({ subject, student, isOpen, onClose
                           Question {idx + 1}: {q.category}
                         </label>
                       </div>
-                      <p className="text-xs text-slate-600 mb-2">{q.text}</p>
+                      <p className="text-xs text-slate-600 mb-2">{questionText}</p>
                       <textarea
-                        value={comment}
-                        onChange={(e) => setComment(e.target.value)}
-                        placeholder="Write constructive remarks or suggestions for faculty/lab enhancement..."
+                        value={textAnswers[q.id] || ''}
+                        onChange={(e) => {
+                          const val = e.target.value;
+                          setTextAnswers(prev => ({
+                            ...prev,
+                            [q.id]: val
+                          }));
+                        }}
+                        placeholder={`Write remarks or suggestions for ${q.category}...`}
                         rows={3}
                         className="w-full text-xs sm:text-sm p-3 border border-slate-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 bg-white"
                       />
@@ -308,7 +338,7 @@ export default function SubjectFeedbackModal({ subject, student, isOpen, onClose
                       </span>
                     </div>
                     <p className="text-xs sm:text-sm font-medium text-slate-800 mb-3">
-                      {q.text}
+                      {questionText}
                     </p>
 
                     {/* 5-point rating buttons */}

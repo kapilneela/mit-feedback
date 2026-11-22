@@ -221,7 +221,12 @@ async function syncPortalSettings(supabase) {
     if (settingsMap.has('feedback_questions')) {
       const remoteQuestions = settingsMap.get('feedback_questions');
       if (Array.isArray(remoteQuestions) && remoteQuestions.length > 0) {
-        setLocal(KEY_QUESTIONS, remoteQuestions);
+        const normalizedQuestions = remoteQuestions.map(q => ({
+          ...q,
+          text: q.text || q.question || '',
+          question: q.text || q.question || ''
+        }));
+        setLocal(KEY_QUESTIONS, normalizedQuestions);
       }
     }
 
@@ -272,8 +277,10 @@ async function syncFeedbackQuestions(supabase) {
       const questions = data.map(q => ({
         id: q.id,
         category: q.category,
-        question: q.text,
-        type: q.type || 'rating_5'
+        text: q.text || q.question || '',
+        question: q.text || q.question || '',
+        type: q.type || 'rating_5',
+        order: q.display_order || q.order || 1
       }));
       setLocal(KEY_QUESTIONS, questions);
       return true;
