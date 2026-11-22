@@ -30,7 +30,8 @@ import {
   getAllStudentsFeedbackOverview,
   isCoordinatorSubject,
   getAllQuestionsForSubject,
-  getFeedbackQuestions
+  getFeedbackQuestions,
+  getQuestionInfo
 } from '../../services/dataService';
 import SubjectFormManager from './SubjectFormManager';
 
@@ -819,33 +820,6 @@ function CoordinatorStudentModal({ student, coordinator, assignedSubjectLabel, o
   const avgRating = submission?.average_score || 
     (submission?.ratings ? (Object.values(submission.ratings).reduce((a, b) => a + Number(b), 0) / Object.values(submission.ratings).length).toFixed(1) : null);
 
-  // Helper to resolve the question name/prompt and category given to it
-  const allQuestions = getAllQuestionsForSubject(course.code, course.name);
-  const getQuestionInfo = (qId) => {
-    const found = allQuestions.find(q => q.id === qId || q.id?.toLowerCase() === qId?.toLowerCase());
-    if (found) {
-      return {
-        category: found.category || '',
-        text: (found.text || found.question || '').trim(),
-        name: (found.text || found.question || found.category || qId).trim()
-      };
-    }
-    const instQs = getFeedbackQuestions();
-    const instFound = instQs.find(q => q.id === qId || q.id?.toLowerCase() === qId?.toLowerCase());
-    if (instFound) {
-      return {
-        category: instFound.category || '',
-        text: (instFound.text || instFound.question || '').trim(),
-        name: (instFound.text || instFound.question || instFound.category || qId).trim()
-      };
-    }
-    return {
-      category: '',
-      text: '',
-      name: qId.replace(/^(q|sq)_?/i, 'Question ').replace(/_/g, ' ')
-    };
-  };
-
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-xs animate-in fade-in duration-150 overflow-y-auto">
       <div className="bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-2xl overflow-hidden my-8">
@@ -959,7 +933,7 @@ function CoordinatorStudentModal({ student, coordinator, assignedSubjectLabel, o
                       </div>
                       <div className="space-y-2">
                         {Object.entries(submission.ratings).map(([paramKey, val], idx) => {
-                          const qInfo = getQuestionInfo(paramKey);
+                          const qInfo = getQuestionInfo(paramKey, course.code, course.name);
                           const questionPrompt = qInfo.text || qInfo.name;
                           return (
                             <div 

@@ -914,6 +914,57 @@ export function getAllQuestionsForSubject(courseCode, courseName = '') {
   return [...institutionalQuestions, ...subjectQuestions];
 }
 
+export function getQuestionInfo(qId, courseCode = '', courseName = '') {
+  if (!qId) return { category: '', text: '', name: '' };
+
+  // 1. Check in course-specific questions if course specified
+  if (courseCode || courseName) {
+    const allQs = getAllQuestionsForSubject(courseCode, courseName);
+    const found = allQs.find(q => q.id === qId || q.id?.toLowerCase() === qId?.toLowerCase());
+    if (found) {
+      return {
+        category: found.category || '',
+        text: (found.text || found.question || '').trim(),
+        name: (found.text || found.question || found.category || qId).trim()
+      };
+    }
+  }
+
+  // 2. Check in institutional feedback questions
+  const instQs = getFeedbackQuestions();
+  const instFound = instQs.find(q => q.id === qId || q.id?.toLowerCase() === qId?.toLowerCase());
+  if (instFound) {
+    return {
+      category: instFound.category || '',
+      text: (instFound.text || instFound.question || '').trim(),
+      name: (instFound.text || instFound.question || instFound.category || qId).trim()
+    };
+  }
+
+  // 3. Fallback check across all stored subject configs
+  try {
+    const allConfigs = getAllStoredSubjectConfigs();
+    for (const cfg of Object.values(allConfigs || {})) {
+      if (Array.isArray(cfg?.subjectQuestions)) {
+        const match = cfg.subjectQuestions.find(q => q.id === qId || q.id?.toLowerCase() === qId?.toLowerCase());
+        if (match) {
+          return {
+            category: match.category || '',
+            text: (match.text || match.question || '').trim(),
+            name: (match.text || match.question || match.category || qId).trim()
+          };
+        }
+      }
+    }
+  } catch (e) {}
+
+  return {
+    category: '',
+    text: '',
+    name: qId.replace(/^(q|sq)_?/i, 'Question ').replace(/_/g, ' ')
+  };
+}
+
 export function getAllCoursesList() {
   return getStoredItem(KEY_COURSES, COURSES);
 }

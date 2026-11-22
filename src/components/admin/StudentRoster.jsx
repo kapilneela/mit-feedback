@@ -23,39 +23,14 @@ import {
   removeFeedbackResponse,
   removeStudentAllFeedbacks,
   getAllQuestionsForSubject,
-  getFeedbackQuestions
+  getFeedbackQuestions,
+  getQuestionInfo
 } from '../../services/dataService';
 
 export default function StudentRoster() {
   const [version, setVersion] = useState(0);
   const studentsWithStatus = getAllStudentsFeedbackOverview();
   const allDivisions = getDivisionsList();
-
-  const getQuestionInfo = (qId, courseCode, courseName) => {
-    const allQs = getAllQuestionsForSubject(courseCode, courseName);
-    const found = allQs.find(q => q.id === qId || q.id?.toLowerCase() === qId?.toLowerCase());
-    if (found) {
-      return {
-        category: found.category || '',
-        text: (found.text || found.question || '').trim(),
-        name: (found.text || found.question || found.category || qId).trim()
-      };
-    }
-    const instQs = getFeedbackQuestions();
-    const instFound = instQs.find(q => q.id === qId || q.id?.toLowerCase() === qId?.toLowerCase());
-    if (instFound) {
-      return {
-        category: instFound.category || '',
-        text: (instFound.text || instFound.question || '').trim(),
-        name: (instFound.text || instFound.question || instFound.category || qId).trim()
-      };
-    }
-    return {
-      category: '',
-      text: '',
-      name: qId.replace(/^(q|sq)_?/i, 'Question ').replace(/_/g, ' ')
-    };
-  };
 
   const [search, setSearch] = useState('');
   const [selectedDivision, setSelectedDivision] = useState('ALL');
