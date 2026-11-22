@@ -258,7 +258,44 @@ export async function clearAllFeedbacks() {
   return [];
 }
 
-// 5. Coordinator Analytics for Assigned Divisions
+// 5. Coordinator Analytics for Assigned Subject(s) & Divisions
+export function isCoordinatorSubject(courseCode, courseName, facultyName, coord) {
+  if (!coord) return false;
+
+  // 1. Check faculty name match
+  if (facultyName && coord.name) {
+    const cleanF = facultyName.toLowerCase().replace(/^(prof|dr|mr|ms|mrs)\.?\s+/i, '').trim();
+    const cleanC = coord.name.toLowerCase().replace(/^(prof|dr|mr|ms|mrs)\.?\s+/i, '').trim();
+    if (cleanF && cleanC && (cleanF.includes(cleanC) || cleanC.includes(cleanF))) {
+      return true;
+    }
+  }
+
+  // 2. Check subject match against coordinator's assigned subjects
+  const subjects = coord.subjects || [];
+  if (subjects.length === 0) {
+    return false;
+  }
+
+  const codeLow = (courseCode || '').toLowerCase().trim();
+  const nameLow = (courseName || '').toLowerCase().trim();
+
+  return subjects.some(s => {
+    const sLow = s.toLowerCase().trim();
+    if (codeLow && (sLow.includes(codeLow) || codeLow.includes(sLow))) return true;
+    if (nameLow && (sLow.includes(nameLow) || nameLow.includes(sLow))) return true;
+    
+    // Check subject code prefix/acronym e.g. EC, BEEE, EP, EM, PPS, LADC, EGR
+    const m = sLow.match(/^([a-z]+)\b/);
+    if (m) {
+      const acr = m[1];
+      if (codeLow && codeLow.includes(acr)) return true;
+      if (nameLow && nameLow.includes(acr)) return true;
+    }
+    return false;
+  });
+}
+
 export function getCoordinatorDashboardData(coordinatorEmail) {
   const facultyList = getAllFacultyAllocations();
   const cleanEmail = (coordinatorEmail || '').toLowerCase();
@@ -271,6 +308,7 @@ export function getCoordinatorDashboardData(coordinatorEmail) {
   
   let coord = foundFaculty || facultyList[0];
   let assignedDivisions = coord.assignedDivisions || [];
+  let assignedSubjects = coord.subjects || [];
 
   const allStudents = getStoredItem(KEY_STUDENTS, STUDENTS);
   const allResponses = getStoredItem(KEY_RESPONSES, INITIAL_RESPONSES);
@@ -280,29 +318,31 @@ export function getCoordinatorDashboardData(coordinatorEmail) {
   );
   const totalEnrolledStudents = relevantStudents.length;
 
-  // Breakdown for each assigned division
+  // Breakdown for each assigned division — strictly for coordinator's assigned subject(s)!
   const divisionStats = assignedDivisions.map(divName => {
     const divStudents = allStudents.filter(s => s.division === divName);
     const divStudentPrns = new Set(divStudents.map(s => s.prn));
     const divCourses = getCoursesForDivision(divName, facultyList);
-    const totalExpectedSubmissions = divStudents.length * divCourses.length;
+    
+    // Filter to coordinator's subjects in this division
+    const coordCourses = divCourses.filter(c => isCoordinatorSubject(c.code, c.name, c.faculty, coord));
+    const effectiveCourses = coordCourses.length > 0 ? coordCourses : (assignedSubjects.length > 0 ? assignedSubjects.map(s => ({ code: s, name: s, faculty: coord.name })) : divCourses.slice(0, 1));
+    const totalExpectedSubmissions = divStudents.length * effectiveCourses.length;
 
-    const divResponses = allResponses.filter(r => divStudentPrns.has(r.studentPrn));
+    // Submissions for this coordinator's subject ONLY
+    const divResponses = allResponses.filter(r => 
+      divStudentPrns.has(r.studentPrn) && 
+      isCoordinatorSubject(r.courseCode, r.courseName, r.faculty, coord)
+    );
     
-    const studentsStarted = new Set(divResponses.map(r => r.studentPrn)).size;
-    
-    const studentCounts = {};
-    divResponses.forEach(r => {
-      studentCounts[r.studentPrn] = (studentCounts[r.studentPrn] || 0) + 1;
-    });
-    const studentsFullyCompleted = Object.values(studentCounts).filter(c => c >= divCourses.length).length;
+    const studentsSubmitted = new Set(divResponses.map(r => r.studentPrn)).size;
 
     const completionPercent = totalExpectedSubmissions > 0 
       ? Math.round((divResponses.length / totalExpectedSubmissions) * 100) 
       : 0;
     
     const studentParticipationPercent = divStudents.length > 0
-      ? Math.round((studentsStarted / divStudents.length) * 100)
+      ? Math.round((studentsSubmitted / divStudents.length) * 100)
       : 0;
 
     const branchName = divStudents.length > 0 ? divStudents[0].branch : 'First Year Engineering';
@@ -313,11 +353,11 @@ export function getCoordinatorDashboardData(coordinatorEmail) {
       totalStudents: divStudents.length,
       expectedSubmissions: totalExpectedSubmissions,
       actualSubmissions: divResponses.length,
-      studentsStarted,
-      studentsFullyCompleted,
+      studentsStarted: studentsSubmitted,
+      studentsFullyCompleted: studentsSubmitted,
       completionPercent,
       studentParticipationPercent,
-      courses: divCourses
+      courses: effectiveCourses
     };
   });
 
@@ -328,7 +368,11 @@ export function getCoordinatorDashboardData(coordinatorEmail) {
     : 0;
 
   const relevantStudentPrns = new Set(relevantStudents.map(s => s.prn));
-  const coordinatorResponses = allResponses.filter(r => relevantStudentPrns.has(r.studentPrn));
+  // Filter all coordinator responses to ONLY the coordinator's assigned subjects
+  const coordinatorResponses = allResponses.filter(r => 
+    relevantStudentPrns.has(r.studentPrn) &&
+    isCoordinatorSubject(r.courseCode, r.courseName, r.faculty, coord)
+  );
 
   const questions = getStoredItem(KEY_QUESTIONS, FEEDBACK_QUESTIONS).filter(q => q.type.startsWith('rating'));
   const parameterAverages = questions.map(q => {
@@ -364,6 +408,7 @@ export function getCoordinatorDashboardData(coordinatorEmail) {
   return {
     coordinator: coord,
     assignedDivisions,
+    assignedSubjects,
     totalEnrolledStudents,
     totalExpectedSubmissions: totalExpectedAll,
     totalActualSubmissions: totalActualAll,

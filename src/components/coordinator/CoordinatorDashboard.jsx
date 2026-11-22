@@ -19,12 +19,15 @@ import {
   Calendar,
   GraduationCap,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  ShieldCheck,
+  BookOpen
 } from 'lucide-react';
 import { 
   getCoordinatorDashboardData, 
   getAllDivisionsDetailedStats, 
-  getAllStudentsFeedbackOverview 
+  getAllStudentsFeedbackOverview,
+  isCoordinatorSubject
 } from '../../services/dataService';
 
 export default function CoordinatorDashboard({ coordinator }) {
@@ -63,24 +66,44 @@ export default function CoordinatorDashboard({ coordinator }) {
     assignedDivisionsSet.has(s.division) || assignedDivisionsSet.has('All Divisions')
   );
 
+  // Augment each student with coordinator's assigned subject submission status
+  const coordStudentsWithSubjectStatus = coordinatorStudents.map(s => {
+    const coordCourses = s.allCourses.filter(c => isCoordinatorSubject(c.code, c.name, c.faculty, data.coordinator));
+    const effectiveCoordCourse = coordCourses[0] || (data.assignedSubjects?.length > 0 ? { code: data.assignedSubjects[0], name: data.assignedSubjects[0], faculty: data.coordinator.name } : null);
+    
+    const coordSubmitted = s.submittedSubjects.find(sub => isCoordinatorSubject(sub.code, sub.name, sub.faculty, data.coordinator));
+    const coordRemaining = s.remainingSubjects.find(rem => isCoordinatorSubject(rem.code, rem.name, rem.faculty, data.coordinator));
+    const isCoordSubmitted = !!coordSubmitted;
+    
+    return {
+      ...s,
+      coordCourse: effectiveCoordCourse,
+      coordSubmitted,
+      coordRemaining,
+      isCoordSubmitted
+    };
+  });
+
   // Further filter for students table
-  const filteredCoordinatorStudents = coordinatorStudents.filter(s => {
+  const filteredCoordinatorStudents = coordStudentsWithSubjectStatus.filter(s => {
     const q = studentSearch.toLowerCase();
     const matchesSearch = 
       s.prn.includes(q) || 
       s.name.toLowerCase().includes(q) ||
       s.branch.toLowerCase().includes(q) ||
-      s.allCourses.some(c => c.name.toLowerCase().includes(q) || c.code.toLowerCase().includes(q));
+      (s.coordCourse && (s.coordCourse.name.toLowerCase().includes(q) || s.coordCourse.code.toLowerCase().includes(q)));
 
     const matchesDiv = selectedDivisionFilter === 'ALL' || s.division === selectedDivisionFilter;
 
     let matchesStatus = true;
-    if (studentStatusFilter === 'COMPLETED') matchesStatus = s.submittedCount === s.totalCount && s.totalCount > 0;
-    else if (studentStatusFilter === 'IN_PROGRESS') matchesStatus = s.submittedCount > 0 && s.submittedCount < s.totalCount;
-    else if (studentStatusFilter === 'PENDING') matchesStatus = s.submittedCount === 0;
+    if (studentStatusFilter === 'COMPLETED') matchesStatus = s.isCoordSubmitted;
+    else if (studentStatusFilter === 'PENDING') matchesStatus = !s.isCoordSubmitted;
 
     return matchesSearch && matchesDiv && matchesStatus;
   });
+
+  const totalSubmittedCount = coordStudentsWithSubjectStatus.filter(s => s.isCoordSubmitted).length;
+  const totalPendingCount = coordStudentsWithSubjectStatus.filter(s => !s.isCoordSubmitted).length;
 
   const totalStudentPages = Math.ceil(filteredCoordinatorStudents.length / studentPageSize) || 1;
   const currentCoordinatorStudents = filteredCoordinatorStudents.slice(
@@ -102,7 +125,7 @@ export default function CoordinatorDashboard({ coordinator }) {
 
   const handleExportCSV = () => {
     const rows = [
-      ['Division', 'Total Students', 'Expected Submissions', 'Actual Submissions', 'Completion %', 'Student Participation %'],
+      ['Division', 'Total Students', 'Expected Subject Submissions', 'Actual Subject Submissions', 'Completion %', 'Student Participation %'],
       ...data.divisionStats.map(d => [
         `"${d.division}"`,
         d.totalStudents,
@@ -123,9 +146,13 @@ export default function CoordinatorDashboard({ coordinator }) {
     document.body.removeChild(link);
   };
 
+  const assignedSubjectLabel = (data.assignedSubjects && data.assignedSubjects.length > 0)
+    ? data.assignedSubjects.join(', ')
+    : 'Assigned Course';
+
   return (
     <div className="space-y-6">
-      {/* Coordinator Info Banner - Pure Navy & Slate */}
+      {/* Coordinator Info Banner */}
       <div className="bg-white rounded-xl shadow-xs border border-slate-200 overflow-hidden">
         <div className="bg-slate-900 p-6 text-white flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800">
           <div className="flex items-start gap-4">
@@ -133,20 +160,34 @@ export default function CoordinatorDashboard({ coordinator }) {
               <School className="w-6 h-6" />
             </div>
             <div>
-              <div className="flex items-center gap-2">
-                <h2 className="text-xl sm:text-2xl font-bold  text-white">{data.coordinator.name}</h2>
-                <span className="bg-blue-500/20 text-blue-300 text-xs px-2 py-0.5 rounded border border-blue-400/30">
-                  Course Coordinator & Faculty
+              <div className="flex items-center gap-2 flex-wrap">
+                <h2 className="text-xl sm:text-2xl font-bold text-white">{data.coordinator.name}</h2>
+                <span className="bg-blue-500/20 text-blue-300 text-xs px-2 py-0.5 rounded border border-blue-400/30 font-semibold">
+                  Course Coordinator
+                </span>
+                <span className="bg-emerald-500/20 text-emerald-300 text-xs px-2 py-0.5 rounded border border-emerald-400/30 flex items-center gap-1 font-semibold">
+                  <ShieldCheck className="w-3.5 h-3.5" />
+                  <span>Confidential Subject-Restricted View</span>
                 </span>
               </div>
               <p className="text-xs sm:text-sm text-slate-300 mt-1">{data.coordinator.department}</p>
-              <div className="flex flex-wrap gap-1.5 mt-2">
-                <span className="text-[11px] text-slate-400 font-medium">Assigned Divisions ({data.assignedDivisions.length}):</span>
-                {data.assignedDivisions.map(div => (
-                  <span key={div} className="text-[11px] bg-slate-800 text-blue-300 px-2 py-0.5 rounded font-mono border border-slate-700">
-                    {div}
-                  </span>
-                ))}
+              
+              {/* Assigned Subjects & Divisions */}
+              <div className="flex flex-wrap items-center gap-3 mt-2.5">
+                <div className="flex items-center gap-1.5 bg-blue-900/60 border border-blue-700/60 px-2.5 py-1 rounded-lg">
+                  <BookOpen className="w-3.5 h-3.5 text-blue-300" />
+                  <span className="text-xs text-blue-200 font-medium">Assigned Subject:</span>
+                  <span className="text-xs font-bold text-white">{assignedSubjectLabel}</span>
+                </div>
+                
+                <div className="flex flex-wrap items-center gap-1.5">
+                  <span className="text-[11px] text-slate-400 font-medium">Divisions ({data.assignedDivisions.length}):</span>
+                  {data.assignedDivisions.map(div => (
+                    <span key={div} className="text-[11px] bg-slate-800 text-blue-300 px-2 py-0.5 rounded font-mono border border-slate-700">
+                      {div}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -169,18 +210,18 @@ export default function CoordinatorDashboard({ coordinator }) {
           </div>
         </div>
 
-        {/* 4 Highlighted KPI Cards */}
+        {/* 4 Highlighted KPI Cards - Scoped Strictly to Assigned Subject */}
         <div className="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-slate-200 bg-slate-50 border-t border-slate-200">
           <div className="p-4 sm:p-5 text-center bg-blue-50/50">
             <div className="text-xs font-bold uppercase tracking-wider text-blue-900 mb-1 flex items-center justify-center gap-1">
               <TrendingUp className="w-3.5 h-3.5 text-blue-700" />
-              <span>Feedback Filled Rate</span>
+              <span>Subject Feedback Rate</span>
             </div>
             <div className="text-3xl sm:text-4xl font-extrabold text-blue-700 font-mono">
               {data.overallCompletionPercentage}%
             </div>
             <p className="text-[11px] text-slate-600 mt-1">
-              {data.totalActualSubmissions} of {data.totalExpectedSubmissions} forms filled
+              {data.totalActualSubmissions} of {data.totalExpectedSubmissions} forms filled for {assignedSubjectLabel}
             </p>
           </div>
 
@@ -206,7 +247,7 @@ export default function CoordinatorDashboard({ coordinator }) {
               {data.totalActualSubmissions}
             </div>
             <p className="text-[11px] text-slate-600 mt-1">
-              Actual student submissions
+              For {assignedSubjectLabel}
             </p>
           </div>
 
@@ -219,7 +260,7 @@ export default function CoordinatorDashboard({ coordinator }) {
               {Math.max(0, data.totalExpectedSubmissions - data.totalActualSubmissions)}
             </div>
             <p className="text-[11px] text-slate-600 mt-1">
-              Awaiting submission
+              Awaiting student submission
             </p>
           </div>
         </div>
@@ -240,7 +281,7 @@ export default function CoordinatorDashboard({ coordinator }) {
                 </span>
               </h3>
               <p className="text-xs text-slate-500">
-                Official First Year engineering divisions assigned to you by Dean & Central Administration. Click any division to filter.
+                Official First Year engineering divisions assigned to you. Evaluations below are filtered strictly to your subject ({assignedSubjectLabel}).
               </p>
             </div>
           </div>
@@ -279,7 +320,7 @@ export default function CoordinatorDashboard({ coordinator }) {
                   {div.branch || 'First Year Engineering'}
                 </div>
                 <div className="mt-2.5 pt-2 border-t border-slate-200/80 flex items-center justify-between text-[11px]">
-                  <span className="text-slate-500">Filled Forms:</span>
+                  <span className="text-slate-500">{assignedSubjectLabel}:</span>
                   <span className="font-mono font-bold text-emerald-700">{div.actualSubmissions} / {div.expectedSubmissions}</span>
                 </div>
                 <div className="w-full bg-slate-200 rounded-full h-1.5 mt-1 overflow-hidden">
@@ -305,7 +346,7 @@ export default function CoordinatorDashboard({ coordinator }) {
               }`}
             >
               <Users className="w-3.5 h-3.5" />
-              <span>Student Submissions & Details (Filled vs Remaining)</span>
+              <span>Student Feedback Status ({assignedSubjectLabel})</span>
             </button>
             <button
               onClick={() => setViewScope('assigned')}
@@ -350,16 +391,21 @@ export default function CoordinatorDashboard({ coordinator }) {
         </div>
       </div>
 
-      {/* VIEW 1: STUDENT-BY-STUDENT DETAILED STATUS (NEW USER REQUEST) */}
+      {/* VIEW 1: STUDENT-BY-STUDENT DETAILED STATUS (SCOPED TO ASSIGNED SUBJECT) */}
       {viewScope === 'students' && (
         <div className="bg-white rounded-xl shadow-xs border border-slate-200 overflow-hidden space-y-4 p-5">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-200">
             <div>
-              <h3 className=" font-bold text-base sm:text-lg text-slate-900">
-                Student-Wise Feedback Evaluation Status
-              </h3>
+              <div className="flex items-center gap-2">
+                <h3 className="font-bold text-base sm:text-lg text-slate-900">
+                  Student Feedback Status for {assignedSubjectLabel}
+                </h3>
+                <span className="text-[11px] bg-blue-50 text-blue-700 border border-blue-200 px-2 py-0.5 rounded font-medium">
+                  Confidential View
+                </span>
+              </div>
               <p className="text-xs text-slate-500 mt-0.5">
-                Detailed view of which subjects each student has submitted and which are still remaining.
+                Showing student submissions strictly for your assigned subject. Other professors' evaluations are restricted for confidentiality.
               </p>
             </div>
 
@@ -371,7 +417,7 @@ export default function CoordinatorDashboard({ coordinator }) {
                   studentStatusFilter === 'ALL' ? 'bg-slate-900 text-white font-bold border-slate-900' : 'bg-slate-50 text-slate-600 border-slate-300'
                 }`}
               >
-                All ({coordinatorStudents.length})
+                All ({coordStudentsWithSubjectStatus.length})
               </button>
               <button
                 onClick={() => { setStudentStatusFilter('COMPLETED'); setStudentPage(1); }}
@@ -379,23 +425,15 @@ export default function CoordinatorDashboard({ coordinator }) {
                   studentStatusFilter === 'COMPLETED' ? 'bg-emerald-600 text-white font-bold border-emerald-600' : 'bg-emerald-50 text-emerald-800 border-emerald-300'
                 }`}
               >
-                Completed ({coordinatorStudents.filter(s => s.submittedCount === s.totalCount && s.totalCount > 0).length})
-              </button>
-              <button
-                onClick={() => { setStudentStatusFilter('IN_PROGRESS'); setStudentPage(1); }}
-                className={`px-2.5 py-1 rounded-lg border transition cursor-pointer ${
-                  studentStatusFilter === 'IN_PROGRESS' ? 'bg-blue-600 text-white font-bold border-blue-600' : 'bg-blue-50 text-blue-800 border-blue-300'
-                }`}
-              >
-                In Progress ({coordinatorStudents.filter(s => s.submittedCount > 0 && s.submittedCount < s.totalCount).length})
+                Submitted ({totalSubmittedCount})
               </button>
               <button
                 onClick={() => { setStudentStatusFilter('PENDING'); setStudentPage(1); }}
                 className={`px-2.5 py-1 rounded-lg border transition cursor-pointer ${
-                  studentStatusFilter === 'PENDING' ? 'bg-slate-700 text-white font-bold border-slate-700' : 'bg-slate-100 text-slate-700 border-slate-300'
+                  studentStatusFilter === 'PENDING' ? 'bg-amber-600 text-white font-bold border-amber-600' : 'bg-amber-50 text-amber-800 border-amber-300'
                 }`}
               >
-                Pending ({coordinatorStudents.filter(s => s.submittedCount === 0).length})
+                Pending ({totalPendingCount})
               </button>
             </div>
           </div>
@@ -407,7 +445,7 @@ export default function CoordinatorDashboard({ coordinator }) {
               type="text"
               value={studentSearch}
               onChange={(e) => { setStudentSearch(e.target.value); setStudentPage(1); }}
-              placeholder="Search student by name, PRN, or course name..."
+              placeholder="Search student by name, PRN, or course..."
               className="w-full py-1.5 px-3 border border-slate-300 rounded-lg text-xs bg-slate-50/50 hover:bg-white focus:ring-1 focus:ring-blue-600"
             />
           </div>
@@ -421,15 +459,16 @@ export default function CoordinatorDashboard({ coordinator }) {
                   <th className="py-3 px-4">PRN</th>
                   <th className="py-3 px-4">Student Name</th>
                   <th className="py-3 px-4 text-center">Division</th>
-                  <th className="py-3 px-4">Feedback Completion</th>
-                  <th className="py-3 px-4">Subjects (Filled vs Remaining)</th>
-                  <th className="py-3 px-4 text-center">Details</th>
+                  <th className="py-3 px-4">Assigned Subject</th>
+                  <th className="py-3 px-4">Feedback Status</th>
+                  <th className="py-3 px-4">Rating / Submission</th>
+                  <th className="py-3 px-4 text-center">Action</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-200">
                 {currentCoordinatorStudents.length === 0 ? (
                   <tr>
-                    <td colSpan={7} className="py-8 text-center text-slate-400">
+                    <td colSpan={8} className="py-8 text-center text-slate-400">
                       No students found matching current filters.
                     </td>
                   </tr>
@@ -452,47 +491,41 @@ export default function CoordinatorDashboard({ coordinator }) {
                         </span>
                         <div className="text-[10px] text-slate-400 mt-0.5">Batch {s.batch}</div>
                       </td>
-                      <td className="py-3.5 px-4 whitespace-nowrap min-w-[130px]">
-                        <div className="flex items-center justify-between text-[11px] font-bold mb-1">
-                          <span className={s.submittedCount === s.totalCount ? 'text-emerald-700' : s.submittedCount > 0 ? 'text-blue-700' : 'text-slate-500'}>
-                            {s.submittedCount}/{s.totalCount} Filled
-                          </span>
-                          <span className="font-mono text-slate-600">{s.completionPercent}%</span>
+                      <td className="py-3.5 px-4">
+                        <div className="font-medium text-slate-800">
+                          {s.coordCourse?.name || assignedSubjectLabel}
                         </div>
-                        <div className="w-full bg-slate-200 rounded-full h-1.5 overflow-hidden">
-                          <div 
-                            className={`h-full rounded-full transition-all duration-300 ${
-                              s.submittedCount === s.totalCount ? 'bg-emerald-600' : s.submittedCount > 0 ? 'bg-blue-600' : 'bg-slate-300'
-                            }`}
-                            style={{ width: `${s.completionPercent}%` }}
-                          />
+                        <div className="text-[10px] text-slate-500 font-mono">
+                          {s.coordCourse?.code || 'Assigned Course'}
                         </div>
                       </td>
-                      <td className="py-3.5 px-4">
-                        <div className="flex flex-wrap items-center gap-1.5">
-                          {/* Submitted */}
-                          {s.submittedSubjects.map(sub => (
-                            <span
-                              key={sub.code}
-                              className="inline-flex items-center gap-1 bg-emerald-50 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-300"
-                              title={`Filled: ${sub.name} (Faculty: ${sub.faculty})`}
-                            >
-                              <CheckCircle2 className="w-3 h-3 text-emerald-600" />
-                              <span>{sub.code}</span>
+                      <td className="py-3.5 px-4 whitespace-nowrap">
+                        {s.isCoordSubmitted ? (
+                          <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-800 text-xs font-bold px-2.5 py-1 rounded-lg border border-emerald-300">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                            <span>Submitted</span>
+                          </span>
+                        ) : (
+                          <span className="inline-flex items-center gap-1.5 bg-amber-50 text-amber-800 text-xs font-medium px-2.5 py-1 rounded-lg border border-amber-300">
+                            <Clock className="w-3.5 h-3.5 text-amber-600" />
+                            <span>Pending</span>
+                          </span>
+                        )}
+                      </td>
+                      <td className="py-3.5 px-4 whitespace-nowrap">
+                        {s.isCoordSubmitted ? (
+                          <div className="flex items-center gap-2">
+                            <span className="inline-flex items-center gap-1 bg-emerald-100 text-emerald-950 font-mono font-bold text-xs px-2 py-0.5 rounded border border-emerald-300">
+                              <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-500" />
+                              <span>{s.coordSubmitted.submissionData?.average_score || '5.0'} ★</span>
                             </span>
-                          ))}
-                          {/* Remaining */}
-                          {s.remainingSubjects.map(rem => (
-                            <span
-                              key={rem.code}
-                              className="inline-flex items-center gap-1 bg-slate-100 text-slate-600 text-[10px] font-medium px-2 py-0.5 rounded border border-slate-300"
-                              title={`Remaining: ${rem.name} (Faculty: ${rem.faculty})`}
-                            >
-                              <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
-                              <span>{rem.code}</span>
+                            <span className="text-[10px] text-slate-400 font-mono">
+                              {s.coordSubmitted.submittedAt ? new Date(s.coordSubmitted.submittedAt).toLocaleDateString() : 'Recorded'}
                             </span>
-                          ))}
-                        </div>
+                          </div>
+                        ) : (
+                          <span className="text-[11px] text-slate-400 italic">Awaiting Student</span>
+                        )}
                       </td>
                       <td className="py-3.5 px-4 text-center whitespace-nowrap">
                         <button
@@ -538,16 +571,16 @@ export default function CoordinatorDashboard({ coordinator }) {
         </div>
       )}
 
-      {/* VIEW 2: DIVISION TURNOUT MATRIX */}
+      {/* VIEW 2: DIVISION TURNOUT MATRIX (SCOPED TO ASSIGNED SUBJECT) */}
       {viewScope === 'assigned' && (
         <div className="bg-white rounded-xl shadow-xs border border-slate-200 overflow-hidden">
           <div className="p-5 border-b border-slate-200 bg-slate-50/70 flex justify-between items-center">
             <div>
-              <h3 className=" font-bold text-base sm:text-lg text-slate-900">
-                Division Feedback Turnout Tracking
+              <h3 className="font-bold text-base sm:text-lg text-slate-900">
+                Division Feedback Turnout Tracking ({assignedSubjectLabel})
               </h3>
               <p className="text-xs text-slate-500">
-                Shows exact count and percentage of students who submitted evaluations
+                Shows exact count and percentage of students who submitted evaluations for your assigned subject
               </p>
             </div>
           </div>
@@ -558,11 +591,10 @@ export default function CoordinatorDashboard({ coordinator }) {
                 <tr className="bg-slate-100 text-slate-700 font-bold border-b border-slate-200">
                   <th className="py-3 px-4">Division Name</th>
                   <th className="py-3 px-4 text-center">Enrolled Students</th>
-                  <th className="py-3 px-4 text-center">Expected Forms (x4)</th>
+                  <th className="py-3 px-4 text-center">Expected Forms ({assignedSubjectLabel})</th>
                   <th className="py-3 px-4 text-center">Forms Filled</th>
-                  <th className="py-3 px-4 text-center">Students Started</th>
-                  <th className="py-3 px-4 text-center">All 4 Completed</th>
-                  <th className="py-3 px-4 min-w-[200px]">% Students Filled Form</th>
+                  <th className="py-3 px-4 text-center">Students Participated</th>
+                  <th className="py-3 px-4 min-w-[200px]">% Turnout ({assignedSubjectLabel})</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-200">
@@ -583,9 +615,6 @@ export default function CoordinatorDashboard({ coordinator }) {
                       </td>
                       <td className="py-3.5 px-4 text-center text-slate-700">
                         {div.studentsStarted} <span className="text-[10px] text-slate-400">({div.studentParticipationPercent}%)</span>
-                      </td>
-                      <td className="py-3.5 px-4 text-center font-semibold text-slate-800">
-                        {div.studentsFullyCompleted}
                       </td>
                       <td className="py-3.5 px-4">
                         <div className="space-y-1">
@@ -618,7 +647,7 @@ export default function CoordinatorDashboard({ coordinator }) {
       {viewScope === 'all32' && (
         <div className="bg-white rounded-xl shadow-xs border border-slate-200 overflow-hidden">
           <div className="p-5 border-b border-slate-200 bg-slate-50/70">
-            <h3 className=" font-bold text-base sm:text-lg text-slate-900">
+            <h3 className="font-bold text-base sm:text-lg text-slate-900">
               All 32 FY Engineering Divisions Overview
             </h3>
             <p className="text-xs text-slate-500">
@@ -661,16 +690,16 @@ export default function CoordinatorDashboard({ coordinator }) {
         </div>
       )}
 
-      {/* Analytics & Feedback Feed */}
+      {/* Analytics & Feedback Feed - STRICTLY FOR ASSIGNED SUBJECT */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-white rounded-xl shadow-xs border border-slate-200 p-5">
           <div className="flex items-center gap-2 mb-4">
             <BarChart3 className="w-5 h-5 text-blue-600" />
             <div>
-              <h3 className=" font-bold text-base text-slate-900">
-                Course Evaluation Metric Scores
+              <h3 className="font-bold text-base text-slate-900">
+                {assignedSubjectLabel} - Evaluation Metrics
               </h3>
-              <p className="text-xs text-slate-500">Average student ratings on 5-point Likert scale</p>
+              <p className="text-xs text-slate-500">Average student ratings on 5-point Likert scale for your subject</p>
             </div>
           </div>
 
@@ -707,18 +736,18 @@ export default function CoordinatorDashboard({ coordinator }) {
           <div className="flex items-center gap-2 mb-4">
             <MessageSquare className="w-5 h-5 text-blue-600" />
             <div>
-              <h3 className=" font-bold text-base text-slate-900">
-                Student Feedback & Remarks
+              <h3 className="font-bold text-base text-slate-900">
+                Student Feedback Remarks ({assignedSubjectLabel})
               </h3>
-              <p className="text-xs text-slate-500">Submitted qualitative suggestions ({displayedComments.length})</p>
+              <p className="text-xs text-slate-500">Submitted comments for your course ({displayedComments.length})</p>
             </div>
           </div>
 
           <div className="space-y-3 overflow-y-auto max-h-[460px] pr-1">
             {displayedComments.length === 0 ? (
               <div className="p-12 text-center text-xs text-slate-400 bg-slate-50 rounded-lg border border-slate-200">
-                No open text comments submitted yet for this division. 
-                When students fill their 4 subjects, feedback remarks will appear here live.
+                No open text remarks submitted yet for {assignedSubjectLabel}. 
+                When students submit evaluations for your course, remarks will appear here.
               </div>
             ) : (
               displayedComments.map((c, i) => (
@@ -727,11 +756,11 @@ export default function CoordinatorDashboard({ coordinator }) {
                     <span className="font-mono font-bold text-blue-800">{c.courseCode} • {c.division}</span>
                     <span>{new Date(c.submittedAt).toLocaleDateString()}</span>
                   </div>
-                  <p className="text-slate-800 italic ">
+                  <p className="text-slate-800 italic">
                     "{c.comment}"
                   </p>
                   <div className="text-[10px] text-slate-500 font-medium">
-                    Course: {c.courseName}
+                    Faculty: {c.faculty || data.coordinator.name}
                   </div>
                 </div>
               ))
@@ -740,10 +769,12 @@ export default function CoordinatorDashboard({ coordinator }) {
         </div>
       </div>
 
-      {/* Inspect Student Feedback Modal */}
+      {/* Inspect Student Feedback Modal - Strictly Assigned Subject */}
       {inspectingStudent && (
         <CoordinatorStudentModal
           student={inspectingStudent}
+          coordinator={data.coordinator}
+          assignedSubjectLabel={assignedSubjectLabel}
           onClose={() => setInspectingStudent(null)}
         />
       )}
@@ -751,21 +782,30 @@ export default function CoordinatorDashboard({ coordinator }) {
   );
 }
 
-// Subcomponent: Coordinator Student Modal
-function CoordinatorStudentModal({ student, onClose }) {
+// Subcomponent: Coordinator Student Modal - Strictly Confidential Assigned Subject View
+function CoordinatorStudentModal({ student, coordinator, assignedSubjectLabel, onClose }) {
+  const isSubmitted = student.isCoordSubmitted;
+  const submission = student.coordSubmitted?.submissionData;
+  const course = student.coordCourse || { name: assignedSubjectLabel, code: 'Assigned Course', faculty: coordinator.name };
+
+  const avgRating = submission?.average_score || 
+    (submission?.ratings ? (Object.values(submission.ratings).reduce((a, b) => a + Number(b), 0) / Object.values(submission.ratings).length).toFixed(1) : null);
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-xs animate-in fade-in duration-150 overflow-y-auto">
       <div className="bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-2xl overflow-hidden my-8">
+        {/* Header */}
         <div className="bg-slate-900 text-white p-5 flex items-start justify-between border-b-2 border-blue-600">
           <div className="flex items-center gap-3.5">
             <div className="w-12 h-12 bg-blue-600/30 rounded-xl flex items-center justify-center border border-blue-400/40 text-blue-400 font-bold">
               <GraduationCap className="w-6 h-6" />
             </div>
             <div>
-              <div className="text-[11px] font-bold text-blue-300 uppercase tracking-wider">
-                Student Feedback Submission Audit
+              <div className="text-[11px] font-bold text-blue-300 uppercase tracking-wider flex items-center gap-1.5">
+                <ShieldCheck className="w-3.5 h-3.5 text-blue-400" />
+                <span>Subject Evaluation Audit</span>
               </div>
-              <h3 className="text-xl font-bold  text-white">
+              <h3 className="text-xl font-bold text-white">
                 {student.name}
               </h3>
               <p className="text-xs text-slate-300 font-mono mt-0.5">
@@ -781,123 +821,121 @@ function CoordinatorStudentModal({ student, onClose }) {
           </button>
         </div>
 
-        <div className="p-6 space-y-6 text-xs max-h-[75vh] overflow-y-auto">
-          {/* Progress Banner */}
-          <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 flex items-center justify-between">
-            <div>
-              <div className="text-xs font-bold text-slate-800 uppercase tracking-wider">
-                Completion Status
-              </div>
-              <div className="text-sm text-slate-600 mt-1">
-                Completed <strong className="text-emerald-700">{student.submittedCount}</strong> of <strong>{student.totalCount}</strong> subjects ({student.completionPercent}%)
-              </div>
-            </div>
-            <div className="w-40 bg-slate-200 rounded-full h-2.5 overflow-hidden">
-              <div 
-                className={`h-full rounded-full transition-all duration-300 ${
-                  student.submittedCount === student.totalCount ? 'bg-emerald-600' : 'bg-blue-600'
-                }`}
-                style={{ width: `${student.completionPercent}%` }}
-              />
+        <div className="p-6 space-y-5 text-xs max-h-[75vh] overflow-y-auto">
+          {/* Confidentiality Notice */}
+          <div className="bg-blue-50/80 border border-blue-200 rounded-xl p-3.5 flex items-start gap-3">
+            <ShieldCheck className="w-4 h-4 text-blue-700 shrink-0 mt-0.5" />
+            <div className="text-[11px] text-blue-900 leading-relaxed">
+              <strong className="font-bold">Academic Confidentiality Notice:</strong> In compliance with MIT-WPU evaluation guidelines, course coordinators have access strictly to student feedback for their assigned subject (<strong>{assignedSubjectLabel}</strong>). Evaluations for courses taught by other faculty members remain confidential.
             </div>
           </div>
 
-          {/* Submitted Subjects */}
-          <div className="space-y-3">
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-              <h4 className="font-bold text-sm text-slate-900 uppercase tracking-wider">
-                Filled Course Forms ({student.submittedCount})
-              </h4>
+          {/* Subject Feedback Status Card */}
+          <div className="border border-slate-200 rounded-xl overflow-hidden">
+            <div className="bg-slate-100 p-3.5 flex items-center justify-between border-b border-slate-200">
+              <div className="flex items-center gap-2">
+                <span className="font-mono font-bold text-xs bg-slate-900 text-white px-2 py-0.5 rounded">
+                  {course.code}
+                </span>
+                <span className="font-bold text-slate-900 text-sm">{course.name}</span>
+              </div>
+              <div>
+                {isSubmitted ? (
+                  <span className="inline-flex items-center gap-1 bg-emerald-600 text-white text-xs font-bold px-2.5 py-0.5 rounded-full">
+                    <CheckCircle2 className="w-3.5 h-3.5" />
+                    <span>Evaluation Submitted</span>
+                  </span>
+                ) : (
+                  <span className="inline-flex items-center gap-1 bg-amber-500 text-white text-xs font-bold px-2.5 py-0.5 rounded-full">
+                    <Clock className="w-3.5 h-3.5" />
+                    <span>Evaluation Pending</span>
+                  </span>
+                )}
+              </div>
             </div>
 
-            {student.submittedSubjects.length === 0 ? (
-              <div className="p-4 bg-slate-50 border border-dashed border-slate-300 rounded-xl text-center text-slate-400">
-                Student has not filled any course feedback forms yet.
+            <div className="p-4 space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-100">
+                <div>
+                  <span className="text-slate-500 text-[11px]">Faculty: </span>
+                  <strong className="text-slate-800 text-xs">{course.faculty || coordinator.name}</strong>
+                </div>
+                {isSubmitted && (
+                  <div className="flex items-center gap-2">
+                    <span className="text-slate-500 text-[11px]">Submission Time: </span>
+                    <span className="font-mono text-slate-700 font-semibold text-[11px]">
+                      {student.coordSubmitted?.submittedAt ? new Date(student.coordSubmitted.submittedAt).toLocaleString() : 'Recorded'}
+                    </span>
+                  </div>
+                )}
               </div>
-            ) : (
-              <div className="space-y-3">
-                {student.submittedSubjects.map((sub) => {
-                  const submission = sub.submissionData;
-                  const avgRating = submission?.average_score || 
-                    (submission?.ratings ? (Object.values(submission.ratings).reduce((a, b) => a + Number(b), 0) / Object.values(submission.ratings).length).toFixed(1) : null);
 
-                  return (
-                    <div key={sub.code} className="p-4 bg-emerald-50/40 rounded-xl border border-emerald-200 space-y-2">
-                      <div className="flex items-start justify-between gap-2">
-                        <div>
-                          <div className="flex items-center gap-2">
-                            <span className="font-mono font-bold text-emerald-900 bg-emerald-100 px-2 py-0.5 rounded text-[11px]">
-                              {sub.code}
-                            </span>
-                            <span className="font-bold text-slate-900 text-sm">{sub.name}</span>
-                          </div>
-                          <div className="text-xs text-slate-600 mt-0.5">
-                            Faculty: <strong className="text-slate-800">{sub.faculty}</strong>
-                          </div>
-                        </div>
-
-                        {avgRating && (
-                          <div className="flex items-center gap-1 bg-emerald-100 text-emerald-900 px-2.5 py-1 rounded-lg font-mono font-bold text-xs border border-emerald-300">
-                            <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-500" />
-                            <span>{avgRating} / 5.0</span>
-                          </div>
-                        )}
+              {isSubmitted ? (
+                <div className="space-y-4">
+                  {/* Rating Score Card */}
+                  <div className="p-4 bg-emerald-50/70 border border-emerald-200 rounded-xl flex items-center justify-between">
+                    <div>
+                      <div className="text-[11px] font-bold text-emerald-900 uppercase tracking-wider">
+                        Overall Evaluation Rating
                       </div>
-
-                      <div className="pt-2 border-t border-emerald-200/60 font-mono text-[11px] text-slate-500 flex items-center gap-1">
-                        <Calendar className="w-3.5 h-3.5 text-slate-400" />
-                        <span>Submitted on: {sub.submittedAt ? new Date(sub.submittedAt).toLocaleString() : 'Recently'}</span>
+                      <div className="text-xs text-emerald-700 mt-0.5">
+                        Weighted average across all teaching parameters
                       </div>
-
-                      {submission?.comment && (
-                        <div className="mt-2 p-2.5 bg-white rounded-lg border border-emerald-200 text-slate-700 italic flex items-start gap-2">
-                          <MessageSquare className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
-                          <span>"{submission.comment}"</span>
-                        </div>
-                      )}
                     </div>
-                  );
-                })}
-              </div>
-            )}
-          </div>
-
-          {/* Remaining Subjects */}
-          <div className="space-y-3 pt-3 border-t border-slate-200">
-            <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4 text-amber-600" />
-              <h4 className="font-bold text-sm text-slate-900 uppercase tracking-wider">
-                Remaining Course Forms ({student.remainingCount})
-              </h4>
-            </div>
-
-            {student.remainingSubjects.length === 0 ? (
-              <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-center text-emerald-800 font-semibold">
-                ✓ Student has submitted evaluations for all 4 courses.
-              </div>
-            ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                {student.remainingSubjects.map((rem) => (
-                  <div key={rem.code} className="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
-                    <div className="flex items-center justify-between gap-1">
-                      <span className="font-mono font-bold text-slate-700 bg-white px-2 py-0.5 rounded text-[11px] border border-slate-200">
-                        {rem.code}
+                    <div className="flex items-center gap-1.5 bg-emerald-100 border border-emerald-300 px-3 py-1.5 rounded-xl">
+                      <Star className="w-4 h-4 fill-amber-400 text-amber-500" />
+                      <span className="font-mono font-extrabold text-base text-emerald-950">
+                        {avgRating || '5.0'} / 5.0
                       </span>
-                      <span className="bg-amber-100 text-amber-900 font-semibold px-2 py-0.5 rounded-full text-[10px] border border-amber-200">
-                        Pending Submission
-                      </span>
-                    </div>
-                    <div className="font-bold text-slate-800 text-xs mt-1 truncate" title={rem.name}>
-                      {rem.name}
-                    </div>
-                    <div className="text-[11px] text-slate-500">
-                      Faculty: <span className="text-slate-700 font-medium">{rem.faculty}</span>
                     </div>
                   </div>
-                ))}
-              </div>
-            )}
+
+                  {/* Individual ratings breakdown if available */}
+                  {submission?.ratings && Object.keys(submission.ratings).length > 0 && (
+                    <div className="space-y-2">
+                      <div className="font-bold text-slate-800 text-xs">Parameter Ratings:</div>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        {Object.entries(submission.ratings).map(([paramKey, val]) => (
+                          <div key={paramKey} className="p-2.5 bg-slate-50 rounded-lg border border-slate-200 flex items-center justify-between">
+                            <span className="text-[11px] text-slate-700 capitalize font-medium">{paramKey.replace(/_/g, ' ')}</span>
+                            <span className="font-mono font-bold text-xs text-blue-800 bg-blue-100 px-2 py-0.5 rounded">
+                              {val} / 5.0
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Comments / Remarks */}
+                  {submission?.comment ? (
+                    <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+                      <div className="font-bold text-slate-800 text-xs flex items-center gap-1.5">
+                        <MessageSquare className="w-3.5 h-3.5 text-blue-600" />
+                        <span>Student's Written Feedback Remarks:</span>
+                      </div>
+                      <p className="text-slate-800 italic pl-5">
+                        "{submission.comment}"
+                      </p>
+                    </div>
+                  ) : (
+                    <div className="text-slate-400 italic text-[11px] p-2 bg-slate-50 rounded-lg border border-slate-200 text-center">
+                      No qualitative text comment provided by the student for this submission.
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div className="p-8 text-center bg-slate-50 border border-dashed border-slate-200 rounded-xl space-y-2">
+                  <Clock className="w-8 h-8 text-amber-500 mx-auto" />
+                  <div className="font-bold text-slate-800 text-sm">
+                    Feedback Not Yet Submitted
+                  </div>
+                  <p className="text-xs text-slate-500 max-w-sm mx-auto">
+                    This student has not yet completed the course feedback evaluation for <strong>{course.name}</strong>. Once submitted, their ratings and remarks will appear here.
+                  </p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
 

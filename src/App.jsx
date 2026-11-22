@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 import UnifiedLogin from './components/UnifiedLogin';
 import StudentDashboard from './components/student/StudentDashboard';
 import CoordinatorDashboard from './components/coordinator/CoordinatorDashboard';
@@ -49,8 +48,6 @@ export default function App() {
         )}
         {currentUser.role === 'admin' && <AdminDashboard onOpenSupabaseSettings={() => setIsSupabaseModalOpen(true)} />}
       </main>
-
-      <Footer />
 
       <SupabaseSettingsModal
         isOpen={isSupabaseModalOpen}
