@@ -603,6 +603,75 @@ export function saveFeedbackQuestions(questions) {
 }
 
 // 5c. Course Outcomes (CO) & Subject-Specific Feedback Questions (Configured by Course Coordinators)
+export const SUBJECT_ALIAS_MAP = {
+  'EC': 'CHM10011',
+  'LADC': 'EMT11011',
+  'EP': 'PHY10010',
+  'EGR': 'MEC10021',
+  'EM': 'CIV10010',
+  'PPS': 'CSE10120',
+  'BEEE': 'ECE10010',
+  'PYTHON PROGRAMMING': 'CSE10040',
+  'CAM': 'MEC10030',
+  'DELD': 'ESV10020',
+  'IIM': 'MEC10010',
+  'AEC': 'CDC10010',
+  'YOGA': 'YOG10010'
+};
+
+export function normalizeSubjectKey(input, courseName = '') {
+  if (!input && !courseName) return '';
+  const s = (input || '').trim();
+  const name = (courseName || '').trim();
+  const courses = getAllCoursesList();
+
+  // 1. Direct code match in catalog
+  if (s) {
+    const direct = courses.find(c => c.code.toLowerCase() === s.toLowerCase());
+    if (direct) return direct.code;
+  }
+
+  // 2. Direct name match in catalog
+  if (name) {
+    const byName = courses.find(c => c.name.toLowerCase() === name.toLowerCase());
+    if (byName) return byName.code;
+  }
+  if (s) {
+    const bySName = courses.find(c => c.name.toLowerCase() === s.toLowerCase());
+    if (bySName) return bySName.code;
+  }
+
+  // 3. Extract text inside parentheses, e.g. "EC (Engineering Chemistry)" -> "Engineering Chemistry"
+  const parenMatch = s.match(/\(([^)]+)\)/);
+  if (parenMatch) {
+    const inside = parenMatch[1].trim().toLowerCase();
+    const matched = courses.find(c => c.name.toLowerCase().includes(inside) || inside.includes(c.name.toLowerCase()));
+    if (matched) return matched.code;
+  }
+
+  // 4. Extract prefix acronym, e.g. "EC" or "PYTHON PROGRAMMING"
+  const prefixMatch = s.match(/^([A-Za-z0-9\- ]+)/);
+  if (prefixMatch) {
+    const prefix = prefixMatch[1].trim().toUpperCase();
+    if (SUBJECT_ALIAS_MAP[prefix]) return SUBJECT_ALIAS_MAP[prefix];
+  }
+
+  // 5. Check if string contains any acronym from SUBJECT_ALIAS_MAP
+  const sUpper = s.toUpperCase();
+  for (const [acr, code] of Object.entries(SUBJECT_ALIAS_MAP)) {
+    if (sUpper.includes(acr)) return code;
+  }
+
+  // 6. Partial name match
+  if (s) {
+    const sLow = s.toLowerCase();
+    const partial = courses.find(c => sLow.includes(c.name.toLowerCase()) || c.name.toLowerCase().includes(sLow));
+    if (partial) return partial.code;
+  }
+
+  return (s || name).toUpperCase();
+}
+
 export const DEFAULT_COURSE_OUTCOMES = {
   EMT11011: `CO1: Apply matrix algebra and determinants to solve systems of linear equations and analyze engineering transformations.
 CO2: Utilize differential and integral calculus concepts to model and analyze physical and dynamical engineering systems.
@@ -632,16 +701,25 @@ CO5: Interpret standard engineering drawing conventions, dimensioning, tolerance
 CO2: Design, implement, and debug structured programs using Python syntax, data types, and control flow.
 CO3: Apply data structures including lists, tuples, dictionaries, and sets to manage structured data.
 CO4: Implement modular programming through functions, file handling, and standard library modules.
-CO5: Solve real-world computational problems through algorithmic decomposition and rigorous testing.`
+CO5: Solve real-world computational problems through algorithmic decomposition and rigorous testing.`,
+
+  CSE10040: `CO1: Understand Python fundamental syntax, data types, conditional flow, and iterations.
+CO2: Design modular programs utilizing functions, recursion, and object-oriented paradigms.
+CO3: Apply data manipulation utilizing standard libraries for structured data processing.
+CO4: Implement error handling, file I/O operations, and unit testing practices.
+CO5: Develop algorithmic solutions to computational and data-driven engineering problems.`
 };
 
-export function getDefaultCourseOutcomes(courseCode) {
+export function getDefaultCourseOutcomes(courseCode, courseName = '') {
+  const norm = normalizeSubjectKey(courseCode, courseName);
+  if (norm && DEFAULT_COURSE_OUTCOMES[norm]) {
+    return DEFAULT_COURSE_OUTCOMES[norm];
+  }
   if (courseCode) {
     const clean = courseCode.trim().toUpperCase();
     if (DEFAULT_COURSE_OUTCOMES[clean]) {
       return DEFAULT_COURSE_OUTCOMES[clean];
     }
-    // Match partial code
     for (const [key, val] of Object.entries(DEFAULT_COURSE_OUTCOMES)) {
       if (clean.includes(key) || key.includes(clean)) return val;
     }
@@ -657,44 +735,91 @@ export function getAllSubjectConfigs() {
   return getStoredItem(KEY_SUBJECT_CONFIGS, {});
 }
 
-export function getSubjectConfig(courseCode) {
-  if (!courseCode) {
+export function getSubjectConfig(courseCode, courseName = '') {
+  const cleanCode = (courseCode || '').trim();
+  const cleanName = (courseName || '').trim();
+  if (!cleanCode && !cleanName) {
     return {
       courseOutcomes: getDefaultCourseOutcomes(''),
       subjectQuestions: []
     };
   }
 
-  const cleanCode = courseCode.trim().toUpperCase();
+  const normKey = normalizeSubjectKey(cleanCode, cleanName);
   const allConfigs = getAllSubjectConfigs();
-  const existing = allConfigs[cleanCode] || allConfigs[courseCode];
 
-  if (existing) {
+  // 1. Direct check with normalized key (e.g. CHM10011)
+  if (normKey && allConfigs[normKey]) {
     return {
-      courseOutcomes: existing.courseOutcomes || getDefaultCourseOutcomes(courseCode),
-      subjectQuestions: Array.isArray(existing.subjectQuestions) ? existing.subjectQuestions : []
+      courseOutcomes: allConfigs[normKey].courseOutcomes || getDefaultCourseOutcomes(normKey),
+      subjectQuestions: Array.isArray(allConfigs[normKey].subjectQuestions) ? allConfigs[normKey].subjectQuestions : []
     };
   }
 
+  // 2. Direct checks with raw strings
+  if (cleanCode && allConfigs[cleanCode.toUpperCase()]) {
+    return {
+      courseOutcomes: allConfigs[cleanCode.toUpperCase()].courseOutcomes || getDefaultCourseOutcomes(normKey || cleanCode),
+      subjectQuestions: Array.isArray(allConfigs[cleanCode.toUpperCase()].subjectQuestions) ? allConfigs[cleanCode.toUpperCase()].subjectQuestions : []
+    };
+  }
+  if (cleanCode && allConfigs[cleanCode]) {
+    return {
+      courseOutcomes: allConfigs[cleanCode].courseOutcomes || getDefaultCourseOutcomes(normKey || cleanCode),
+      subjectQuestions: Array.isArray(allConfigs[cleanCode].subjectQuestions) ? allConfigs[cleanCode].subjectQuestions : []
+    };
+  }
+  if (cleanName && allConfigs[cleanName.toUpperCase()]) {
+    return {
+      courseOutcomes: allConfigs[cleanName.toUpperCase()].courseOutcomes || getDefaultCourseOutcomes(normKey || cleanName),
+      subjectQuestions: Array.isArray(allConfigs[cleanName.toUpperCase()].subjectQuestions) ? allConfigs[cleanName.toUpperCase()].subjectQuestions : []
+    };
+  }
+
+  // 3. Scan all saved keys in allConfigs by normalizing them
+  for (const [k, v] of Object.entries(allConfigs)) {
+    const kNorm = normalizeSubjectKey(k);
+    if (kNorm && normKey && kNorm === normKey) {
+      return {
+        courseOutcomes: v.courseOutcomes || getDefaultCourseOutcomes(normKey),
+        subjectQuestions: Array.isArray(v.subjectQuestions) ? v.subjectQuestions : []
+      };
+    }
+  }
+
   return {
-    courseOutcomes: getDefaultCourseOutcomes(courseCode),
+    courseOutcomes: getDefaultCourseOutcomes(normKey || cleanCode, cleanName),
     subjectQuestions: []
   };
 }
 
-export function saveSubjectConfig(courseCode, config) {
-  if (!courseCode) return;
-  const cleanCode = courseCode.trim().toUpperCase();
+export function saveSubjectConfig(courseCode, config, courseName = '') {
+  if (!courseCode && !courseName) return;
+  const cleanCode = (courseCode || '').trim();
+  const cleanName = (courseName || '').trim();
+  const normKey = normalizeSubjectKey(cleanCode, cleanName);
+
   const allConfigs = getAllSubjectConfigs();
-  const currentForCode = allConfigs[cleanCode] || {};
+  const existingConfig = getSubjectConfig(cleanCode, cleanName);
 
   const updatedForCode = {
-    ...currentForCode,
-    courseOutcomes: config.courseOutcomes !== undefined ? config.courseOutcomes : (currentForCode.courseOutcomes || getDefaultCourseOutcomes(courseCode)),
-    subjectQuestions: config.subjectQuestions !== undefined ? config.subjectQuestions : (currentForCode.subjectQuestions || [])
+    courseOutcomes: config.courseOutcomes !== undefined ? config.courseOutcomes : (existingConfig.courseOutcomes || getDefaultCourseOutcomes(normKey || cleanCode)),
+    subjectQuestions: config.subjectQuestions !== undefined ? config.subjectQuestions : (existingConfig.subjectQuestions || [])
   };
 
-  allConfigs[cleanCode] = updatedForCode;
+  // Save under normalized code (e.g. CHM10011), the raw code, and uppercase
+  if (normKey) {
+    allConfigs[normKey] = updatedForCode;
+  }
+  if (cleanCode) {
+    allConfigs[cleanCode] = updatedForCode;
+    allConfigs[cleanCode.toUpperCase()] = updatedForCode;
+  }
+  if (cleanName) {
+    allConfigs[cleanName] = updatedForCode;
+    allConfigs[cleanName.toUpperCase()] = updatedForCode;
+  }
+
   setStoredItem(KEY_SUBJECT_CONFIGS, allConfigs);
 
   // Sync to Supabase portal_settings
@@ -717,23 +842,27 @@ export function saveSubjectConfig(courseCode, config) {
     window.dispatchEvent(new CustomEvent('mitwpu_supabase_synced', {
       detail: { timestamp: new Date().toISOString(), status: 'LIVE' }
     }));
+    window.dispatchEvent(new CustomEvent('mitwpu_subject_config_updated', {
+      detail: { courseCode: cleanCode, normKey, config: updatedForCode }
+    }));
   }
 
   return updatedForCode;
 }
 
-export function saveCourseOutcomes(courseCode, outcomesText) {
-  const current = getSubjectConfig(courseCode);
+export function saveCourseOutcomes(courseCode, outcomesText, courseName = '') {
+  const current = getSubjectConfig(courseCode, courseName);
   return saveSubjectConfig(courseCode, {
     ...current,
     courseOutcomes: outcomesText
-  });
+  }, courseName);
 }
 
-export function addSubjectQuestion(courseCode, { category, text }) {
-  const current = getSubjectConfig(courseCode);
+export function addSubjectQuestion(courseCode, { category, text }, courseName = '') {
+  const current = getSubjectConfig(courseCode, courseName);
+  const normKey = normalizeSubjectKey(courseCode, courseName);
   const newQuestion = {
-    id: `sq_${courseCode.replace(/[^a-zA-Z0-9]/g, '_')}_${Date.now()}`,
+    id: `sq_${(normKey || courseCode).replace(/[^a-zA-Z0-9]/g, '_')}_${Date.now()}`,
     category: category ? category.trim() : 'Course Specific Parameter',
     text: text ? text.trim() : '',
     type: 'rating_5',
@@ -743,23 +872,23 @@ export function addSubjectQuestion(courseCode, { category, text }) {
   saveSubjectConfig(courseCode, {
     ...current,
     subjectQuestions: updatedQuestions
-  });
+  }, courseName);
   return newQuestion;
 }
 
-export function deleteSubjectQuestion(courseCode, questionId) {
-  const current = getSubjectConfig(courseCode);
+export function deleteSubjectQuestion(courseCode, questionId, courseName = '') {
+  const current = getSubjectConfig(courseCode, courseName);
   const updatedQuestions = current.subjectQuestions.filter(q => q.id !== questionId);
   saveSubjectConfig(courseCode, {
     ...current,
     subjectQuestions: updatedQuestions
-  });
+  }, courseName);
   return updatedQuestions;
 }
 
-export function getAllQuestionsForSubject(courseCode) {
+export function getAllQuestionsForSubject(courseCode, courseName = '') {
   const institutionalQuestions = getFeedbackQuestions();
-  const subjectConfig = getSubjectConfig(courseCode);
+  const subjectConfig = getSubjectConfig(courseCode, courseName);
   const subjectQuestions = (subjectConfig.subjectQuestions || []).map(q => ({
     ...q,
     isSubjectSpecific: true

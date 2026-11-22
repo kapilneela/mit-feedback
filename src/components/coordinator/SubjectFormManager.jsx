@@ -22,13 +22,29 @@ import {
   addSubjectQuestion, 
   deleteSubjectQuestion, 
   getDefaultCourseOutcomes,
-  getAllQuestionsForSubject
+  getAllQuestionsForSubject,
+  normalizeSubjectKey,
+  getAllCoursesList
 } from '../../services/dataService';
 
 export default function SubjectFormManager({ coordinator, assignedSubjects = [] }) {
-  // Select active subject (defaults to first assigned subject or 'EMT11011')
-  const defaultSubjectCode = assignedSubjects.length > 0 ? assignedSubjects[0] : 'EMT11011';
-  const [selectedSubject, setSelectedSubject] = useState(defaultSubjectCode);
+  const allCourses = getAllCoursesList();
+
+  // Resolve assigned subjects into canonical course objects
+  const assignedList = (assignedSubjects.length > 0 ? assignedSubjects : ['EMT11011']).map(raw => {
+    const normCode = normalizeSubjectKey(raw);
+    const catalogMatch = allCourses.find(c => c.code === normCode);
+    return {
+      raw,
+      code: normCode || raw,
+      name: catalogMatch?.name || raw,
+      label: catalogMatch ? `${catalogMatch.code} — ${catalogMatch.name}` : raw
+    };
+  });
+
+  const [selectedSubject, setSelectedSubject] = useState(() => 
+    assignedList.length > 0 ? assignedList[0].code : 'EMT11011'
+  );
 
   // CO state
   const [courseOutcomes, setCourseOutcomes] = useState('');
@@ -44,11 +60,16 @@ export default function SubjectFormManager({ coordinator, assignedSubjects = [] 
   const [showPreview, setShowPreview] = useState(false);
   const [previewConfirmed, setPreviewConfirmed] = useState(false);
 
+  // Find active course metadata
+  const currentCourse = allCourses.find(c => c.code === selectedSubject) || 
+    assignedList.find(c => c.code === selectedSubject) || 
+    { code: selectedSubject, name: selectedSubject };
+
   // Load subject config whenever selectedSubject changes
   const loadConfig = () => {
     if (!selectedSubject) return;
-    const cfg = getSubjectConfig(selectedSubject);
-    setCourseOutcomes(cfg.courseOutcomes || getDefaultCourseOutcomes(selectedSubject));
+    const cfg = getSubjectConfig(selectedSubject, currentCourse.name);
+    setCourseOutcomes(cfg.courseOutcomes || getDefaultCourseOutcomes(selectedSubject, currentCourse.name));
     setSubjectQuestions(cfg.subjectQuestions || []);
   };
 
@@ -63,17 +84,17 @@ export default function SubjectFormManager({ coordinator, assignedSubjects = [] 
       alert('Course Outcomes text cannot be empty.');
       return;
     }
-    saveCourseOutcomes(selectedSubject, courseOutcomes.trim());
+    saveCourseOutcomes(selectedSubject, courseOutcomes.trim(), currentCourse.name);
     setCoSavedMsg('Course Outcomes saved successfully and synced with student evaluation form.');
     setTimeout(() => setCoSavedMsg(''), 4000);
   };
 
   // Handle Reset CO to defaults
   const handleResetOutcomes = () => {
-    if (window.confirm('Reset Course Outcomes to institutional default benchmarks for this subject?')) {
-      const def = getDefaultCourseOutcomes(selectedSubject);
+    if (window.confirm(`Reset Course Outcomes for ${selectedSubject} to institutional default benchmarks?`)) {
+      const def = getDefaultCourseOutcomes(selectedSubject, currentCourse.name);
       setCourseOutcomes(def);
-      saveCourseOutcomes(selectedSubject, def);
+      saveCourseOutcomes(selectedSubject, def, currentCourse.name);
       setCoSavedMsg('Reset to default Course Outcomes.');
       setTimeout(() => setCoSavedMsg(''), 3000);
     }
@@ -87,7 +108,7 @@ export default function SubjectFormManager({ coordinator, assignedSubjects = [] 
     addSubjectQuestion(selectedSubject, {
       category: newCategory,
       text: newQuestionText.trim()
-    });
+    }, currentCourse.name);
 
     setNewQuestionText('');
     loadConfig();
@@ -98,14 +119,14 @@ export default function SubjectFormManager({ coordinator, assignedSubjects = [] 
   // Handle Delete Subject-Specific Question
   const handleDeleteQuestion = (qId, text) => {
     if (window.confirm(`Are you sure you want to remove this question?\n"${text}"`)) {
-      deleteSubjectQuestion(selectedSubject, qId);
+      deleteSubjectQuestion(selectedSubject, qId, currentCourse.name);
       loadConfig();
       setQuestionMsg('Question removed from student evaluation form.');
       setTimeout(() => setQuestionMsg(''), 3000);
     }
   };
 
-  const allQuestionsForPreview = getAllQuestionsForSubject(selectedSubject);
+  const allQuestionsForPreview = getAllQuestionsForSubject(selectedSubject, currentCourse.name);
 
   return (
     <div className="space-y-6">
@@ -141,31 +162,42 @@ export default function SubjectFormManager({ coordinator, assignedSubjects = [] 
         </div>
 
         {/* Course Selection Pills / Dropdown */}
-        <div className="flex flex-wrap items-center gap-2.5">
-          <span className="text-xs font-bold text-slate-700 flex items-center gap-1">
-            <Layers className="w-3.5 h-3.5 text-slate-500" />
-            <span>Configuring Subject:</span>
-          </span>
-          {assignedSubjects.length > 0 ? (
-            assignedSubjects.map(code => (
+        <div className="flex flex-wrap items-center justify-between gap-3 pt-1">
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="text-xs font-bold text-slate-700 flex items-center gap-1">
+              <Layers className="w-3.5 h-3.5 text-blue-600" />
+              <span>Assigned Subject:</span>
+            </span>
+            {assignedList.map(item => (
               <button
-                key={code}
-                onClick={() => setSelectedSubject(code)}
+                key={item.code}
+                onClick={() => setSelectedSubject(item.code)}
                 className={`text-xs font-bold px-3 py-1.5 rounded-lg border transition cursor-pointer flex items-center gap-1.5 ${
-                  selectedSubject === code
+                  selectedSubject === item.code
                     ? 'bg-blue-600 text-white border-blue-600 shadow-xs'
                     : 'bg-slate-50 text-slate-700 border-slate-300 hover:bg-white'
                 }`}
               >
                 <BookOpen className="w-3 h-3" />
-                <span>{code}</span>
+                <span>{item.label}</span>
               </button>
-            ))
-          ) : (
-            <span className="text-xs font-mono font-bold bg-blue-50 text-blue-700 px-2.5 py-1 rounded border border-blue-200">
-              {selectedSubject}
-            </span>
-          )}
+            ))}
+          </div>
+
+          <div className="flex items-center gap-2">
+            <span className="text-[11px] text-slate-500 font-medium">Or select course:</span>
+            <select
+              value={selectedSubject}
+              onChange={(e) => setSelectedSubject(e.target.value)}
+              className="text-xs font-semibold px-2.5 py-1.5 border border-slate-300 rounded-lg bg-slate-50 focus:ring-1 focus:ring-blue-600"
+            >
+              {allCourses.slice(0, 15).map(c => (
+                <option key={c.code} value={c.code}>
+                  {c.code} — {c.name}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
       </div>
 

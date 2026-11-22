@@ -28,23 +28,51 @@ export default function SubjectFeedbackModal({ subject, student, isOpen, onClose
   const [hasReadCO, setHasReadCO] = useState(false);
   const [coError, setCoError] = useState('');
 
-  // Fetch subject-specific outcomes & questions
-  const subjectConfig = subject?.code ? getSubjectConfig(subject.code) : null;
-  const questions = subject?.code ? getAllQuestionsForSubject(subject.code) : [];
+  // Fetch subject-specific outcomes & questions as reactive state
+  const [subjectConfig, setSubjectConfig] = useState(() => 
+    subject ? getSubjectConfig(subject.code, subject.name) : null
+  );
+  const [questions, setQuestions] = useState(() => 
+    subject ? getAllQuestionsForSubject(subject.code, subject.name) : []
+  );
+
+  const reloadSubjectConfig = () => {
+    if (subject?.code || subject?.name) {
+      const cfg = getSubjectConfig(subject.code, subject.name);
+      const qs = getAllQuestionsForSubject(subject.code, subject.name);
+      setSubjectConfig(cfg);
+      setQuestions(qs);
+
+      setRatings(prev => {
+        const next = { ...prev };
+        qs.forEach(q => {
+          if (!next[q.id]) next[q.id] = 5;
+        });
+        return next;
+      });
+    }
+  };
 
   useEffect(() => {
-    if (subject?.code) {
-      const qs = getAllQuestionsForSubject(subject.code);
-      const initialRatings = {};
-      qs.forEach(q => {
-        initialRatings[q.id] = 5;
-      });
-      setRatings(initialRatings);
+    if (isOpen && subject) {
+      reloadSubjectConfig();
       setHasReadCO(false);
       setCoError('');
       setComment(subject?.submissionData?.comment || '');
     }
-  }, [subject?.code, isOpen]);
+  }, [isOpen, subject?.code, subject?.name]);
+
+  useEffect(() => {
+    const handleSync = () => reloadSubjectConfig();
+    window.addEventListener('mitwpu_supabase_synced', handleSync);
+    window.addEventListener('mitwpu_subject_config_updated', handleSync);
+    window.addEventListener('storage', handleSync);
+    return () => {
+      window.removeEventListener('mitwpu_supabase_synced', handleSync);
+      window.removeEventListener('mitwpu_subject_config_updated', handleSync);
+      window.removeEventListener('storage', handleSync);
+    };
+  }, [subject?.code, subject?.name]);
 
   if (!isOpen || !subject) return null;
 
