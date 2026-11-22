@@ -14,6 +14,7 @@ const KEY_QUESTIONS = 'mitwpu_feedback_questions_v2';
 const KEY_COURSES = 'mitwpu_courses_v52';
 const KEY_FACULTY = 'mitwpu_faculty_allocations_v80_exact';
 const KEY_STUDENTS = 'mitwpu_students_v2200';
+const KEY_SUBJECT_CONFIGS = 'mitwpu_subject_configs_v1';
 const KEY_LAST_SYNC = 'mitwpu_last_supabase_sync_time';
 
 let realtimeChannel = null;
@@ -224,7 +225,16 @@ async function syncPortalSettings(supabase) {
       }
     }
 
-    // E. Apply deletions to local storage immediately if tombstones exist
+    // E. Subject Configs (Course Outcomes & Subject-Specific Questions)
+    if (settingsMap.has('subject_configs')) {
+      const remoteConfigs = settingsMap.get('subject_configs');
+      if (remoteConfigs && typeof remoteConfigs === 'object') {
+        const localConfigs = getLocal(KEY_SUBJECT_CONFIGS, {});
+        setLocal(KEY_SUBJECT_CONFIGS, { ...localConfigs, ...remoteConfigs });
+      }
+    }
+
+    // F. Apply deletions to local storage immediately if tombstones exist
     if (settingsMap.has('deleted_feedback_ids') || settingsMap.has('all_feedbacks_cleared_at')) {
       const deletedIds = new Set(Array.isArray(settingsMap.get('deleted_feedback_ids')) ? settingsMap.get('deleted_feedback_ids') : []);
       const clearedAtStr = settingsMap.get('all_feedbacks_cleared_at');

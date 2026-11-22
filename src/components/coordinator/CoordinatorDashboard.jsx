@@ -21,7 +21,8 @@ import {
   ChevronLeft,
   ChevronRight,
   ShieldCheck,
-  BookOpen
+  BookOpen,
+  Sparkles
 } from 'lucide-react';
 import { 
   getCoordinatorDashboardData, 
@@ -29,6 +30,7 @@ import {
   getAllStudentsFeedbackOverview,
   isCoordinatorSubject
 } from '../../services/dataService';
+import SubjectFormManager from './SubjectFormManager';
 
 export default function CoordinatorDashboard({ coordinator }) {
   const [data, setData] = useState(null);
@@ -367,9 +369,18 @@ export default function CoordinatorDashboard({ coordinator }) {
             >
               All 32 FY Engineering Divisions
             </button>
+            <button
+              onClick={() => setViewScope('form_builder')}
+              className={`px-3 py-1.5 rounded-md transition flex items-center gap-1.5 cursor-pointer ${
+                viewScope === 'form_builder' ? 'bg-white shadow-xs text-blue-700 font-bold' : 'text-slate-600 hover:text-slate-900'
+              }`}
+            >
+              <BookOpen className="w-3.5 h-3.5 text-blue-600" />
+              <span>CO & Subject Questions</span>
+            </button>
           </div>
 
-          {viewScope !== 'all32' && (
+          {(viewScope === 'students' || viewScope === 'assigned') && (
             <div className="flex items-center gap-2">
               <Filter className="w-4 h-4 text-slate-500" />
               <select
@@ -390,9 +401,19 @@ export default function CoordinatorDashboard({ coordinator }) {
         </div>
 
         <div className="text-xs text-slate-500">
-          Showing {filteredCoordinatorStudents.length} Students in Selected View
+          {viewScope === 'form_builder' 
+            ? 'Configuring Course Outcomes and Form Parameters' 
+            : `Showing ${filteredCoordinatorStudents.length} Students in Selected View`}
         </div>
       </div>
+
+      {/* VIEW 4: COURSE OUTCOMES & SUBJECT-SPECIFIC QUESTIONS */}
+      {viewScope === 'form_builder' && (
+        <SubjectFormManager 
+          coordinator={data.coordinator} 
+          assignedSubjects={data.assignedSubjects} 
+        />
+      )}
 
       {/* VIEW 1: STUDENT-BY-STUDENT DETAILED STATUS (SCOPED TO ASSIGNED SUBJECT) */}
       {viewScope === 'students' && (
@@ -694,83 +715,85 @@ export default function CoordinatorDashboard({ coordinator }) {
       )}
 
       {/* Analytics & Feedback Feed - STRICTLY FOR ASSIGNED SUBJECT */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-white rounded-xl shadow-xs border border-slate-200 p-5">
-          <div className="flex items-center gap-2 mb-4">
-            <BarChart3 className="w-5 h-5 text-blue-600" />
-            <div>
-              <h3 className="font-bold text-base text-slate-900">
-                {assignedSubjectLabel} - Evaluation Metrics
-              </h3>
-              <p className="text-xs text-slate-500">Average student ratings on 5-point Likert scale for your subject</p>
-            </div>
-          </div>
-
-          <div className="space-y-4">
-            {data.parameterAverages.map((param, index) => {
-              const score = param.average;
-              const percent = (score / 5) * 100;
-
-              return (
-                <div key={param.id} className="p-3 bg-slate-50 rounded-lg border border-slate-200">
-                  <div className="flex justify-between items-start gap-2 mb-1">
-                    <span className="text-xs font-bold text-slate-800">
-                      {index + 1}. {param.category}
-                    </span>
-                    <span className="font-mono text-xs font-extrabold text-blue-800 bg-blue-100 px-2 py-0.5 rounded border border-blue-200">
-                      {score.toFixed(2)} / 5.0
-                    </span>
-                  </div>
-                  <p className="text-[11px] text-slate-600 mb-2">{param.question}</p>
-                  
-                  <div className="w-full bg-slate-200 rounded-full h-2 overflow-hidden">
-                    <div 
-                      className="bg-blue-600 h-2 rounded-full"
-                      style={{ width: `${percent}%` }}
-                    />
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        <div className="bg-white rounded-xl shadow-xs border border-slate-200 p-5 flex flex-col">
-          <div className="flex items-center gap-2 mb-4">
-            <MessageSquare className="w-5 h-5 text-blue-600" />
-            <div>
-              <h3 className="font-bold text-base text-slate-900">
-                Student Feedback Remarks ({assignedSubjectLabel})
-              </h3>
-              <p className="text-xs text-slate-500">Submitted comments for your course ({displayedComments.length})</p>
-            </div>
-          </div>
-
-          <div className="space-y-3 overflow-y-auto max-h-[460px] pr-1">
-            {displayedComments.length === 0 ? (
-              <div className="p-12 text-center text-xs text-slate-400 bg-slate-50 rounded-lg border border-slate-200">
-                No open text remarks submitted yet for {assignedSubjectLabel}. 
-                When students submit evaluations for your course, remarks will appear here.
+      {viewScope !== 'form_builder' && (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-white rounded-xl shadow-xs border border-slate-200 p-5">
+            <div className="flex items-center gap-2 mb-4">
+              <BarChart3 className="w-5 h-5 text-blue-600" />
+              <div>
+                <h3 className="font-bold text-base text-slate-900">
+                  {assignedSubjectLabel} - Evaluation Metrics
+                </h3>
+                <p className="text-xs text-slate-500">Average student ratings on 5-point Likert scale for your subject</p>
               </div>
-            ) : (
-              displayedComments.map((c, i) => (
-                <div key={i} className="p-3 bg-slate-50 rounded-lg border border-slate-200 text-xs space-y-1.5">
-                  <div className="flex justify-between items-center text-[10px] text-slate-500">
-                    <span className="font-mono font-bold text-blue-800">{c.courseCode} • {c.division}</span>
-                    <span>{new Date(c.submittedAt).toLocaleDateString()}</span>
+            </div>
+
+            <div className="space-y-4">
+              {data.parameterAverages.map((param, index) => {
+                const score = param.average;
+                const percent = (score / 5) * 100;
+
+                return (
+                  <div key={param.id} className="p-3 bg-slate-50 rounded-lg border border-slate-200">
+                    <div className="flex justify-between items-start gap-2 mb-1">
+                      <span className="text-xs font-bold text-slate-800">
+                        {index + 1}. {param.category}
+                      </span>
+                      <span className="font-mono text-xs font-extrabold text-blue-800 bg-blue-100 px-2 py-0.5 rounded border border-blue-200">
+                        {score.toFixed(2)} / 5.0
+                      </span>
+                    </div>
+                    <p className="text-[11px] text-slate-600 mb-2">{param.question}</p>
+                    
+                    <div className="w-full bg-slate-200 rounded-full h-2 overflow-hidden">
+                      <div 
+                        className="bg-blue-600 h-2 rounded-full"
+                        style={{ width: `${percent}%` }}
+                      />
+                    </div>
                   </div>
-                  <p className="text-slate-800 italic">
-                    "{c.comment}"
-                  </p>
-                  <div className="text-[10px] text-slate-500 font-medium">
-                    Faculty: {c.faculty || data.coordinator.name}
-                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-xs border border-slate-200 p-5 flex flex-col">
+            <div className="flex items-center gap-2 mb-4">
+              <MessageSquare className="w-5 h-5 text-blue-600" />
+              <div>
+                <h3 className="font-bold text-base text-slate-900">
+                  Student Feedback Remarks ({assignedSubjectLabel})
+                </h3>
+                <p className="text-xs text-slate-500">Submitted comments for your course ({displayedComments.length})</p>
+              </div>
+            </div>
+
+            <div className="space-y-3 overflow-y-auto max-h-[460px] pr-1">
+              {displayedComments.length === 0 ? (
+                <div className="p-12 text-center text-xs text-slate-400 bg-slate-50 rounded-lg border border-slate-200">
+                  No open text remarks submitted yet for {assignedSubjectLabel}. 
+                  When students submit evaluations for your course, remarks will appear here.
                 </div>
-              ))
-            )}
+              ) : (
+                displayedComments.map((c, i) => (
+                  <div key={i} className="p-3 bg-slate-50 rounded-lg border border-slate-200 text-xs space-y-1.5">
+                    <div className="flex justify-between items-center text-[10px] text-slate-500">
+                      <span className="font-mono font-bold text-blue-800">{c.courseCode} • {c.division}</span>
+                      <span>{new Date(c.submittedAt).toLocaleDateString()}</span>
+                    </div>
+                    <p className="text-slate-800 italic">
+                      "{c.comment}"
+                    </p>
+                    <div className="text-[10px] text-slate-500 font-medium">
+                      Faculty: {c.faculty || data.coordinator.name}
+                    </div>
+                  </div>
+                ))
+              )}
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
       {/* Inspect Student Feedback Modal - Strictly Assigned Subject */}
       {inspectingStudent && (

@@ -19,6 +19,7 @@ const KEY_COURSES = 'mitwpu_courses_v52';
 const KEY_COORDINATORS = 'mitwpu_coordinators_v32';
 const KEY_FACULTY = 'mitwpu_faculty_allocations_v80_exact';
 const KEY_STUDENTS = 'mitwpu_students_v2200';
+const KEY_SUBJECT_CONFIGS = 'mitwpu_subject_configs_v1';
 
 function getStoredItem(key, defaultValue) {
   try {
@@ -473,8 +474,9 @@ export function getCoordinatorDashboardData(coordinatorEmail) {
     isCoordinatorSubject(r.courseCode, r.courseName, r.faculty, coord)
   );
 
-  const questions = getStoredItem(KEY_QUESTIONS, FEEDBACK_QUESTIONS).filter(q => q.type.startsWith('rating'));
-  const parameterAverages = questions.map(q => {
+  const primarySubject = assignedSubjects[0] || '';
+  const allSubjQuestions = getAllQuestionsForSubject(primarySubject).filter(q => q.type.startsWith('rating'));
+  const parameterAverages = allSubjQuestions.map(q => {
     let sum = 0;
     let count = 0;
     coordinatorResponses.forEach(r => {
@@ -489,7 +491,8 @@ export function getCoordinatorDashboardData(coordinatorEmail) {
       category: q.category,
       question: q.text,
       average: parseFloat(avg),
-      count
+      count,
+      isSubjectSpecific: !!q.isSubjectSpecific
     };
   });
 
@@ -597,6 +600,171 @@ export function saveFeedbackQuestions(questions) {
   }
 
   return questions;
+}
+
+// 5c. Course Outcomes (CO) & Subject-Specific Feedback Questions (Configured by Course Coordinators)
+export const DEFAULT_COURSE_OUTCOMES = {
+  EMT11011: `CO1: Apply matrix algebra and determinants to solve systems of linear equations and analyze engineering transformations.
+CO2: Utilize differential and integral calculus concepts to model and analyze physical and dynamical engineering systems.
+CO3: Evaluate eigenvalues, eigenvectors, and diagonalization for stability analysis in engineering problems.
+CO4: Formulate and solve first and higher-order ordinary differential equations applicable to engineering models.
+CO5: Apply multivariable calculus tools and gradient vectors to optimize multivariable engineering functions.`,
+
+  CHM10011: `CO1: Comprehend chemical bonding, molecular structure, and periodic properties in engineering materials.
+CO2: Analyze electrochemical systems, battery technologies, energy storage, and corrosion prevention mechanisms.
+CO3: Understand spectroscopic techniques (UV-Vis, IR, NMR) for characterization of chemical compounds and polymers.
+CO4: Evaluate water quality parameters, water treatment methodologies, and green chemistry principles in industrial applications.
+CO5: Demonstrate safe handling of chemical reagents, experimental analysis, and laboratory precision.`,
+
+  PHY10010: `CO1: Apply wave optics, interference, diffraction, and polarization principles to precision engineering measurement.
+CO2: Understand quantum mechanics principles governing semiconductors, superconductors, and nanomaterials.
+CO3: Analyze electromagnetic fields and Maxwell's equations in the context of wave propagation and optical communication.
+CO4: Comprehend principles of lasers, fiber optics, and photonics applications in contemporary technologies.
+CO5: Demonstrate laboratory competencies in experimental optical and electronic instrumentation.`,
+
+  MEC10021: `CO1: Understand principles of engineering graphics, orthographic projections, and isometric views.
+CO2: Construct projections of points, lines, planes, and solid objects in various engineering orientations.
+CO3: Develop sectional views and surface development of engineering components and assemblies.
+CO4: Utilize modern computer-aided drafting (CAD) software tools for 2D drafting and 3D geometric modeling.
+CO5: Interpret standard engineering drawing conventions, dimensioning, tolerances, and design specifications.`,
+
+  CSE10011: `CO1: Understand algorithmic problem-solving techniques and computational thinking methodologies.
+CO2: Design, implement, and debug structured programs using Python syntax, data types, and control flow.
+CO3: Apply data structures including lists, tuples, dictionaries, and sets to manage structured data.
+CO4: Implement modular programming through functions, file handling, and standard library modules.
+CO5: Solve real-world computational problems through algorithmic decomposition and rigorous testing.`
+};
+
+export function getDefaultCourseOutcomes(courseCode) {
+  if (courseCode) {
+    const clean = courseCode.trim().toUpperCase();
+    if (DEFAULT_COURSE_OUTCOMES[clean]) {
+      return DEFAULT_COURSE_OUTCOMES[clean];
+    }
+    // Match partial code
+    for (const [key, val] of Object.entries(DEFAULT_COURSE_OUTCOMES)) {
+      if (clean.includes(key) || key.includes(clean)) return val;
+    }
+  }
+  return `CO1: Understand and demonstrate proficiency in foundational theoretical concepts of the course.
+CO2: Apply analytical, mathematical, and algorithmic principles to formulate and solve engineering problems.
+CO3: Implement practical solutions, lab demonstrations, and interpret laboratory / computational outcomes.
+CO4: Evaluate contemporary engineering tools and methodologies to address real-world technical challenges.
+CO5: Adhere to professional ethics, continuous self-learning, and clear technical communication.`;
+}
+
+export function getAllSubjectConfigs() {
+  return getStoredItem(KEY_SUBJECT_CONFIGS, {});
+}
+
+export function getSubjectConfig(courseCode) {
+  if (!courseCode) {
+    return {
+      courseOutcomes: getDefaultCourseOutcomes(''),
+      subjectQuestions: []
+    };
+  }
+
+  const cleanCode = courseCode.trim().toUpperCase();
+  const allConfigs = getAllSubjectConfigs();
+  const existing = allConfigs[cleanCode] || allConfigs[courseCode];
+
+  if (existing) {
+    return {
+      courseOutcomes: existing.courseOutcomes || getDefaultCourseOutcomes(courseCode),
+      subjectQuestions: Array.isArray(existing.subjectQuestions) ? existing.subjectQuestions : []
+    };
+  }
+
+  return {
+    courseOutcomes: getDefaultCourseOutcomes(courseCode),
+    subjectQuestions: []
+  };
+}
+
+export function saveSubjectConfig(courseCode, config) {
+  if (!courseCode) return;
+  const cleanCode = courseCode.trim().toUpperCase();
+  const allConfigs = getAllSubjectConfigs();
+  const currentForCode = allConfigs[cleanCode] || {};
+
+  const updatedForCode = {
+    ...currentForCode,
+    courseOutcomes: config.courseOutcomes !== undefined ? config.courseOutcomes : (currentForCode.courseOutcomes || getDefaultCourseOutcomes(courseCode)),
+    subjectQuestions: config.subjectQuestions !== undefined ? config.subjectQuestions : (currentForCode.subjectQuestions || [])
+  };
+
+  allConfigs[cleanCode] = updatedForCode;
+  setStoredItem(KEY_SUBJECT_CONFIGS, allConfigs);
+
+  // Sync to Supabase portal_settings
+  if (isSupabaseConnected()) {
+    try {
+      const supabase = getSupabase();
+      if (supabase) {
+        supabase.from('portal_settings').upsert({
+          key: 'subject_configs',
+          data: allConfigs,
+          updated_at: new Date().toISOString()
+        }).then(() => {});
+      }
+    } catch (e) {
+      console.warn('Supabase saveSubjectConfig warning:', e);
+    }
+  }
+
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent('mitwpu_supabase_synced', {
+      detail: { timestamp: new Date().toISOString(), status: 'LIVE' }
+    }));
+  }
+
+  return updatedForCode;
+}
+
+export function saveCourseOutcomes(courseCode, outcomesText) {
+  const current = getSubjectConfig(courseCode);
+  return saveSubjectConfig(courseCode, {
+    ...current,
+    courseOutcomes: outcomesText
+  });
+}
+
+export function addSubjectQuestion(courseCode, { category, text }) {
+  const current = getSubjectConfig(courseCode);
+  const newQuestion = {
+    id: `sq_${courseCode.replace(/[^a-zA-Z0-9]/g, '_')}_${Date.now()}`,
+    category: category ? category.trim() : 'Course Specific Parameter',
+    text: text ? text.trim() : '',
+    type: 'rating_5',
+    isSubjectSpecific: true
+  };
+  const updatedQuestions = [...current.subjectQuestions, newQuestion];
+  saveSubjectConfig(courseCode, {
+    ...current,
+    subjectQuestions: updatedQuestions
+  });
+  return newQuestion;
+}
+
+export function deleteSubjectQuestion(courseCode, questionId) {
+  const current = getSubjectConfig(courseCode);
+  const updatedQuestions = current.subjectQuestions.filter(q => q.id !== questionId);
+  saveSubjectConfig(courseCode, {
+    ...current,
+    subjectQuestions: updatedQuestions
+  });
+  return updatedQuestions;
+}
+
+export function getAllQuestionsForSubject(courseCode) {
+  const institutionalQuestions = getFeedbackQuestions();
+  const subjectConfig = getSubjectConfig(courseCode);
+  const subjectQuestions = (subjectConfig.subjectQuestions || []).map(q => ({
+    ...q,
+    isSubjectSpecific: true
+  }));
+  return [...institutionalQuestions, ...subjectQuestions];
 }
 
 export function getAllCoursesList() {
