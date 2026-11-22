@@ -1,0 +1,6359 @@
+{
+  "students": [
+    {
+      "prn": "1272260395",
+      "name": "Aarna Anand Naware",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261002",
+      "name": "Abeer Agrawal",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261789",
+      "name": "Aditya Prakash",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261342",
+      "name": "Ansh Deepak Shivangi",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261863",
+      "name": "Aryan Tomar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262303",
+      "name": "Atharva Priyesh Veedu",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262151",
+      "name": "Ayaan Sheikh",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261692",
+      "name": "Ayush Dubey",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262479",
+      "name": "Dhruva Parag Chitnis",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272260488",
+      "name": "Hamdan Bin Shiejeeb",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272260703",
+      "name": "Mehul Patidar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261857",
+      "name": "Parinith Shetty",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261923",
+      "name": "Saksham Santosh Raje",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261545",
+      "name": "Saloni Santosh Shrivastav",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261022",
+      "name": "Shabd Wankhede",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272260527",
+      "name": "Simran Ravikumar Gandhi",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272260706",
+      "name": "Tanmay Kumar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261010",
+      "name": "Vidhi Tulsyan",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261568",
+      "name": "Aayushi Vilas Umbare",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261177",
+      "name": "Agrima Raghuvanshi",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262240",
+      "name": "Arjun Pramod Kachare",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261953",
+      "name": "Ark Raj",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262072",
+      "name": "Atharv Gajanan Dhakre",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262428",
+      "name": "Harsh Satysen Patil",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261587",
+      "name": "Ira Chandrashekhar Bandekar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261087",
+      "name": "Khadija Irshad Godme",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272260444",
+      "name": "Krish Rupesh Gopani",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261980",
+      "name": "Mahak Ghanshyam Laddha",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262524",
+      "name": "Manasvi Jayesh Mutha",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261088",
+      "name": "Piyush Pitre",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261058",
+      "name": "Rishika Shivadharlal Shiva",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262410",
+      "name": "Rishita Prashant Kavishwar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272260528",
+      "name": "Shivani Arun Seena",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261037",
+      "name": "Sohan Arvind Narkhede",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262493",
+      "name": "Swanandi Shekhar Deshmukh",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261445",
+      "name": "Utkarsh Shantilal Mohalkar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261746",
+      "name": "Wilyn Nimish Saraf",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261573",
+      "name": "Ananya Vivek Temkar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261107",
+      "name": "Aum Abhijeet Kolte",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261332",
+      "name": "Dhyan Piyushkumar Patel",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261277",
+      "name": "Ishwari Rajendra Mali",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1262260376",
+      "name": "Kosh Jain",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261236",
+      "name": "Lekh Chawda",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1262260343",
+      "name": "Manas Sunil Tale",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272260451",
+      "name": "Prisha Prasad Kunder",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261878",
+      "name": "Ronak Vilasrao Patil",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272260562",
+      "name": "Sarthak Jitendra Patil",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262287",
+      "name": "Sarvesh Sachin Wagh",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262251",
+      "name": "Shaunak Abhay Karekar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261488",
+      "name": "Shreya Sanjay Lakhade",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261976",
+      "name": "Tanish Chandra",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272260940",
+      "name": "Vedant Hanmant Bakal",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262063",
+      "name": "Vihaan Ajay Pawal",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "1 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261712",
+      "name": "Aarnavi Kashyap",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261047",
+      "name": "Aditya Nandkishor Aher",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261585",
+      "name": "Akshat Vivek Bhardwaj",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261059",
+      "name": "Aryansh Alok Singh",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261494",
+      "name": "Ayush Singh",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262134",
+      "name": "Dhruv Tambi",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261032",
+      "name": "Hardik Rahul Shelke",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261052",
+      "name": "Jyotmeher Bedi",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262452",
+      "name": "Krushna Anil Bahirat",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261018",
+      "name": "Mihir Mukund Pendse",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261674",
+      "name": "Parth Parag Patil",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272260984",
+      "name": "Rajasi Nerkar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261855",
+      "name": "Samarth Tanaji Godage",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261922",
+      "name": "Shreya Mahesh Kolhe",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262166",
+      "name": "Shreya Mahesh Zawar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261444",
+      "name": "Smit Nileshbhai Kavathiya",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261470",
+      "name": "Tanushree Santosh Bhoite",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262258",
+      "name": "Vedangi Vinod Naik",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261309",
+      "name": "Vihan Vivek Butley",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261547",
+      "name": "Akshat Mahavir Durugkar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261511",
+      "name": "Arjun Deepak Patil",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262235",
+      "name": "Aroushi Vishwakarma",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261113",
+      "name": "Atharva Hemant Neve",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272260284",
+      "name": "Debadrish Bhowmick",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262080",
+      "name": "Ekta Abhay Wagadre",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261185",
+      "name": "Khushi Paras Khinvasara",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262321",
+      "name": "Mayank Bijarniya",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262520",
+      "name": "Nikhil Khera",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261543",
+      "name": "Pragya Arora",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261244",
+      "name": "Rishika Vishal Bafna",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272260097",
+      "name": "Saideep Prashant Barge",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261653",
+      "name": "Shivanjali Mishra",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262541",
+      "name": "Shrikant Kishor Gawande",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262545",
+      "name": "Soham Nitin Badge",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261068",
+      "name": "Sonkee Milind Joshi",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261251",
+      "name": "Yash Pandurang Shelar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261176",
+      "name": "Arush Jha",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261803",
+      "name": "Avaneesh Shirish Deshpande",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262393",
+      "name": "Aviral Gothwal",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261711",
+      "name": "Divyanshu Singh",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272260670",
+      "name": "Jaganadh Ms",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261227",
+      "name": "Lisha Tejas Patil",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262144",
+      "name": "Mahak Agarwal",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261646",
+      "name": "Nityam Nileshbhai Lathiya",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1262261064",
+      "name": "Omkar Hemant Dhimte",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261988",
+      "name": "Parth Pravinkumar Pawar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262031",
+      "name": "Prakash Sakharam Choudhary",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261223",
+      "name": "Priyal Alok Khandelwal",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261117",
+      "name": "Saanvi Chikyala",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262529",
+      "name": "Samarth Navanath Shinde",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261737",
+      "name": "Sarthak Mahesh Pawar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261556",
+      "name": "Surabhi Pramod Dhore",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272260707",
+      "name": "Vedant Sunil Sakore",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "2 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261540",
+      "name": "Aarsh Chetan Jain",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261125",
+      "name": "Advaet Umesh Chintakunta",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272260102",
+      "name": "Anand Lakshmikanth",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261847",
+      "name": "Anshul Amit Gosavi",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261462",
+      "name": "Aryarajsinh Kishorsinh Jadeja",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262304",
+      "name": "Bhumika Dilip Dhamane",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261435",
+      "name": "Chhand Tyagi",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261532",
+      "name": "Kabir Pramod Pardeshi",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261351",
+      "name": "Minakshi Sachin Zope",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262283",
+      "name": "Nishita Vinay Thombre",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261144",
+      "name": "Parth Gorakhnath Jadhav",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261592",
+      "name": "Rajiv Ajit Shinde",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262447",
+      "name": "Saee Sachin Siddhe",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272260664",
+      "name": "Samarth Ganesh Dombe",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272260944",
+      "name": "Sharvi Jindhar Chougule",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261921",
+      "name": "Swar Sagar Gandhi",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261085",
+      "name": "Tanvi Basawaraj Somashetti",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262164",
+      "name": "Uzair Zaheer Rawal",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261159",
+      "name": "Vinayak Dhanyakumar Kolhe",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262280",
+      "name": "Aaryan Ajit Kavitake",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261216",
+      "name": "Abhinav Kumar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261204",
+      "name": "Akshay Srinivasa",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272260532",
+      "name": "Arjun Rastogi",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261184",
+      "name": "Atharva Sunil Patil",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262544",
+      "name": "Hitesh Rajpal",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261092",
+      "name": "Khushi Milind Prabhudesai",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1262262099",
+      "name": "Mohammad Hamdaan Valsangkar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261710",
+      "name": "Neev Nileshkumar Panchal",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262549",
+      "name": "Pranjal Sharma",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261610",
+      "name": "Rohit Manglani",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261346",
+      "name": "Sanika Sanjay Vaidya",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261049",
+      "name": "Shivansh Saurabh Vijayvergiya",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262284",
+      "name": "Shreyas Ramdas Dhage",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272260490",
+      "name": "Sonu Kumar Chaurasiya",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261659",
+      "name": "Yash Rajanikant Mane",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261188",
+      "name": "Aadit Kaul",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261460",
+      "name": "Aditya Narendra Chavan",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261666",
+      "name": "Animesh Misra",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262415",
+      "name": "Anoushka Ranjit Ganguly",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261103",
+      "name": "Aryan Sagar Bandekar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1262260908",
+      "name": "Atharva Nitin Bauskar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262255",
+      "name": "Ayush Pramod Nalavade",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261560",
+      "name": "Drishti Satish Rai",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261421",
+      "name": "Jahnavi Sarang Deshkar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261050",
+      "name": "Maithili Ashtaputre",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261155",
+      "name": "Ojas Manish Khodaskar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262478",
+      "name": "Pranjal Bujetya Mukesh Kumar Meena",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261331",
+      "name": "Purushottam Shyam Jadhav",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261457",
+      "name": "Sachi Shamrao Gade",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1262260940",
+      "name": "Sarthak Dhyani",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261036",
+      "name": "Shriya Yati Kokare",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261795",
+      "name": "Swara Kandalkar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "3 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261241",
+      "name": "Aarvi Manish Rathod",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1262261119",
+      "name": "Aditya Anand Ashtekar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261398",
+      "name": "Advait Agrahari",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262068",
+      "name": "Alyssa Deepak Dhembre",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261938",
+      "name": "Anushka Ganesh Bhoite",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262320",
+      "name": "Anvay Bhatli",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272260673",
+      "name": "Arijit Pattanaik",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261464",
+      "name": "Chhavi Chandrabhushan Singh",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262453",
+      "name": "Chitranshu Sahu",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261480",
+      "name": "Hasan Murtaza Chasmawala",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261034",
+      "name": "Mrudula Sunil Dere",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272260337",
+      "name": "Parth Mahesh Pharande",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261334",
+      "name": "Rajveer Gaurav Sanghavi",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262206",
+      "name": "Shayaan Shahnawaz Khan",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272260672",
+      "name": "Soham Sudhir Mahadik",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261203",
+      "name": "Tejaswi Shivraj Mone",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261667",
+      "name": "Vinayak Jay Sharma",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261760",
+      "name": "Abhiraj Singh Chauhan",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272260396",
+      "name": "Aliza Naseem Shirshikar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261420",
+      "name": "Arnav Atul Bhusari",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272260719",
+      "name": "Atharva Prashant Shinde",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261131",
+      "name": "Ishaan Udaya Mogaveera",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261030",
+      "name": "Krishna Sudhir Aklade",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1262260493",
+      "name": "Namasvi Shantaram Mahajan",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262347",
+      "name": "Omkar Rajesh Mane",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261748",
+      "name": "Pranav Prasad Haldule",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261810",
+      "name": "Rudra Shitalkumar Dhole",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262449",
+      "name": "Sarthak Sanjay Parkhe",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261220",
+      "name": "Shlesha Sanjay Ghare",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272260100",
+      "name": "Shlok Yogesh Bute",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261443",
+      "name": "Sourav Mishra",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262276",
+      "name": "Tanish Mantri",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261339",
+      "name": "Varun Maruti Maskar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261967",
+      "name": "Vatsa Shashin Deputy",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261599",
+      "name": "Aaditya Balsara",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1262261606",
+      "name": "Aayush Rajesh Hambarde",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272260671",
+      "name": "Aditya Kulkarni",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261438",
+      "name": "Anish Prakash Jadhav",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272260691",
+      "name": "Avaneesh Sambhaji Bhosale",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261183",
+      "name": "Dwij Dipu Prasad",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261518",
+      "name": "Jainam Mahesh Jain",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262372",
+      "name": "Kriyan Shah",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261399",
+      "name": "Manasdeep Nitin Borole",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262237",
+      "name": "Meet Nitin Gidwani",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261652",
+      "name": "Omkar Narendra Kulkarni",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261406",
+      "name": "Pushpak Agrawal",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272260735",
+      "name": "Sahil Kudi",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262125",
+      "name": "Samey Rahul Kothavade",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261065",
+      "name": "Saumya Samit Patil",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261143",
+      "name": "Shruti Ramji Gupta",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272260388",
+      "name": "Swarali Shreekanth Joshi",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262386",
+      "name": "Taksh Jain",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261013",
+      "name": "Vedant Mahesh Jadhav",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "4 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261801",
+      "name": "Aarya Agrawal",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261089",
+      "name": "Advika Aniket Bakore",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261015",
+      "name": "Antariksh Pramod Papade",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261126",
+      "name": "Asmita Manoj Dalvi",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261486",
+      "name": "Chhavi Goyal",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262257",
+      "name": "Jay",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272260334",
+      "name": "Karan Ramesh Nair",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261237",
+      "name": "Mrudula Sanjay Maske",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261168",
+      "name": "Philip Bentolouis Fernandes",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262465",
+      "name": "Priyansh Nitin Anasane",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272260560",
+      "name": "Ranvijay Nilesh Jagtap",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261024",
+      "name": "Samiksha Patrikar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262281",
+      "name": "Saptarchi Manna",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262222",
+      "name": "Sarthak Santosh Dhage",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262361",
+      "name": "Sarthak Ravindra Choudhari",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262005",
+      "name": "Satyam Vishnu Tambade",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262497",
+      "name": "Shandra Jiss",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272260491",
+      "name": "Vishnu Ashok Bhandare",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261366",
+      "name": "Adbhut Khandelwal",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261266",
+      "name": "Arnav Sameer Zagade",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261433",
+      "name": "Ishan Ravindra Pawar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262279",
+      "name": "Kavya Ashish Bansal",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262081",
+      "name": "Nikita Abhijit Deokule",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272260342",
+      "name": "Nimai Gaurang Gorasiya",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262118",
+      "name": "Palak Sagar Baldota",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272260489",
+      "name": "Pranit Santosh Dere",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262509",
+      "name": "Ritesh Bajaj",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261791",
+      "name": "Sanyat Sharma",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262488",
+      "name": "Shahzeb Irfan Kazi",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261097",
+      "name": "Shourya Santosh Karkar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261007",
+      "name": "Sradha Saiju",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262282",
+      "name": "Tanvi Madhav Rathod",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261388",
+      "name": "Varun Singhal",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261949",
+      "name": "Yash Rajendra Wankhede",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261528",
+      "name": "Aditya Bind",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262443",
+      "name": "Akshara Rameshwar Maniyar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261123",
+      "name": "Anisha Aniket Inamdar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1262253115",
+      "name": "Aryan Prafulla Taralekar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272260430",
+      "name": "Aryan Pankaj Hedaoo",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272260332",
+      "name": "Avni Manoj Madhavan",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1262261019",
+      "name": "Ethan Luell Lopes",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261678",
+      "name": "Eva Santhosh",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261128",
+      "name": "Jayesh Mahendra Jagtap",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261189",
+      "name": "Manthankumar Sandip Keni",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272260448",
+      "name": "Owais Arzam",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262248",
+      "name": "Prutha Preshit Todkari",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261405",
+      "name": "Rachit Rahul Gandhewar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261983",
+      "name": "Satyam Kumar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261450",
+      "name": "Sayyam Gautam Soni",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261147",
+      "name": "Shubh Singh",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261019",
+      "name": "Swarnim Suhas Pande",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262391",
+      "name": "Tanmay Sharma",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261660",
+      "name": "Vedika Shantibhushan Suryawanshi",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "5 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261491",
+      "name": "Aatish Naveen Das",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261390",
+      "name": "Aayush Jha",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262078",
+      "name": "Aditi Navnath Jadhav",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262318",
+      "name": "Ammar Kausar Khan",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262507",
+      "name": "Anshi Jain",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261724",
+      "name": "Anuj Adhik Gurav",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261328",
+      "name": "Chinmay Amit Kulkarni",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262483",
+      "name": "Lakshika Yashpal Satija",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272260956",
+      "name": "Muhammed Shezin",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261455",
+      "name": "Piyush Jain",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261294",
+      "name": "Riddhi Jain",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261083",
+      "name": "Sammit Santosh Kharolkar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261753",
+      "name": "Shiv Shailesh Kawalkar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262195",
+      "name": "Shreyash Rangnath Khaire",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261931",
+      "name": "Shrikar Nitin Zargad",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261127",
+      "name": "Soham Kedar Mulay",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261497",
+      "name": "Trisha Pankaj Jambhale",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262475",
+      "name": "Vedika Shivraj Lokhande",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261825",
+      "name": "Vivek Chandora",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272260695",
+      "name": "Amey Maheshkumar Inamdar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261471",
+      "name": "Arnav Bhati",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261368",
+      "name": "Atharva Sudhakar Patil",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261869",
+      "name": "Chirag Manoj Jadhav",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261003",
+      "name": "Dhanush Sri Shanmugam Mudhaliar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262487",
+      "name": "Ipshita Manish Solanki",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261461",
+      "name": "Ishant Santosh Mahadik",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1262260703",
+      "name": "Jiya Chandani",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261808",
+      "name": "Kulshree Sharma",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261027",
+      "name": "Niral Aparish Shetty",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261004",
+      "name": "Prathamesh Kishor Pawar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261487",
+      "name": "Rutuja Dhananjay Gurav",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262076",
+      "name": "Sanchit Rauniyar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272260961",
+      "name": "Sarah Zubair Ahmed Sarguroh",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262522",
+      "name": "Sarthak Ravikant Chavan",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261028",
+      "name": "Shreeom Deepak Paigude",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262224",
+      "name": "Srushti Pramod Soma",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261347",
+      "name": "Stuti Jain",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261960",
+      "name": "Yashraj Kiran Patil",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262051",
+      "name": "Aadima Kiran Galande",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261040",
+      "name": "Aditya Patel",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262148",
+      "name": "Akshat Farkya",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261385",
+      "name": "Anishk Sharma",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261201",
+      "name": "Avnish Mukesh Agarwal",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261706",
+      "name": "Gaurav Kumar Singh",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262188",
+      "name": "Harshawardhan Ashok Kale",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272260454",
+      "name": "Jimee Jain",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262253",
+      "name": "Kanishka Gupta",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261245",
+      "name": "Meera Vaibhav Kulkarni",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262439",
+      "name": "Mugdha Ghanashyam Kirve",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262204",
+      "name": "Naman Dipak Rathi",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261276",
+      "name": "Radha Vinay Joshi",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272260620",
+      "name": "Sakshi Sharma Belbase",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261728",
+      "name": "Sejal Sandip Akkangire",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261048",
+      "name": "Siddhesh Patil",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261363",
+      "name": "Tahir Suhail Inamdar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "6 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262128",
+      "name": "Aayush Nitin Ghumare",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262120",
+      "name": "Abhinav Agrawal",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262060",
+      "name": "Anurag Shukla",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261408",
+      "name": "Anushka Nitin Desai",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261996",
+      "name": "Aryaa Sandip Jadhav",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261689",
+      "name": "Crystal Thagunna",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261234",
+      "name": "Hiren Dev",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262421",
+      "name": "Joshua Noble",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261106",
+      "name": "Ketaki Ajay Gadgil",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262419",
+      "name": "Kunal Kautik Khadke",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262178",
+      "name": "Manan Bharat Panchal",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261067",
+      "name": "Nandit Goyal",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261695",
+      "name": "Piyush Raj",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262504",
+      "name": "Purvesh Vijay Darwatkar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261180",
+      "name": "Rishan Sharma",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272262313",
+      "name": "Sarvesh Sahebrao Gawande",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261807",
+      "name": "Unmil Atul Jawale",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272261946",
+      "name": "Varun Amol Tarte",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 1
+    },
+    {
+      "prn": "1272260583",
+      "name": "Ananya Shivaprasad",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262374",
+      "name": "Anirudh Soni",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261975",
+      "name": "Anwesha Alok Kumar Sinha",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272260949",
+      "name": "Arnav Jakkapalli",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261124",
+      "name": "Dhruv Hemant Sonawane",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262200",
+      "name": "Drishti Ravi Israni",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261138",
+      "name": "Harshil Niravbhai Shukla",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261665",
+      "name": "Ishmeetsingh Surjeetsingh Sawlani",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262557",
+      "name": "Jose Fernandes Bimbi Dombaxi Andre",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1262260881",
+      "name": "Lakshya Singh",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261133",
+      "name": "Niranjan Ranjith",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272260997",
+      "name": "Prathvi Raju Poojari",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261376",
+      "name": "Ryan Sushant Narkar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272262077",
+      "name": "Sakshi Sunil Kanjwani",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272260975",
+      "name": "Stuti Kashyap",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272260338",
+      "name": "Vedanshi Sagar Vadher",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 2
+    },
+    {
+      "prn": "1272261361",
+      "name": "Aarna Samesh Shah",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261285",
+      "name": "Aditya Prashant Yewale",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261173",
+      "name": "Anishka Adarsh Upadhye",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262494",
+      "name": "Atharv Mahindra Katkar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262403",
+      "name": "Bhoomi Esarka",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261413",
+      "name": "Jonathan Bijoy Cheliparambil",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262402",
+      "name": "Kunal Ravindra Shinde",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261754",
+      "name": "Pall Rajubhai",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262226",
+      "name": "Prasanna Pravin Joshi",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262434",
+      "name": "Priyal Sunil Gadekar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262202",
+      "name": "Pruthviraj Prashant Eakde",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261082",
+      "name": "Rahul Singh",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261271",
+      "name": "Sejal Amit Suryavanshi",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261156",
+      "name": "Siddhi Laxmikant Joshi",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272262196",
+      "name": "Subhikshan Kumar Nadar",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261198",
+      "name": "Vibha Manoj Nair",
+      "branch": "B.Tech Computer Science and Engineering",
+      "division": "7 - FY CSE",
+      "batch": 3
+    },
+    {
+      "prn": "1272261150",
+      "name": "Aarav Anil Kumar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272260145",
+      "name": "Abhyuday Tripathi",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261872",
+      "name": "Achyut Ajit Torvekar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261033",
+      "name": "Aishwarya Bhushan Godbole",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272260611",
+      "name": "Anya Gaur",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272260957",
+      "name": "Auhona Chakraborty",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261233",
+      "name": "Devanshi Nishant Chordia",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261729",
+      "name": "Garima Thanwani",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261333",
+      "name": "Joanne Joseph Fernandes",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261359",
+      "name": "Lakshika Nandkishor Kabra",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262528",
+      "name": "Mayuresh Nitinkumar Bulbule",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261086",
+      "name": "Nandini Ajay Rohilla",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272260677",
+      "name": "Prabal Bhugoo",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261890",
+      "name": "Pragya Sinha Mahapatra",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262032",
+      "name": "Renuka Subhash Kale",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261584",
+      "name": "Sanidhya Ravikant Shandilya",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272260994",
+      "name": "Shivam Nitin Thakare",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272260482",
+      "name": "Soham Mandar Sathe",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261383",
+      "name": "Tanish Sudhakar Sail",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262436",
+      "name": "Tanish Jain",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262238",
+      "name": "Tanmay Tushar Patil",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272260413",
+      "name": "Venkatesh Sandeep Likhite",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261415",
+      "name": "Aarnavi Nilesh Tanpure",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272262146",
+      "name": "Adeetya Nitin Agarwal",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272260598",
+      "name": "Anant Kumar Jaiswal",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261597",
+      "name": "Aryan Anup Mahajan",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261229",
+      "name": "Ayush Amrut Dabhekar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261934",
+      "name": "Hardik Bachhawat",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261364",
+      "name": "Harshita Vashistha",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261524",
+      "name": "Kathan Sunil Patel",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261195",
+      "name": "Maina Jain",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261589",
+      "name": "Nikhil Makarand Chitale",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272260361",
+      "name": "Pranay Suman",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261986",
+      "name": "Qusai Asif Sathalyawala",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272262495",
+      "name": "Raj Dilip Patil",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272260434",
+      "name": "Rian Najar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272260414",
+      "name": "Sahir Mohammad Alam",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261831",
+      "name": "Satish Bhuraram Choudhary",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272262085",
+      "name": "Shivani",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261377",
+      "name": "Shreyas Dinesh Deore",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272262270",
+      "name": "Soham Sanjay Khodke",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261709",
+      "name": "Toshik Alam Haq",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1262260667",
+      "name": "Yash Rajesh Chiney",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272260704",
+      "name": "Yashasvi Singh",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272260359",
+      "name": "Aditya Renjit",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272262183",
+      "name": "Akshat Agarwal",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261467",
+      "name": "Anshul Aditya Verma",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272262515",
+      "name": "Anvee Atul Phalke",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272260678",
+      "name": "Ashwin Ajay Ghare",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272260958",
+      "name": "Daksh Dwivedi",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261631",
+      "name": "Eshal Asif",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272262055",
+      "name": "Harsh Deepak Angane",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261465",
+      "name": "Ishika Neeraj Mehta",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261948",
+      "name": "Kaif Yusuf Mahedvi",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272260410",
+      "name": "Krish Rahul Durve",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272260967",
+      "name": "Mohammed Adnan Mohammed Rayees",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272262288",
+      "name": "Nikhil Ganesh",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261134",
+      "name": "Pahel Dinesh Gandhi",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261080",
+      "name": "Pratishtha Thakre",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261356",
+      "name": "Rishikesh Prashant Kherde",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261744",
+      "name": "Saksham Aggarwal",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272260698",
+      "name": "Shantanu Santosh Chhettiar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261060",
+      "name": "Siddharth Sameer Sharma",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272262228",
+      "name": "Tanvi Ravi Lot",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261757",
+      "name": "Varad Vivek Chandankhede",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "8 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261154",
+      "name": "Aarav Prashant Singh",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262400",
+      "name": "Anushka Vikas Gorde",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261162",
+      "name": "Archit Sandip Bhole",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262246",
+      "name": "Arshita Chauhan",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1262260414",
+      "name": "Darsh Mohit Gupta",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261437",
+      "name": "Deven Haridas Sonawane",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261137",
+      "name": "Leisha Manish Jain",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261078",
+      "name": "Nandini Navin Zamvar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262217",
+      "name": "Parth Sunil Vaidya",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262404",
+      "name": "Pauravi Manish Phuke",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272260449",
+      "name": "Prachi Shailesh Thanki",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262519",
+      "name": "Pritesh Shravan Jadhav",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261463",
+      "name": "Rajvi Sagar Dudhat",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261296",
+      "name": "Rutuja Rahul Mohite",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261196",
+      "name": "Sanjit Rajan Dhole",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262000",
+      "name": "Shifaniya Shemeem",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272260632",
+      "name": "Shivam Khera",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272260524",
+      "name": "Soham Sandeep Charde",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261997",
+      "name": "Sujeet Kapoor",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261548",
+      "name": "Tanishka Uttam Khedkar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262444",
+      "name": "Vaishnavi Ranjan",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262135",
+      "name": "Vasishth Gupta",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272260486",
+      "name": "Vibha Vignesh Iyer",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261984",
+      "name": "Aarav Jain",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272262091",
+      "name": "Aaryan Chaudhari",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261856",
+      "name": "Anaya Yogesh Phalke",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1262262364",
+      "name": "Anwesha Shailendra Vaidya",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261357",
+      "name": "Aryan Pradeep Kumar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272262484",
+      "name": "Chetana Amit Katariya",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1262260709",
+      "name": "Daksh Gala",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272262474",
+      "name": "Durva Deepak Dalvi",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272262145",
+      "name": "Ishwar Anand Shankar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272262049",
+      "name": "Ishwari Vishal Pimple",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1262260321",
+      "name": "Madhav Unnikrishnan",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272262273",
+      "name": "Malay Jain",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272260676",
+      "name": "Manas Suhas Adhatrao",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261861",
+      "name": "Nikhil Udayakumar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261933",
+      "name": "Pratham Prataprao Deshmukh",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272262267",
+      "name": "Shambhavi Palak Singh",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272262405",
+      "name": "Shreya Shridhar Sawant",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261407",
+      "name": "Shritej Paresh Shirude",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272262396",
+      "name": "Siddhi Purushottam Gohokar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261066",
+      "name": "Supriya Netaji Mahadik",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261798",
+      "name": "Trambkeshwar Omshankar Singh",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261206",
+      "name": "Yashraj Sandip Botre",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272262223",
+      "name": "Yatik Tanmay Doshi",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261202",
+      "name": "Aditya Amrut Bangar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261064",
+      "name": "Anshuman Amit Kulkarni",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272262505",
+      "name": "Anushri Thopte",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261787",
+      "name": "Asmi Aniket Bhagwat",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272262293",
+      "name": "Atharva Vishnu Naik",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272260899",
+      "name": "Darsheel Chhajed",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272260408",
+      "name": "Fawwaz Arshad",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272262197",
+      "name": "Harsh Deepak More",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272260680",
+      "name": "Ishita Satyajit Patki",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261968",
+      "name": "Kanak Paryani",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261062",
+      "name": "Krishna Sachin Tamgole",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261008",
+      "name": "Mrigesh Milind Jadhav",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261207",
+      "name": "Palak Prasad Dhoot",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261213",
+      "name": "Prayusha Mohnish Chordiya",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261544",
+      "name": "Rudra Sunil Shinde",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261192",
+      "name": "Samprikta Banerjee",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272260579",
+      "name": "Shanvi Shaw",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272262165",
+      "name": "Shruti Rani",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261529",
+      "name": "Swanandi Mangesh Mahajan",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1262261147",
+      "name": "Swapnil Rajeshwar Patnaik",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261136",
+      "name": "Ved Khodaskar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "9 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272262446",
+      "name": "Aditya Sunil Mohite",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261255",
+      "name": "Akshara Anand Rathod",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261243",
+      "name": "Arin Virendra Nadgir",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272260399",
+      "name": "Avi Bansal",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272260439",
+      "name": "Devika Ambat",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261512",
+      "name": "Gaurav Nilesh Agarwal",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262124",
+      "name": "Harpreet Singh",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261839",
+      "name": "Himanshi Ravi Agrawal",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272260341",
+      "name": "Leo George Thomas",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261930",
+      "name": "Madan Varalaxmaiah Pagadala",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262547",
+      "name": "Mohammed Iqbal Patel",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262221",
+      "name": "Nimit Parag Mehta",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261141",
+      "name": "Saanvi Sammit Potdar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261163",
+      "name": "Sarang Sandesh Nair",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261718",
+      "name": "Shorya Pratap Singh Rathore",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262249",
+      "name": "Siddharth Harish Shetty",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272260716",
+      "name": "Sonit Sanjay Hanumante",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261139",
+      "name": "Tanmay Santosh Khaire",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1262260706",
+      "name": "Tejas Bharatrao Lahane",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262138",
+      "name": "Vihaan Rajput",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261070",
+      "name": "Vinayak Sanjeev Kumar Singh",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262155",
+      "name": "Aarush Arvind Bodgal",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261061",
+      "name": "Adinath Shrikant Amale",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272260584",
+      "name": "Angad Kaul",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261598",
+      "name": "Aryandra Shrivastava",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261469",
+      "name": "Chaitanya Bipinkumar Patel",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261562",
+      "name": "Diggaj Ganesh Shete",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272260522",
+      "name": "Hetvi Hiteshkumar Zanzmeria",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272262462",
+      "name": "Himesh Maroti Atkari",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272260485",
+      "name": "Manav R Nair",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261051",
+      "name": "Nishita Nilesh Thorat",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272262047",
+      "name": "Om Bhavankumar Mishra",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272262480",
+      "name": "Om Bhushan",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272262265",
+      "name": "Pranav Shatendra Rao",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261326",
+      "name": "Prapti Dashrath Chende",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261942",
+      "name": "Ritvik Avinashchander Sharma",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272262543",
+      "name": "Sayma Sahil Mhatre",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261476",
+      "name": "Sejal Kiran Karale",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272260133",
+      "name": "Shritej Mohan Ghule",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261719",
+      "name": "Surya Verma",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272260596",
+      "name": "Unmesh Kiran Shinde",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272260487",
+      "name": "Yazeed Sarwar Hafiz",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261292",
+      "name": "Aadheesh Amit Rane",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261023",
+      "name": "Aditya Pala",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261908",
+      "name": "Aditya Abhijit Mudhole",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261338",
+      "name": "Athaang Sanket Jambhekar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272262131",
+      "name": "Ayaan Intekhab Shaikh",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261169",
+      "name": "Ishwaryaa Sethuraman Tamaram",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261432",
+      "name": "Krishna Gaurav Laad",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272262297",
+      "name": "Mitali Ajitkumar Sancheti",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272262126",
+      "name": "Mokshi Jain",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261418",
+      "name": "Mrudula Shriram Deshpande",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272262190",
+      "name": "Ojas Dhananjay Ahirrao",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261135",
+      "name": "Paras Abhaykumar Sakale",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261963",
+      "name": "Piyush Mangesh Mahadik",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261172",
+      "name": "Preksha Pankaj Mehta",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272262503",
+      "name": "Pruthviraj Murlidhar Huple",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261110",
+      "name": "Samridhi",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272262244",
+      "name": "Sanvi Amol Jagtap",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272260970",
+      "name": "Sidharth Sanjay Nair",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261171",
+      "name": "Swara Sameer Barmukh",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261297",
+      "name": "Vedant Sachin Sane",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272262262",
+      "name": "Zuhair Zulfikar Kurane",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "10 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261380",
+      "name": "Akshay Suhas Joglekar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1262260101",
+      "name": "Aryan Ravindra Bhagwat",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261119",
+      "name": "Devin Johnson Rodrigues",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272260340",
+      "name": "Gavin Nathan Pinto",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261181",
+      "name": "Junaid Chand Nadaf",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272260571",
+      "name": "Liteel Raj",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262486",
+      "name": "Manasvi",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261775",
+      "name": "Neha Ravindra Dhokale",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272260711",
+      "name": "Prajwal Manoj Dhumal",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262472",
+      "name": "Rachit Mitesh Thacker",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261820",
+      "name": "Raushan Raj Raj",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262261",
+      "name": "Rutwej Ravindra Nagare",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272260455",
+      "name": "Sabel Daniel George",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272260576",
+      "name": "Saransh Rampal",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262534",
+      "name": "Shaikh Mohammed Athar Ali",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261466",
+      "name": "Shouryan Santosh Baradkar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261848",
+      "name": "Sonu Kumar Sah",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261926",
+      "name": "Swajit Jitendra Patil",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261745",
+      "name": "Tanvi Umesh Arote",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261816",
+      "name": "Yash Shivaji Ingulkar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262161",
+      "name": "Aazain Adil Shaikh",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261472",
+      "name": "Aditi Bhardwaj",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261118",
+      "name": "Ankita Pramod Reghate",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261956",
+      "name": "Anushka Ravikiran Jadhav",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272260406",
+      "name": "Aryaraj Yuvraj Mhetre",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261454",
+      "name": "Chandraprakash Ummed Kumar Pareek",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272260623",
+      "name": "Duruwank Dinesh Pai",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272260417",
+      "name": "Khadija Husain Sheikh",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1262260675",
+      "name": "Manish Mohan Choudhary",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261786",
+      "name": "Om Sumit Shete",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261167",
+      "name": "Prateekshya Pradhan",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272262272",
+      "name": "Prathamesh Bandu Pawar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261475",
+      "name": "Rishi Pandharish Kulkarni",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272262364",
+      "name": "Rudra Sandeep Dudhale",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261498",
+      "name": "Saksham Sujit Bora",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272260362",
+      "name": "Shaanvir Singh",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261005",
+      "name": "Siddhant Sameer Deosthale",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261490",
+      "name": "Suryaprakash Sanwarmal Sharma",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261696",
+      "name": "Unnati Satanappa Hurdale",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272260415",
+      "name": "Vaidehi Raosaheb Pandit",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261853",
+      "name": "Yuvraj Pankaj Jaju",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261038",
+      "name": "Advaya Aashlesh Shrikhande",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261353",
+      "name": "Anushka Rathore",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261792",
+      "name": "Atharva Prashant Balwadkar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261100",
+      "name": "Deepankar Shrikant Shukla",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261809",
+      "name": "Ganesh Chetan Prajapati",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261044",
+      "name": "Janhvi Abhijit Kharade",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272262094",
+      "name": "Joravar Singh Jolly",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261132",
+      "name": "Kshitij Rajesh Gaikwad",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272262422",
+      "name": "Madhur Satish Kabra",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261751",
+      "name": "Mubeen Muzammil Kazi",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261114",
+      "name": "Piyush Vijaykumar Chavan",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272262264",
+      "name": "Rishika Vivek Zavar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272262502",
+      "name": "Rishika Singh Gehlot",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272260411",
+      "name": "Rumaysa Khan",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272262450",
+      "name": "Samarth Suganchand Patil",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261411",
+      "name": "Sanchita Sadashiv Deshmane",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272262236",
+      "name": "Sharvil Rajendra Yadav",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272260440",
+      "name": "Sneha Dinesh Shet",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261742",
+      "name": "Swarangi Santosh Sutar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272262227",
+      "name": "Tanish Hitesh Kapadia",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261379",
+      "name": "Vedant Vinod Peshane",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272262476",
+      "name": "Yash Khatri",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "11 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272260615",
+      "name": "Aarjav Ajmera",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272260699",
+      "name": "Alweena Cyril Jadhav",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261941",
+      "name": "Atharv Jain",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261395",
+      "name": "Ayush Rohit Nagpure",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261055",
+      "name": "Dhanashri Vishal Sawant",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272260589",
+      "name": "Harshit Avdesh Singh",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272260457",
+      "name": "Kanhaal Kunnungaparambil Pramodh",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272260466",
+      "name": "Madhav Raj",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261282",
+      "name": "Nidhi Mukeshkumar Gosai",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261439",
+      "name": "Reeva Bhavesh Palrecha",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262394",
+      "name": "Rhucha Vijay Jadhav",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261391",
+      "name": "Sahil Ashish Loya",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261120",
+      "name": "Sarhaan Riaz Mulani",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261586",
+      "name": "Shravani Abhijit Belose",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262451",
+      "name": "Shreyansh Sachin Dharne",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262245",
+      "name": "Shubham Mangesh Jadhav",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272262271",
+      "name": "Shubham Kishor Vishe",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272260700",
+      "name": "Soumya Kushwaha",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261063",
+      "name": "Tisha Uday Jivrajani",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261535",
+      "name": "Yash Prakash Sutar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 1
+    },
+    {
+      "prn": "1272261053",
+      "name": "Aditya Rajesh Jadhav",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261165",
+      "name": "Anshika Sharma",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261000",
+      "name": "Ashwath Nitesh Gaonkar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261081",
+      "name": "Chinmayee Jagdish Patil",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261616",
+      "name": "Dhruv Kalal",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261098",
+      "name": "Eeshita Mukesh Gurubhaiye",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261966",
+      "name": "Ishan Samir Dalvi",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261197",
+      "name": "Khushi Manish Yermal",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272262286",
+      "name": "Manshi Singh",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261091",
+      "name": "Mohammed Shariq",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261730",
+      "name": "Ovi Vivek Jahagirdar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261650",
+      "name": "Pratham",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261533",
+      "name": "Rishi Dilip Kumar Gogad",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272260971",
+      "name": "Saksham Panchal",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261747",
+      "name": "Siddharth Singh",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272260109",
+      "name": "Sumit Sunil Lokhande",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261337",
+      "name": "Suryavansh Bakshi",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272261436",
+      "name": "Vaishnavi Rajendra Kale",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272260901",
+      "name": "Yuvraj Soni",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272262471",
+      "name": "Zahin Amir Pathan",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 2
+    },
+    {
+      "prn": "1272260325",
+      "name": "Aanya Sehgal",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261367",
+      "name": "Advika Kolharkar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261969",
+      "name": "Anaya Avinash Patil",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261686",
+      "name": "Anvi Avinash Patil",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261977",
+      "name": "Aryan Bankat Dhakane",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261910",
+      "name": "Atharv Niwrti Patil",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261565",
+      "name": "Atharva Atul Patil",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272260339",
+      "name": "Ganta Arjun",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272262514",
+      "name": "Gauri Naresh Yadav",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261647",
+      "name": "Jay Jagdish Patel",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261713",
+      "name": "Kunsh Sanjay Agarwal",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272260351",
+      "name": "Naina Kakwani",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261708",
+      "name": "Nilakshi Amol Deshmukh",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261563",
+      "name": "Poorvi Kothari",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261186",
+      "name": "Priyam Dey",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261335",
+      "name": "Sania Khurshid Ahmed Chaudhary",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261011",
+      "name": "Shavez Parveez Shaikh",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261623",
+      "name": "Sneha Avinash Mahindkar",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261859",
+      "name": "Tabish Imran Shaikh",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261235",
+      "name": "Vedanta Sandeep Kanpile",
+      "branch": "B.Tech Computer Science and Engineering (Artificial Intelligence & Data Science)",
+      "division": "12 - FY CSE AIDS",
+      "batch": 3
+    },
+    {
+      "prn": "1272261263",
+      "name": "Aayushi Vasantbhai Patel",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272261605",
+      "name": "Anika Chandra",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272261372",
+      "name": "Anvi Jain",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272261319",
+      "name": "Arush Gupta",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272260976",
+      "name": "Aryan Gourish Suktekar",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272261360",
+      "name": "Ayaan Firoj Attar",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272261894",
+      "name": "Ayush Amol Warudkar",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272260441",
+      "name": "Catherine Jaboy Varghese",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272262290",
+      "name": "Chaitanya Yogesh Jaipurkar",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272261522",
+      "name": "Disha Patel",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272262263",
+      "name": "Govind Mangilal Choudhari",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272261130",
+      "name": "Jaanhavi Harish Kotian",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272261693",
+      "name": "Jyotsav Singh",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272261348",
+      "name": "Kaustub Prasad Rao",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272261550",
+      "name": "Madhura Pradip Nandkar",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272260602",
+      "name": "Mohammed Ali Shaikh",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272262181",
+      "name": "Mohammed Gorachwala",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272260904",
+      "name": "Nirmit Pratik Patel",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272260376",
+      "name": "Ojas Abhinandan Shah",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272260393",
+      "name": "Paxton Luis Fernandes",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272261394",
+      "name": "Priyanshi Rakesh Rajkule",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1262260228",
+      "name": "Raayna Gautam Wahi",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272261758",
+      "name": "Rujula Virdhaval Jadhav",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272262043",
+      "name": "Sairaj Laxmanrao Dakhore",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272262254",
+      "name": "Sawani Sambhaji Ambre",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272261012",
+      "name": "Shakshi Gupta",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1262260684",
+      "name": "Shihij Kaushik",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272261226",
+      "name": "Sonde Kartik Dharmaraj",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272261673",
+      "name": "Tanmay Vaidya",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272261703",
+      "name": "Vedant Jain",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272261858",
+      "name": "Viraj Sachin Kundkar",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272262127",
+      "name": "Yashraj Deepak Swamy",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 1
+    },
+    {
+      "prn": "1272261613",
+      "name": "Aaryan Dhirajprasad Hanchanalkar",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272262526",
+      "name": "Aditya Umashankar Singh",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272262298",
+      "name": "Anshul Jitendra Patil",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272261441",
+      "name": "Arush Amit Mahajan",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272261865",
+      "name": "Ayush Kumar Singh",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272261094",
+      "name": "Dev Suhas Harishchandre",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272262147",
+      "name": "Dhruv Goyal",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272261662",
+      "name": "Harsha Vilas Adav",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272261225",
+      "name": "Janhavi Girish Dahiwale",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272261393",
+      "name": "Kalp Hiten Shah",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272261943",
+      "name": "Lavanya Hrishikesh Chaudhari",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272261045",
+      "name": "Meghana Thalakola",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272261153",
+      "name": "Om Suryakant Nalawade",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272262071",
+      "name": "Parikshit Bhatt",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272260373",
+      "name": "Pranav Mohan Agrawal",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272261115",
+      "name": "Rajdeep Sharad Naik",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272262231",
+      "name": "Ritwik Raj",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272261396",
+      "name": "Rucha Pramod Ballal",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272261468",
+      "name": "Ryan Mike Dsouza",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272261145",
+      "name": "Samruddhi Sanjaykumar Salunke",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1262260747",
+      "name": "Shivraj Udhav Dhepe",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272262209",
+      "name": "Shloka Nilesh Amritkar",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272261649",
+      "name": "Shreya Sandeep Gadhave",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272261434",
+      "name": "Snehal Dattatray Chopdar",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272261583",
+      "name": "Swayam Dinkar Dakare",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272262420",
+      "name": "Tanvesha Venkat Bhosle",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272261112",
+      "name": "Vanshika Rathore",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272261837",
+      "name": "Vidya Sunil Vaid",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272261378",
+      "name": "Yahvi Aditya Modi",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272261940",
+      "name": "Yashaswa Goel",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 2
+    },
+    {
+      "prn": "1272261290",
+      "name": "Aayusha Dilip Lekule",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272262137",
+      "name": "Adityavardhan Ashish Bopche",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272261571",
+      "name": "Anam Javed",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272262177",
+      "name": "Annie Tiwari",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272261628",
+      "name": "Anujay Jaynath Singh",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272260973",
+      "name": "Arnav Sunil Shinde",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272261350",
+      "name": "Aryaman Ashutosh Dubey",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272261870",
+      "name": "Atharv Prashant Ugile",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272261020",
+      "name": "Atharva Vinus Karnwal",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1262261311",
+      "name": "Ayush Avinash Talele",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272261362",
+      "name": "Ayush Deb",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272261315",
+      "name": "Devanshi Chetia",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272261001",
+      "name": "Ishita Neel Patil",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272261806",
+      "name": "Janvi Vishwanath Sanap",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272261325",
+      "name": "Kashish Amol Mudholkar",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272260650",
+      "name": "Lavanya Vyas",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272261945",
+      "name": "Lokesh Rajesh Sonekar",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272261323",
+      "name": "Mohammad Yasin Mithwale",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272260348",
+      "name": "Nirmal Byju Iyyani",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272260992",
+      "name": "Param Vikas Jain",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272260428",
+      "name": "Prince Choudhary",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272261161",
+      "name": "Razeen Riyas",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272261073",
+      "name": "Rujuka Abhijit Danke",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272260459",
+      "name": "Rylan Rodrigues",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272261519",
+      "name": "Saumya Saumin Patel",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272261970",
+      "name": "Shubhanshu Kumar Singh",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272261759",
+      "name": "Shubhra Shashikant Tiwari",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272261588",
+      "name": "Soham Jyotiba Kumbhar",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272261851",
+      "name": "Tanishq Gajanan Gunjal",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272261694",
+      "name": "Vedansh Agarwal",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272261804",
+      "name": "Vignesh Prakash Poojari",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272261715",
+      "name": "Yashaswini Pathak",
+      "branch": "B.Tech Computer Science and Engineering (Cyber Security & Forensics)",
+      "division": "13 - FY CSE CSF",
+      "batch": 3
+    },
+    {
+      "prn": "1272260996",
+      "name": "Aarya Kedar Borkar",
+      "branch": "B.Tech Computer Science and Engineering (Cloud Computing)",
+      "division": "14 - FY CSE CLOUD",
+      "batch": 1
+    },
+    {
+      "prn": "1272261447",
+      "name": "Aditi Rakesh Kadam",
+      "branch": "B.Tech Computer Science and Engineering (Cloud Computing)",
+      "division": "14 - FY CSE CLOUD",
+      "batch": 1
+    },
+    {
+      "prn": "1272262192",
+      "name": "Akshat Singh",
+      "branch": "B.Tech Computer Science and Engineering (Cloud Computing)",
+      "division": "14 - FY CSE CLOUD",
+      "batch": 1
+    },
+    {
+      "prn": "1272261212",
+      "name": "Anshuman Behera",
+      "branch": "B.Tech Computer Science and Engineering (Cloud Computing)",
+      "division": "14 - FY CSE CLOUD",
+      "batch": 1
+    },
+    {
+      "prn": "1272261349",
+      "name": "Arush Ashish Gupta",
+      "branch": "B.Tech Computer Science and Engineering (Cloud Computing)",
+      "division": "14 - FY CSE CLOUD",
+      "batch": 1
+    },
+    {
+      "prn": "1272261756",
+      "name": "Dakshesh Sharma",
+      "branch": "B.Tech Computer Science and Engineering (Cloud Computing)",
+      "division": "14 - FY CSE CLOUD",
+      "batch": 1
+    },
+    {
+      "prn": "1272262333",
+      "name": "Dhruv Jain",
+      "branch": "B.Tech Computer Science and Engineering (Cloud Computing)",
+      "division": "14 - FY CSE CLOUD",
+      "batch": 1
+    },
+    {
+      "prn": "1272260661",
+      "name": "Hitansh Chandan Jain",
+      "branch": "B.Tech Computer Science and Engineering (Cloud Computing)",
+      "division": "14 - FY CSE CLOUD",
+      "batch": 1
+    },
+    {
+      "prn": "1272261182",
+      "name": "Kaavya Sundaresan",
+      "branch": "B.Tech Computer Science and Engineering (Cloud Computing)",
+      "division": "14 - FY CSE CLOUD",
+      "batch": 1
+    },
+    {
+      "prn": "1272261818",
+      "name": "Kshitij Ramdas Ubhe",
+      "branch": "B.Tech Computer Science and Engineering (Cloud Computing)",
+      "division": "14 - FY CSE CLOUD",
+      "batch": 1
+    },
+    {
+      "prn": "1272262322",
+      "name": "Maroushka Reginald Mendes",
+      "branch": "B.Tech Computer Science and Engineering (Cloud Computing)",
+      "division": "14 - FY CSE CLOUD",
+      "batch": 1
+    },
+    {
+      "prn": "1272261539",
+      "name": "Mayank Maheshkumar Jain",
+      "branch": "B.Tech Computer Science and Engineering (Cloud Computing)",
+      "division": "14 - FY CSE CLOUD",
+      "batch": 1
+    },
+    {
+      "prn": "1272260662",
+      "name": "Nishita Sharma",
+      "branch": "B.Tech Computer Science and Engineering (Cloud Computing)",
+      "division": "14 - FY CSE CLOUD",
+      "batch": 1
+    },
+    {
+      "prn": "1272261303",
+      "name": "Riya Rahul Jadhav",
+      "branch": "B.Tech Computer Science and Engineering (Cloud Computing)",
+      "division": "14 - FY CSE CLOUD",
+      "batch": 1
+    },
+    {
+      "prn": "1272261093",
+      "name": "Sai Pranav Anil Attili",
+      "branch": "B.Tech Computer Science and Engineering (Cloud Computing)",
+      "division": "14 - FY CSE CLOUD",
+      "batch": 1
+    },
+    {
+      "prn": "1272261782",
+      "name": "Sanskriti Mohanta",
+      "branch": "B.Tech Computer Science and Engineering (Cloud Computing)",
+      "division": "14 - FY CSE CLOUD",
+      "batch": 1
+    },
+    {
+      "prn": "1272261231",
+      "name": "Shreyas Rajendra Yelalwar",
+      "branch": "B.Tech Computer Science and Engineering (Cloud Computing)",
+      "division": "14 - FY CSE CLOUD",
+      "batch": 1
+    },
+    {
+      "prn": "1272261341",
+      "name": "Siddhi Bansal",
+      "branch": "B.Tech Computer Science and Engineering (Cloud Computing)",
+      "division": "14 - FY CSE CLOUD",
+      "batch": 1
+    },
+    {
+      "prn": "1272262426",
+      "name": "Sushant Rameshwar Mugal",
+      "branch": "B.Tech Computer Science and Engineering (Cloud Computing)",
+      "division": "14 - FY CSE CLOUD",
+      "batch": 1
+    },
+    {
+      "prn": "1272261925",
+      "name": "Swasti Anil Patil",
+      "branch": "B.Tech Computer Science and Engineering (Cloud Computing)",
+      "division": "14 - FY CSE CLOUD",
+      "batch": 1
+    },
+    {
+      "prn": "1272261819",
+      "name": "Ujjwal Kumar Singh",
+      "branch": "B.Tech Computer Science and Engineering (Cloud Computing)",
+      "division": "14 - FY CSE CLOUD",
+      "batch": 1
+    },
+    {
+      "prn": "1272261655",
+      "name": "Yuvraj Gupta",
+      "branch": "B.Tech Computer Science and Engineering (Cloud Computing)",
+      "division": "14 - FY CSE CLOUD",
+      "batch": 1
+    },
+    {
+      "prn": "1262261622",
+      "name": "Aaditya Modi",
+      "branch": "B.Tech Electronics and Communication Engineering",
+      "division": "15 - FY ECE",
+      "batch": 1
+    },
+    {
+      "prn": "1262262356",
+      "name": "Akshata Sanjay Nikam",
+      "branch": "B.Tech Electronics and Communication Engineering",
+      "division": "15 - FY ECE",
+      "batch": 1
+    },
+    {
+      "prn": "1262262548",
+      "name": "Alina Anthonamit Gonsalves",
+      "branch": "B.Tech Electronics and Communication Engineering",
+      "division": "15 - FY ECE",
+      "batch": 1
+    },
+    {
+      "prn": "1262261724",
+      "name": "Anukalp Tibrewal",
+      "branch": "B.Tech Electronics and Communication Engineering",
+      "division": "15 - FY ECE",
+      "batch": 1
+    },
+    {
+      "prn": "1262262089",
+      "name": "Anushree Ankush Sawant",
+      "branch": "B.Tech Electronics and Communication Engineering",
+      "division": "15 - FY ECE",
+      "batch": 1
+    },
+    {
+      "prn": "1262262063",
+      "name": "Arya Manish Tappe",
+      "branch": "B.Tech Electronics and Communication Engineering",
+      "division": "15 - FY ECE",
+      "batch": 1
+    },
+    {
+      "prn": "1262261899",
+      "name": "Aryan Chetan Rasal",
+      "branch": "B.Tech Electronics and Communication Engineering",
+      "division": "15 - FY ECE",
+      "batch": 1
+    },
+    {
+      "prn": "1262262002",
+      "name": "Aryan Singh",
+      "branch": "B.Tech Electronics and Communication Engineering",
+      "division": "15 - FY ECE",
+      "batch": 1
+    },
+    {
+      "prn": "1262261502",
+      "name": "Athashri Prakash Thakre",
+      "branch": "B.Tech Electronics and Communication Engineering",
+      "division": "15 - FY ECE",
+      "batch": 1
+    },
+    {
+      "prn": "1262260680",
+      "name": "Hitarth Chintan Shukla",
+      "branch": "B.Tech Electronics and Communication Engineering",
+      "division": "15 - FY ECE",
+      "batch": 1
+    },
+    {
+      "prn": "1262261634",
+      "name": "Janhavi Sunil Bhise",
+      "branch": "B.Tech Electronics and Communication Engineering",
+      "division": "15 - FY ECE",
+      "batch": 1
+    },
+    {
+      "prn": "1262262375",
+      "name": "Kaushik Surendra Hiware",
+      "branch": "B.Tech Electronics and Communication Engineering",
+      "division": "15 - FY ECE",
+      "batch": 1
+    },
+    {
+      "prn": "1262262141",
+      "name": "Keyur Pramod Chaudhari",
+      "branch": "B.Tech Electronics and Communication Engineering",
+      "division": "15 - FY ECE",
+      "batch": 1
+    },
+    {
+      "prn": "1262261214",
+      "name": "Komya Kirti Kumar Patel",
+      "branch": "B.Tech Electronics and Communication Engineering",
+      "division": "15 - FY ECE",
+      "batch": 1
+    },
+    {
+      "prn": "1262261609",
+      "name": "Maithili Abhijeet Khiratkar",
+      "branch": "B.Tech Electronics and Communication Engineering",
+      "division": "15 - FY ECE",
+      "batch": 1
+    },
+    {
+      "prn": "1262260340",
+      "name": "Megha Yogeshkumar Modi",
+      "branch": "B.Tech Electronics and Communication Engineering",
+      "division": "15 - FY ECE",
+      "batch": 1
+    },
+    {
+      "prn": "1262261129",
+      "name": "Neha Malatesh Mariyappalavar",
+      "branch": "B.Tech Electronics and Communication Engineering",
+      "division": "15 - FY ECE",
+      "batch": 1
+    },
+    {
+      "prn": "1262262408",
+      "name": "Raksha Anand Gajbi",
+      "branch": "B.Tech Electronics and Communication Engineering",
+      "division": "15 - FY ECE",
+      "batch": 1
+    },
+    {
+      "prn": "1262260337",
+      "name": "Ronak Sunil Sharma",
+      "branch": "B.Tech Electronics and Communication Engineering",
+      "division": "15 - FY ECE",
+      "batch": 1
+    },
+    {
+      "prn": "1262260166",
+      "name": "Saumil Ulhas Ranade",
+      "branch": "B.Tech Electronics and Communication Engineering",
+      "division": "15 - FY ECE",
+      "batch": 1
+    },
+    {
+      "prn": "1262261691",
+      "name": "Tanishka Sameer Rajopadhye",
+      "branch": "B.Tech Electronics and Communication Engineering",
+      "division": "15 - FY ECE",
+      "batch": 1
+    },
+    {
+      "prn": "1262261071",
+      "name": "Urvaraj Sunil Jadhav",
+      "branch": "B.Tech Electronics and Communication Engineering",
+      "division": "15 - FY ECE",
+      "batch": 1
+    },
+    {
+      "prn": "1262262001",
+      "name": "Vedant Singh Chauhan",
+      "branch": "B.Tech Electronics and Communication Engineering",
+      "division": "15 - FY ECE",
+      "batch": 1
+    },
+    {
+      "prn": "1262261796",
+      "name": "Veer Jain",
+      "branch": "B.Tech Electronics and Communication Engineering",
+      "division": "15 - FY ECE",
+      "batch": 1
+    },
+    {
+      "prn": "1262262411",
+      "name": "Vishrut Rahul Vaishampayan",
+      "branch": "B.Tech Electronics and Communication Engineering",
+      "division": "15 - FY ECE",
+      "batch": 1
+    },
+    {
+      "prn": "1262261320",
+      "name": "Yug Utpal Panchal",
+      "branch": "B.Tech Electronics and Communication Engineering",
+      "division": "15 - FY ECE",
+      "batch": 1
+    },
+    {
+      "prn": "1262261822",
+      "name": "Aayush Pawar",
+      "branch": "B.Tech Electronics and Communication Engineering (Artificial Intelligence and Machine Learning)",
+      "division": "17 - FY ECE AIML",
+      "batch": 1
+    },
+    {
+      "prn": "1262261438",
+      "name": "Aditya Amol Utpat",
+      "branch": "B.Tech Electronics and Communication Engineering (Artificial Intelligence and Machine Learning)",
+      "division": "17 - FY ECE AIML",
+      "batch": 1
+    },
+    {
+      "prn": "1262261621",
+      "name": "Agrima Belchandan",
+      "branch": "B.Tech Electronics and Communication Engineering (Artificial Intelligence and Machine Learning)",
+      "division": "17 - FY ECE AIML",
+      "batch": 1
+    },
+    {
+      "prn": "1262262287",
+      "name": "Ahmed Aazim Shahid",
+      "branch": "B.Tech Electronics and Communication Engineering (Artificial Intelligence and Machine Learning)",
+      "division": "17 - FY ECE AIML",
+      "batch": 1
+    },
+    {
+      "prn": "1262261326",
+      "name": "Anushka Amol Punde",
+      "branch": "B.Tech Electronics and Communication Engineering (Artificial Intelligence and Machine Learning)",
+      "division": "17 - FY ECE AIML",
+      "batch": 1
+    },
+    {
+      "prn": "1262262210",
+      "name": "Anushka Pradip Shimpi",
+      "branch": "B.Tech Electronics and Communication Engineering (Artificial Intelligence and Machine Learning)",
+      "division": "17 - FY ECE AIML",
+      "batch": 1
+    },
+    {
+      "prn": "1262262051",
+      "name": "Arpit Gupta",
+      "branch": "B.Tech Electronics and Communication Engineering (Artificial Intelligence and Machine Learning)",
+      "division": "17 - FY ECE AIML",
+      "batch": 1
+    },
+    {
+      "prn": "1262261353",
+      "name": "Atharva Bhadale Bhadale",
+      "branch": "B.Tech Electronics and Communication Engineering (Artificial Intelligence and Machine Learning)",
+      "division": "17 - FY ECE AIML",
+      "batch": 1
+    },
+    {
+      "prn": "1262261507",
+      "name": "Aarush Manjit Jadhav",
+      "branch": "B.Tech Electrical & Computer Engineering",
+      "division": "19 - FY E&CE",
+      "batch": 1
+    },
+    {
+      "prn": "1262261343",
+      "name": "Adarsh Pradhan",
+      "branch": "B.Tech Electrical & Computer Engineering",
+      "division": "19 - FY E&CE",
+      "batch": 1
+    },
+    {
+      "prn": "1262260526",
+      "name": "Akshay Tejpal Choudhary",
+      "branch": "B.Tech Electrical & Computer Engineering",
+      "division": "19 - FY E&CE",
+      "batch": 1
+    },
+    {
+      "prn": "1262261423",
+      "name": "Anant Sharma",
+      "branch": "B.Tech Electrical & Computer Engineering",
+      "division": "19 - FY E&CE",
+      "batch": 1
+    },
+    {
+      "prn": "1262260702",
+      "name": "Abhishek Kumar Singh",
+      "branch": "B.Tech Electronics (Semiconductor and VLSI Design)",
+      "division": "20 - FY SEM VLSI",
+      "batch": 1
+    },
+    {
+      "prn": "1262261699",
+      "name": "Adyut Kumar",
+      "branch": "B.Tech Electronics (Semiconductor and VLSI Design)",
+      "division": "20 - FY SEM VLSI",
+      "batch": 1
+    },
+    {
+      "prn": "1262262248",
+      "name": "Ananya Pandey",
+      "branch": "B.Tech Electronics (Semiconductor and VLSI Design)",
+      "division": "20 - FY SEM VLSI",
+      "batch": 1
+    },
+    {
+      "prn": "1262261161",
+      "name": "Abhir Mahesh Deshpande",
+      "branch": "B.Tech Renewable Energy Engineering",
+      "division": "21 - FY REN ENE",
+      "batch": 1
+    },
+    {
+      "prn": "1262260500",
+      "name": "Adwaiya Tushar Narkhede",
+      "branch": "B.Tech Renewable Energy Engineering",
+      "division": "21 - FY REN ENE",
+      "batch": 1
+    },
+    {
+      "prn": "1262261575",
+      "name": "Arya Ajay Daundkar",
+      "branch": "B.Tech Renewable Energy Engineering",
+      "division": "21 - FY REN ENE",
+      "batch": 1
+    },
+    {
+      "prn": "1262260984",
+      "name": "Aadityaraje Sanjay Desai",
+      "branch": "B.Tech Mechanical Engineering",
+      "division": "22 - FY MECH",
+      "batch": 1
+    },
+    {
+      "prn": "1262261080",
+      "name": "Aditya Sudhir Bharambe",
+      "branch": "B.Tech Mechanical Engineering",
+      "division": "22 - FY MECH",
+      "batch": 1
+    },
+    {
+      "prn": "1262262396",
+      "name": "Adwait Nikhil Lonikar",
+      "branch": "B.Tech Mechanical Engineering",
+      "division": "22 - FY MECH",
+      "batch": 1
+    },
+    {
+      "prn": "1262262611",
+      "name": "Aaditya Nilesh Sangwai",
+      "branch": "B.Tech Mechanical Engineering",
+      "division": "23 - FY MECH",
+      "batch": 1
+    },
+    {
+      "prn": "1262261186",
+      "name": "Aashman Rupesh Musale",
+      "branch": "B.Tech Mechanical Engineering",
+      "division": "23 - FY MECH",
+      "batch": 1
+    },
+    {
+      "prn": "1262261017",
+      "name": "Aarein Gaurav Karhadkar",
+      "branch": "B.Tech Mechanical Engineering (Robotics and Automation)",
+      "division": "24 - FY MECH ROBO",
+      "batch": 1
+    },
+    {
+      "prn": "1262261985",
+      "name": "Aaryan Dilip Gangras",
+      "branch": "B.Tech Mechanical Engineering (Robotics and Automation)",
+      "division": "24 - FY MECH ROBO",
+      "batch": 1
+    },
+    {
+      "prn": "1262261864",
+      "name": "Abhay Dinesh Pardeshi",
+      "branch": "B.Tech Mechanical Engineering (Robotics and Automation)",
+      "division": "25 - FY MECH ROBO",
+      "batch": 1
+    },
+    {
+      "prn": "1262261091",
+      "name": "Akanksha Shivalingam Bale",
+      "branch": "B.Tech Chemical Engineering",
+      "division": "26 - FY CHEM",
+      "batch": 1
+    },
+    {
+      "prn": "1262261079",
+      "name": "Arjun Anup Arbale",
+      "branch": "B.Tech Chemical Engineering",
+      "division": "26 - FY CHEM",
+      "batch": 1
+    },
+    {
+      "prn": "1262260973",
+      "name": "Aadhitiya Ashmit Kulai",
+      "branch": "B.Tech Materials Science & Engineering",
+      "division": "27 - FY MSE",
+      "batch": 1
+    },
+    {
+      "prn": "1262262642",
+      "name": "Amasio Toca Tchissapa Chicolassonhi",
+      "branch": "B.Tech Petroleum Engineering",
+      "division": "28 - FY PETRO",
+      "batch": 1
+    },
+    {
+      "prn": "1262260387",
+      "name": "Aadya",
+      "branch": "B.Tech Civil Engineering",
+      "division": "29 - FY CIVIL",
+      "batch": 1
+    },
+    {
+      "prn": "1262261149",
+      "name": "Aayush Jagdale",
+      "branch": "B.Tech Civil Engineering (Smart Infrastructure & Construction)",
+      "division": "30 - FY CIVIL SMART",
+      "batch": 1
+    },
+    {
+      "prn": "1262260660",
+      "name": "Aahna Shah",
+      "branch": "B.Tech Bioengineering",
+      "division": "31 - FY BIO",
+      "batch": 1
+    },
+    {
+      "prn": "1262260644",
+      "name": "Aamena Shabbir Typist",
+      "branch": "B.Tech Bioengineering",
+      "division": "32 - FY BIO",
+      "batch": 1
+    }
+  ],
+  "courses": [
+    {
+      "id": "course-1",
+      "code": "EMT11011",
+      "name": "Linear Algebra and Differential Calculus",
+      "credits": 3
+    },
+    {
+      "id": "course-2",
+      "code": "CHM10011",
+      "name": "Engineering Chemistry",
+      "credits": 3
+    },
+    {
+      "id": "course-3",
+      "code": "PHY10010",
+      "name": "Engineering Physics",
+      "credits": 3
+    },
+    {
+      "id": "course-4",
+      "code": "MEC10021",
+      "name": "Engineering Graphics",
+      "credits": 3
+    },
+    {
+      "id": "course-5",
+      "code": "MEC10010",
+      "name": "Ideas and Innovations in Manufacturing",
+      "credits": 1
+    },
+    {
+      "id": "course-6",
+      "code": "CSE10040",
+      "name": "Python Programming",
+      "credits": 2
+    },
+    {
+      "id": "course-7",
+      "code": "UNC10030",
+      "name": "Environment and Sustainability",
+      "credits": 1
+    },
+    {
+      "id": "course-8",
+      "code": "YOG10010",
+      "name": "Yoga - I",
+      "credits": 1
+    },
+    {
+      "id": "course-9",
+      "code": "UNC10060",
+      "name": "Financial Literacy",
+      "credits": 1
+    },
+    {
+      "id": "course-10",
+      "code": "UNC10080",
+      "name": "Indian Constitution",
+      "credits": 1
+    },
+    {
+      "id": "course-11",
+      "code": "UNC10100",
+      "name": "Sports",
+      "credits": 1
+    },
+    {
+      "id": "course-12",
+      "code": "CDC10010",
+      "name": "Ability Enhancement Course",
+      "credits": 0
+    },
+    {
+      "id": "course-13",
+      "code": "CIV10010",
+      "name": "Engineering Mechanics",
+      "credits": 3
+    },
+    {
+      "id": "course-14",
+      "code": "CSE10010",
+      "name": "Foundations of Programming",
+      "credits": 4
+    },
+    {
+      "id": "course-15",
+      "code": "EMT11140",
+      "name": "Discrete Mathematics with Graph Theory",
+      "credits": 3
+    },
+    {
+      "id": "course-16",
+      "code": "CSE10020",
+      "name": "Foundations of Computer Architecture and System Design",
+      "credits": 4
+    },
+    {
+      "id": "course-17",
+      "code": "YOG10020",
+      "name": "Yoga - II",
+      "credits": 1
+    },
+    {
+      "id": "course-18",
+      "code": "UNC10070",
+      "name": "Co-Creation",
+      "credits": 1
+    },
+    {
+      "id": "course-19",
+      "code": "UNC10090",
+      "name": "Indian Knowledge System",
+      "credits": 2
+    },
+    {
+      "id": "course-20",
+      "code": "PCE10010",
+      "name": "Foundations of Peace",
+      "credits": 2
+    },
+    {
+      "id": "course-21",
+      "code": "CSF10010",
+      "name": "Foundations of Programming",
+      "credits": 4
+    },
+    {
+      "id": "course-22",
+      "code": "CSF10020",
+      "name": "Foundations of Computer Architecture and System Design",
+      "credits": 4
+    },
+    {
+      "id": "course-23",
+      "code": "CSE10120",
+      "name": "Programming and Problem Solving",
+      "credits": 3
+    },
+    {
+      "id": "course-24",
+      "code": "ECE10070",
+      "name": "Basics of Electrical and Electronics Engineering",
+      "credits": 4
+    },
+    {
+      "id": "course-25",
+      "code": "ECE10030",
+      "name": "Python Programming",
+      "credits": 1
+    },
+    {
+      "id": "course-26",
+      "code": "EMT11111",
+      "name": "Integral Calculus",
+      "credits": 3
+    },
+    {
+      "id": "course-27",
+      "code": "ECE10050",
+      "name": "Digital Electronics",
+      "credits": 4
+    },
+    {
+      "id": "course-28",
+      "code": "UNC10160",
+      "name": "AI for everyone",
+      "credits": 2
+    },
+    {
+      "id": "course-29",
+      "code": "ESV10010",
+      "name": "Introduction to Electronics & Semiconductor Technology",
+      "credits": 4
+    },
+    {
+      "id": "course-30",
+      "code": "ESV10020",
+      "name": "Digital Electronics and Logic Design",
+      "credits": 4
+    },
+    {
+      "id": "course-31",
+      "code": "ESV10030",
+      "name": "Computer System Architecture",
+      "credits": 3
+    },
+    {
+      "id": "course-32",
+      "code": "ECE20190",
+      "name": "Electronic Devices and Circuits",
+      "credits": 4
+    },
+    {
+      "id": "course-33",
+      "code": "ERE10010",
+      "name": "Electrical Fundamentals for Energy Systems",
+      "credits": 4
+    },
+    {
+      "id": "course-34",
+      "code": "PHY10030",
+      "name": "Physics for Energy Systems",
+      "credits": 3
+    },
+    {
+      "id": "course-35",
+      "code": "MEC10040",
+      "name": "Engineering Mechanics for Energy Systems",
+      "credits": 4
+    },
+    {
+      "id": "course-36",
+      "code": "ECE20370",
+      "name": "Analog and Digital Electronics",
+      "credits": 4
+    },
+    {
+      "id": "course-37",
+      "code": "ERE10030",
+      "name": "Materials for Energy Systems",
+      "credits": 4
+    },
+    {
+      "id": "course-38",
+      "code": "ECE10010",
+      "name": "Basics of Electrical and Electronics Engineering",
+      "credits": 3
+    },
+    {
+      "id": "course-39",
+      "code": "MEC10030",
+      "name": "Computer Aided Modelling",
+      "credits": 2
+    },
+    {
+      "id": "course-40",
+      "code": "MRA10010",
+      "name": "Python Programming",
+      "credits": 1
+    },
+    {
+      "id": "course-41",
+      "code": "ECE10060",
+      "name": "Introduction to Electrical and Electronics Engineering",
+      "credits": 3
+    },
+    {
+      "id": "course-42",
+      "code": "CHM10021",
+      "name": "Physical Chemistry",
+      "credits": 3
+    },
+    {
+      "id": "course-43",
+      "code": "CHE20250",
+      "name": "Introduction to Chemical Engineering Practices",
+      "credits": 3
+    },
+    {
+      "id": "course-44",
+      "code": "MSE20010",
+      "name": "Introduction to Materials Science and Engineering",
+      "credits": 3
+    },
+    {
+      "id": "course-45",
+      "code": "EMT00010",
+      "name": "Introductory Mathematics for Bioengineers",
+      "credits": 0
+    },
+    {
+      "id": "course-46",
+      "code": "EMT11150",
+      "name": "Mathematics for Bioengineers-I",
+      "credits": 3
+    },
+    {
+      "id": "course-47",
+      "code": "BIE20010",
+      "name": "Cell and Molecular Biology",
+      "credits": 3
+    },
+    {
+      "id": "course-48",
+      "code": "BIE20020",
+      "name": "Human Anatomy and Physiology",
+      "credits": 2
+    },
+    {
+      "id": "course-49",
+      "code": "PET10010",
+      "name": "Petroleum Engineering Practices",
+      "credits": 3
+    },
+    {
+      "id": "course-50",
+      "code": "CIV10041",
+      "name": "Engineering Mechanics",
+      "credits": 4
+    },
+    {
+      "id": "course-51",
+      "code": "CIV10020",
+      "name": "Surveying Field Practices",
+      "credits": 2
+    },
+    {
+      "id": "course-52",
+      "code": "CIV11020",
+      "name": "Surveying Field Practices",
+      "credits": 2
+    }
+  ]
+}

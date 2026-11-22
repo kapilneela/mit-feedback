@@ -1,0 +1,9 @@
+<USER_REQUEST>
+we have to make a dashboard for mit-wpu first year engineering about feedback from students according to their subject, so if i have 4 subject so in student dashboard it should reflect 4 subject and when clicked on a specific subject the feedback form should be visible, similarly for course cordinator they can see all the division assigned to them and all the feedback, % of student who have filled the form in course cordinator dashboard, in admin panel, admin can assign classes to course cordinator according, add subjects, make the feedback form and other features. No backend only frontend, using supabase for db management. Login will be required, for now make a common password as Student@123, Teacher@123 and Admin@123 but they can change in admin panel. Also don't make it look like AI made
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-22T11:21:53+05:30.
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from None to Gemini 3.8 Flash (Medium). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>

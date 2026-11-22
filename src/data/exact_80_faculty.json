@@ -1,0 +1,1544 @@
+[
+  {
+    "id": "EMP72539",
+    "name": "Aarti Vagga",
+    "designation": "Faculty",
+    "role": "Teaching Faculty",
+    "email": "aarti.vagga@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "BEEE (Basics of Electrical and Electronics Engineering)"
+    ],
+    "rawSubjects": "BEEE (Basics of Electrical and Electronics Engineering)",
+    "assignedDivisions": [
+      "26 - FY CHEM",
+      "29 - FY CIVIL"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP43060",
+    "name": "Anupama Jagtap",
+    "designation": "Faculty",
+    "role": "Teaching Faculty",
+    "email": "anupama.jagtap@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "EP (Engineering Physics)"
+    ],
+    "rawSubjects": "EP (Engineering Physics)",
+    "assignedDivisions": [
+      "22 - FY MECH",
+      "27 - FY MSE"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP82213",
+    "name": "Atul Palange",
+    "designation": "Faculty",
+    "role": "Teaching Faculty",
+    "email": "atul.palange@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "EGR (Engineering Graphics)"
+    ],
+    "rawSubjects": "EGR (Engineering Graphics)",
+    "assignedDivisions": [
+      "27 - FY MSE"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP54287",
+    "name": "Dean Academic Office",
+    "designation": "Dean",
+    "role": "Dean",
+    "email": "dean.engineering@mitwpu.edu.in",
+    "department": "School of Engineering & Technology",
+    "subjects": [],
+    "rawSubjects": "\u2014",
+    "assignedDivisions": [
+      "1 - FY CSE",
+      "2 - FY CSE",
+      "3 - FY CSE",
+      "4 - FY CSE",
+      "5 - FY CSE",
+      "6 - FY CSE",
+      "7 - FY CSE",
+      "8 - FY CSE AIDS",
+      "9 - FY CSE AIDS",
+      "10 - FY CSE AIDS",
+      "11 - FY CSE AIDS",
+      "12 - FY CSE AIDS",
+      "13 - FY CSE CSF",
+      "14 - FY CSE CLOUD",
+      "15 - FY ECE",
+      "16 - FY ECE",
+      "17 - FY ECE AIML",
+      "18 - FY ECE AIML",
+      "19 - FY E&CE",
+      "20 - FY SEM VLSI",
+      "21 - FY REN ENE",
+      "22 - FY MECH",
+      "23 - FY MECH",
+      "24 - FY MECH ROBO",
+      "25 - FY MECH ROBO",
+      "26 - FY CHEM",
+      "27 - FY MSE",
+      "28 - FY PETRO",
+      "29 - FY CIVIL",
+      "30 - FY CIVIL SMART",
+      "31 - FY BIO",
+      "32 - FY BIO"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP56518",
+    "name": "Deepa Sapkal",
+    "designation": "Faculty",
+    "role": "Teaching Faculty",
+    "email": "deepa.sapkal@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "PPS (Programming and Problem Solving)"
+    ],
+    "rawSubjects": "PPS (Programming and Problem Solving)",
+    "assignedDivisions": [
+      "16 - FY ECE",
+      "17 - FY ECE AIML",
+      "19 - FY E&CE"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP95109",
+    "name": "Dhruvil Parekh",
+    "designation": "Faculty",
+    "role": "Teaching Faculty",
+    "email": "dhruvil.parekh@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "PPS (Programming and Problem Solving)"
+    ],
+    "rawSubjects": "PPS (Programming and Problem Solving)",
+    "assignedDivisions": [
+      "21 - FY REN ENE",
+      "24 - FY MECH ROBO"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP27207",
+    "name": "Dr. Akshay Bura",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "akshay.bura@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "EM (Engineering Mechanics)"
+    ],
+    "rawSubjects": "EM (Engineering Mechanics)",
+    "assignedDivisions": [
+      "13 - FY CSE CSF"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP22242",
+    "name": "Dr. Arunabh Pandey",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "arunabh.pandey@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "EM (Engineering Mechanics)"
+    ],
+    "rawSubjects": "EM (Engineering Mechanics)",
+    "assignedDivisions": [
+      "9 - FY CSE AIDS"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP64759",
+    "name": "Dr. Ashish Utage",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "ashish.utage@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "EGR (Engineering Graphics)"
+    ],
+    "rawSubjects": "EGR (Engineering Graphics)",
+    "assignedDivisions": [
+      "32 - FY BIO"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP54085",
+    "name": "Dr. Chaitanya Burande",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "chaitanya.burande@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "PPS (Programming and Problem Solving)"
+    ],
+    "rawSubjects": "PPS (Programming and Problem Solving)",
+    "assignedDivisions": [
+      "32 - FY BIO"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP34637",
+    "name": "Dr. D. G. Gaidhankar",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "darshan.gaidhankar@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "EM (Engineering Mechanics)"
+    ],
+    "rawSubjects": "EM (Engineering Mechanics)",
+    "assignedDivisions": [
+      "14 - FY CSE CLOUD"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP95867",
+    "name": "Dr. Dattatreya Tripathy",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "dattatreya.tripathy@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "EM (Engineering Mechanics)"
+    ],
+    "rawSubjects": "EM (Engineering Mechanics)",
+    "assignedDivisions": [
+      "7 - FY CSE"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP27144",
+    "name": "Dr. Gajanan Birajdar",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "gajanan.birajdar@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "LADC (Linear Algebra and Differential Calculus)"
+    ],
+    "rawSubjects": "LADC (Linear Algebra and Differential Calculus)",
+    "assignedDivisions": [
+      "29 - FY CIVIL"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP60927",
+    "name": "Dr. Geetanjali Dagoankar",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "geetanjali.dagoankar@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "EP (Engineering Physics)"
+    ],
+    "rawSubjects": "EP (Engineering Physics)",
+    "assignedDivisions": [
+      "16 - FY ECE",
+      "19 - FY E&CE"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP72017",
+    "name": "Dr. Kiran Kokate",
+    "designation": "Course Coordinator",
+    "role": "Course Coordinator",
+    "email": "kiran.kokate@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "EC (Engineering Chemistry)"
+    ],
+    "rawSubjects": "EC (Engineering Chemistry)",
+    "assignedDivisions": [
+      "1 - FY CSE",
+      "11 - FY CSE AIDS"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP68692",
+    "name": "Dr. Mangesh Shendkar",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "mangesh.shendkar@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "EM (Engineering Mechanics)"
+    ],
+    "rawSubjects": "EM (Engineering Mechanics)",
+    "assignedDivisions": [
+      "6 - FY CSE"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP46712",
+    "name": "Dr. Manojkumar Hambarde",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "manojkumar.hambarde@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "EGR (Engineering Graphics)"
+    ],
+    "rawSubjects": "EGR (Engineering Graphics)",
+    "assignedDivisions": [
+      "31 - FY BIO"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP12840",
+    "name": "Dr. P. K. Ghosh",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "p..k..ghosh@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "EP (Engineering Physics)"
+    ],
+    "rawSubjects": "EP (Engineering Physics)",
+    "assignedDivisions": [
+      "24 - FY MECH ROBO",
+      "28 - FY PETRO",
+      "30 - FY CIVIL SMART"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP20724",
+    "name": "Dr. Pallavi Kadam",
+    "designation": "Teaching Faculty",
+    "role": "Teaching Faculty",
+    "email": "pallavi.kadam@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "EC (Engineering Chemistry)"
+    ],
+    "rawSubjects": "EC (Engineering Chemistry)",
+    "assignedDivisions": [
+      "10 - FY CSE AIDS",
+      "14 - FY CSE CLOUD",
+      "8 - FY CSE AIDS"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP-2026-677",
+    "name": "Dr. Parimal Bhambare",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "parimal.bhambare@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [],
+    "rawSubjects": "\u2014",
+    "assignedDivisions": [
+      "1 - FY CSE",
+      "2 - FY CSE",
+      "3 - FY CSE",
+      "4 - FY CSE",
+      "5 - FY CSE",
+      "6 - FY CSE",
+      "7 - FY CSE",
+      "8 - FY CSE AIDS",
+      "9 - FY CSE AIDS",
+      "10 - FY CSE AIDS",
+      "11 - FY CSE AIDS",
+      "12 - FY CSE AIDS",
+      "13 - FY CSE CSF",
+      "14 - FY CSE CLOUD",
+      "15 - FY ECE",
+      "16 - FY ECE",
+      "17 - FY ECE AIML",
+      "18 - FY ECE AIML",
+      "19 - FY E&CE",
+      "20 - FY SEM VLSI",
+      "21 - FY REN ENE",
+      "22 - FY MECH",
+      "23 - FY MECH",
+      "24 - FY MECH ROBO",
+      "25 - FY MECH ROBO",
+      "26 - FY CHEM",
+      "27 - FY MSE",
+      "28 - FY PETRO",
+      "29 - FY CIVIL",
+      "30 - FY CIVIL SMART",
+      "31 - FY BIO",
+      "32 - FY BIO"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP-2026-19",
+    "name": "Dr. Pradnya Deshpande",
+    "designation": "Program Director",
+    "role": "Program Director",
+    "email": "pradnya.deshpande@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [],
+    "rawSubjects": "\u2014",
+    "assignedDivisions": [
+      "1 - FY CSE",
+      "2 - FY CSE",
+      "3 - FY CSE",
+      "4 - FY CSE",
+      "5 - FY CSE",
+      "6 - FY CSE",
+      "7 - FY CSE",
+      "8 - FY CSE AIDS",
+      "9 - FY CSE AIDS",
+      "10 - FY CSE AIDS",
+      "11 - FY CSE AIDS",
+      "12 - FY CSE AIDS",
+      "13 - FY CSE CSF",
+      "14 - FY CSE CLOUD",
+      "15 - FY ECE",
+      "16 - FY ECE",
+      "17 - FY ECE AIML",
+      "18 - FY ECE AIML",
+      "19 - FY E&CE",
+      "20 - FY SEM VLSI",
+      "21 - FY REN ENE",
+      "22 - FY MECH",
+      "23 - FY MECH",
+      "24 - FY MECH ROBO",
+      "25 - FY MECH ROBO",
+      "26 - FY CHEM",
+      "27 - FY MSE",
+      "28 - FY PETRO",
+      "29 - FY CIVIL",
+      "30 - FY CIVIL SMART",
+      "31 - FY BIO",
+      "32 - FY BIO"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP37721",
+    "name": "Dr. Pralhad Pesode",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "pralhad.pesode@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "EGR (Engineering Graphics)"
+    ],
+    "rawSubjects": "EGR (Engineering Graphics)",
+    "assignedDivisions": [
+      "26 - FY CHEM"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP59737",
+    "name": "Dr. Prasanta Ghosh",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "prasanta.ghosh@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "AEC (Ability Enhancement Course)",
+      "SELF-LEARNING (Self-Learning)",
+      "YOGA (Yoga and Meditation)"
+    ],
+    "rawSubjects": "AEC (Ability Enhancement Course), SELF-LEARNING (Self-Learning), YOGA (Yoga and Meditation)",
+    "assignedDivisions": [
+      "24 - FY MECH ROBO"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP31591",
+    "name": "Dr. Prashant Patane",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "prashant.patane@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "AEC (Ability Enhancement Course)",
+      "EGR (Engineering Graphics)",
+      "SELF-LEARNING (Self-Learning)",
+      "YOGA (Yoga and Meditation)"
+    ],
+    "rawSubjects": "AEC (Ability Enhancement Course), EGR (Engineering Graphics), SELF-LEARNING (Self-Learning), YOGA (Yoga and Meditation)",
+    "assignedDivisions": [
+      "28 - FY PETRO"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP90247",
+    "name": "Dr. Priyanka Kumari",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "priyanka.kumari@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "AEC (Ability Enhancement Course)",
+      "LADC (Linear Algebra and Differential Calculus)",
+      "SELF-LEARNING (Self-Learning)",
+      "YOGA (Yoga and Meditation)"
+    ],
+    "rawSubjects": "AEC (Ability Enhancement Course), LADC (Linear Algebra and Differential Calculus), SELF-LEARNING (Self-Learning), YOGA (Yoga and Meditation)",
+    "assignedDivisions": [
+      "26 - FY CHEM"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP28795",
+    "name": "Dr. Rahul Aher",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "rahul.aher@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "EP (Engineering Physics)",
+      "PES (Physics for Energy System)"
+    ],
+    "rawSubjects": "EP (Engineering Physics), PES (Physics for Energy System)",
+    "assignedDivisions": [
+      "17 - FY ECE AIML",
+      "21 - FY REN ENE",
+      "26 - FY CHEM"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP11908",
+    "name": "Dr. Raju Ingale",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "raju.ingale@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "AEC (Ability Enhancement Course)",
+      "SELF-LEARNING (Self-Learning)",
+      "YOGA (Yoga and Meditation)"
+    ],
+    "rawSubjects": "AEC (Ability Enhancement Course), SELF-LEARNING (Self-Learning), YOGA (Yoga and Meditation)",
+    "assignedDivisions": [
+      "19 - FY E&CE"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP-2026-17",
+    "name": "Dr. Renuka Mane",
+    "designation": "Program Co-ordinator",
+    "role": "Course Coordinator",
+    "email": "renuka.suryawanshi@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "PYTHON PROGRAMMING (Python Programming)"
+    ],
+    "rawSubjects": "PYTHON PROGRAMMING (Python Programming)",
+    "assignedDivisions": [
+      "14 - FY CSE CLOUD"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP95552",
+    "name": "Dr. Rohini Kale",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "rohini.kale@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "DELD (Digital Electronics and Logic Design)"
+    ],
+    "rawSubjects": "DELD (Digital Electronics and Logic Design)",
+    "assignedDivisions": [
+      "20 - FY SEM VLSI"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP99690",
+    "name": "Dr. Rupal Shroff",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "rupal.shroff@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "LADC (Linear Algebra and Differential Calculus)"
+    ],
+    "rawSubjects": "LADC (Linear Algebra and Differential Calculus)",
+    "assignedDivisions": [
+      "8 - FY CSE AIDS"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP99490",
+    "name": "Dr. Rupali Chavan",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "rupali.chavan@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "AEC (Ability Enhancement Course)",
+      "EC (Engineering Chemistry)",
+      "IIM (Industry Immersion & Workshop Practice)",
+      "PYTHON PROGRAMMING (Python Programming)",
+      "SELF-LEARNING (Self-Learning)",
+      "YOGA (Yoga and Meditation)"
+    ],
+    "rawSubjects": "AEC (Ability Enhancement Course), EC (Engineering Chemistry), IIM (Industry Immersion & Workshop Practice), PYTHON PROGRAMMING (Python Programming), SELF-LEARNING (Self-Learning), YOGA (Yoga and Meditation)",
+    "assignedDivisions": [
+      "12 - FY CSE AIDS",
+      "3 - FY CSE",
+      "9 - FY CSE AIDS"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP95568",
+    "name": "Dr. Samidha Jawade",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "samidha.jawade@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "PPS (Programming and Problem Solving)"
+    ],
+    "rawSubjects": "PPS (Programming and Problem Solving)",
+    "assignedDivisions": [
+      "31 - FY BIO"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP58296",
+    "name": "Dr. Sandeep Sathe",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "sandeep.sathe@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "AEC (Ability Enhancement Course)",
+      "EM (Engineering Mechanics)",
+      "IIM (Industry Immersion & Workshop Practice)",
+      "PYTHON PROGRAMMING (Python Programming)",
+      "YOGA (Yoga and Meditation)"
+    ],
+    "rawSubjects": "AEC (Ability Enhancement Course), EM (Engineering Mechanics), IIM (Industry Immersion & Workshop Practice), PYTHON PROGRAMMING (Python Programming), YOGA (Yoga and Meditation)",
+    "assignedDivisions": [
+      "3 - FY CSE"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP26989",
+    "name": "Dr. Sandeep Singhal",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "sandeep.singhal@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "IMB (Introductory Mathematics for Bioengineering)",
+      "LADC (Linear Algebra and Differential Calculus)"
+    ],
+    "rawSubjects": "IMB (Introductory Mathematics for Bioengineering), LADC (Linear Algebra and Differential Calculus)",
+    "assignedDivisions": [
+      "15 - FY ECE",
+      "22 - FY MECH",
+      "31 - FY BIO",
+      "7 - FY CSE"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP45081",
+    "name": "Dr. Sanjay Kinge",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "sanjay.kinge@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "BEEE (Basics of Electrical and Electronics Engineering)"
+    ],
+    "rawSubjects": "BEEE (Basics of Electrical and Electronics Engineering)",
+    "assignedDivisions": [
+      "15 - FY ECE"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP12048",
+    "name": "Dr. Shailendra Shisode",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "shailendra.shisode@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "AEC (Ability Enhancement Course)",
+      "EGR (Engineering Graphics)",
+      "SELF-LEARNING (Self-Learning)",
+      "YOGA (Yoga and Meditation)"
+    ],
+    "rawSubjects": "AEC (Ability Enhancement Course), EGR (Engineering Graphics), SELF-LEARNING (Self-Learning), YOGA (Yoga and Meditation)",
+    "assignedDivisions": [
+      "25 - FY MECH ROBO"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP98710",
+    "name": "Dr. Shailendrasingh Girase",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "shailendrasingh.girase@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "EGR (Engineering Graphics)"
+    ],
+    "rawSubjects": "EGR (Engineering Graphics)",
+    "assignedDivisions": [
+      "24 - FY MECH ROBO"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP88837",
+    "name": "Dr. Shantaram Dond",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "shantaram.dond@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "IEEE (Introduction to Electrical and Electronics Engineering)"
+    ],
+    "rawSubjects": "IEEE (Introduction to Electrical and Electronics Engineering)",
+    "assignedDivisions": [
+      "25 - FY MECH ROBO"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP36293",
+    "name": "Dr. Shital Kahane",
+    "designation": "Teaching Faculty",
+    "role": "Teaching Faculty",
+    "email": "shital.kahane@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "AEC (Ability Enhancement Course)",
+      "EP (Engineering Physics)",
+      "SELF-LEARNING (Self-Learning)",
+      "YOGA (Yoga and Meditation)"
+    ],
+    "rawSubjects": "AEC (Ability Enhancement Course), EP (Engineering Physics), SELF-LEARNING (Self-Learning), YOGA (Yoga and Meditation)",
+    "assignedDivisions": [
+      "15 - FY ECE",
+      "29 - FY CIVIL",
+      "32 - FY BIO"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP35713",
+    "name": "Dr. Shyam Dhamapurkar",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "shyam.dhamapurkar@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "LADC (Linear Algebra and Differential Calculus)"
+    ],
+    "rawSubjects": "LADC (Linear Algebra and Differential Calculus)",
+    "assignedDivisions": [
+      "14 - FY CSE CLOUD",
+      "28 - FY PETRO"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP54286",
+    "name": "Dr. Siddharth Chakrabarti",
+    "designation": "Dean",
+    "role": "Dean",
+    "email": "siddharth.chakrabarti@mitwpu.edu.in",
+    "department": "School of Engineering & Technology",
+    "subjects": [
+      "EM (Engineering Mechanics)"
+    ],
+    "rawSubjects": "EM (Engineering Mechanics)",
+    "assignedDivisions": [
+      "1 - FY CSE"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "TCH-2026-01",
+    "name": "Dr. Snehal Kulkarni",
+    "designation": "Assistant Professor",
+    "role": "Teaching Faculty",
+    "email": "snehal.kulkarni@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [],
+    "rawSubjects": "\u2014",
+    "assignedDivisions": [
+      "1 - FY CSE",
+      "2 - FY CSE",
+      "3 - FY CSE",
+      "4 - FY CSE",
+      "5 - FY CSE",
+      "6 - FY CSE",
+      "7 - FY CSE",
+      "8 - FY CSE AIDS",
+      "9 - FY CSE AIDS",
+      "10 - FY CSE AIDS",
+      "11 - FY CSE AIDS",
+      "12 - FY CSE AIDS",
+      "13 - FY CSE CSF",
+      "14 - FY CSE CLOUD",
+      "15 - FY ECE",
+      "16 - FY ECE",
+      "17 - FY ECE AIML",
+      "18 - FY ECE AIML",
+      "19 - FY E&CE",
+      "20 - FY SEM VLSI",
+      "21 - FY REN ENE",
+      "22 - FY MECH",
+      "23 - FY MECH",
+      "24 - FY MECH ROBO",
+      "25 - FY MECH ROBO",
+      "26 - FY CHEM",
+      "27 - FY MSE",
+      "28 - FY PETRO",
+      "29 - FY CIVIL",
+      "30 - FY CIVIL SMART",
+      "31 - FY BIO",
+      "32 - FY BIO"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP41348",
+    "name": "Dr. Sudhir Patil",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "sudhir.patil@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "EM (Engineering Mechanics)"
+    ],
+    "rawSubjects": "EM (Engineering Mechanics)",
+    "assignedDivisions": [
+      "11 - FY CSE AIDS"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP17162",
+    "name": "Dr. Sukruti Joshi",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "sukruti.joshi@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "EC (Engineering Chemistry)"
+    ],
+    "rawSubjects": "EC (Engineering Chemistry)",
+    "assignedDivisions": [
+      "13 - FY CSE CSF",
+      "4 - FY CSE"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP75489",
+    "name": "Dr. Sumant Shinde",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "sumant.shinde@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "AEC (Ability Enhancement Course)",
+      "EM (Engineering Mechanics)",
+      "IIM (Industry Immersion & Workshop Practice)",
+      "PYTHON PROGRAMMING (Python Programming)",
+      "SELF-LEARNING (Self-Learning)",
+      "YOGA (Yoga and Meditation)"
+    ],
+    "rawSubjects": "AEC (Ability Enhancement Course), EM (Engineering Mechanics), IIM (Industry Immersion & Workshop Practice), PYTHON PROGRAMMING (Python Programming), SELF-LEARNING (Self-Learning), YOGA (Yoga and Meditation)",
+    "assignedDivisions": [
+      "10 - FY CSE AIDS"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP25416",
+    "name": "Dr. Vaishali Gaikwad",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "vaishali.gaikwad@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "AEC (Ability Enhancement Course)",
+      "EC (Engineering Chemistry)",
+      "IIM (Industry Immersion & Workshop Practice)",
+      "PYTHON PROGRAMMING (Python Programming)",
+      "SELF-LEARNING (Self-Learning)",
+      "YOGA (Yoga and Meditation)"
+    ],
+    "rawSubjects": "AEC (Ability Enhancement Course), EC (Engineering Chemistry), IIM (Industry Immersion & Workshop Practice), PYTHON PROGRAMMING (Python Programming), SELF-LEARNING (Self-Learning), YOGA (Yoga and Meditation)",
+    "assignedDivisions": [
+      "5 - FY CSE",
+      "6 - FY CSE",
+      "7 - FY CSE"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP12291",
+    "name": "Dr. Vinayak Gaikwad",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "vinayak.gaikwad@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "AEC (Ability Enhancement Course)",
+      "BEEE (Basics of Electrical and Electronics Engineering)",
+      "EFES (Electrical Fundamentals for Energy Systems)",
+      "SELF-LEARNING (Self-Learning)",
+      "YOGA (Yoga and Meditation)"
+    ],
+    "rawSubjects": "AEC (Ability Enhancement Course), BEEE (Basics of Electrical and Electronics Engineering), EFES (Electrical Fundamentals for Energy Systems), SELF-LEARNING (Self-Learning), YOGA (Yoga and Meditation)",
+    "assignedDivisions": [
+      "21 - FY REN ENE",
+      "30 - FY CIVIL SMART"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP67813",
+    "name": "Dr. Vivek Patel",
+    "designation": "Associate Professor",
+    "role": "Teaching Faculty",
+    "email": "vivek.patel@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "EMES (Engineering Mechanics for Energy Systems)"
+    ],
+    "rawSubjects": "EMES (Engineering Mechanics for Energy Systems)",
+    "assignedDivisions": [
+      "21 - FY REN ENE"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP25425",
+    "name": "Kshama Karpe",
+    "designation": "Faculty",
+    "role": "Teaching Faculty",
+    "email": "kshama.karpe@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "BEEE (Basics of Electrical and Electronics Engineering)",
+      "IEEE (Introduction to Electrical and Electronics Engineering)"
+    ],
+    "rawSubjects": "BEEE (Basics of Electrical and Electronics Engineering), IEEE (Introduction to Electrical and Electronics Engineering)",
+    "assignedDivisions": [
+      "19 - FY E&CE",
+      "24 - FY MECH ROBO"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP78060",
+    "name": "Mina Vagha",
+    "designation": "Faculty",
+    "role": "Teaching Faculty",
+    "email": "mina.vagha@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "BEEE (Basics of Electrical and Electronics Engineering)"
+    ],
+    "rawSubjects": "BEEE (Basics of Electrical and Electronics Engineering)",
+    "assignedDivisions": [
+      "31 - FY BIO",
+      "32 - FY BIO"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP54444",
+    "name": "Ms. Tanvi Patil",
+    "designation": "Faculty",
+    "role": "Teaching Faculty",
+    "email": "ms..tanvi.patil@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "EM (Engineering Mechanics)"
+    ],
+    "rawSubjects": "EM (Engineering Mechanics)",
+    "assignedDivisions": [
+      "12 - FY CSE AIDS"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP79709",
+    "name": "Prof. Anil Singh",
+    "designation": "Assistant Professor",
+    "role": "Teaching Faculty",
+    "email": "anil.singh@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "CAM (Computer Aided Modelling)"
+    ],
+    "rawSubjects": "CAM (Computer Aided Modelling)",
+    "assignedDivisions": [
+      "28 - FY PETRO"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP-2026-991",
+    "name": "Prof. Aparna Nagure",
+    "designation": "Assistant Professor",
+    "role": "Teaching Faculty",
+    "email": "aparna.nagure@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "AEC (Ability Enhancement Course)",
+      "IIM (Industry Immersion & Workshop Practice)",
+      "PYTHON PROGRAMMING (Python Programming)",
+      "SELF-LEARNING (Self-Learning)",
+      "YOGA (Yoga and Meditation)"
+    ],
+    "rawSubjects": "AEC (Ability Enhancement Course), IIM (Industry Immersion & Workshop Practice), PYTHON PROGRAMMING (Python Programming), SELF-LEARNING (Self-Learning), YOGA (Yoga and Meditation)",
+    "assignedDivisions": [
+      "8 - FY CSE AIDS"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP28537",
+    "name": "Prof. Apoorva Wadje",
+    "designation": "Assistant Professor",
+    "role": "Teaching Faculty",
+    "email": "apoorva.wadje@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "LADC (Linear Algebra and Differential Calculus)"
+    ],
+    "rawSubjects": "LADC (Linear Algebra and Differential Calculus)",
+    "assignedDivisions": [
+      "13 - FY CSE CSF",
+      "20 - FY SEM VLSI"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP50372",
+    "name": "Prof. Jayashree Aher",
+    "designation": "Assistant Professor",
+    "role": "Teaching Faculty",
+    "email": "jayashree.aher@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "LADC (Linear Algebra and Differential Calculus)"
+    ],
+    "rawSubjects": "LADC (Linear Algebra and Differential Calculus)",
+    "assignedDivisions": [
+      "17 - FY ECE AIML"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP51067",
+    "name": "Prof. Jyoti Pulgam",
+    "designation": "Assistant Professor",
+    "role": "Teaching Faculty",
+    "email": "jyoti.pulgam@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "LADC (Linear Algebra and Differential Calculus)"
+    ],
+    "rawSubjects": "LADC (Linear Algebra and Differential Calculus)",
+    "assignedDivisions": [
+      "1 - FY CSE",
+      "30 - FY CIVIL SMART"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP81080",
+    "name": "Prof. Kundan Nagare",
+    "designation": "Teaching Faculty",
+    "role": "Teaching Faculty",
+    "email": "kundan.nagare@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "AEC (Ability Enhancement Course)",
+      "LADC (Linear Algebra and Differential Calculus)",
+      "SELF-LEARNING (Self-Learning)",
+      "YOGA (Yoga and Meditation)"
+    ],
+    "rawSubjects": "AEC (Ability Enhancement Course), LADC (Linear Algebra and Differential Calculus), SELF-LEARNING (Self-Learning), YOGA (Yoga and Meditation)",
+    "assignedDivisions": [
+      "27 - FY MSE"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP12186",
+    "name": "Prof. Mangesh Khemnar",
+    "designation": "Assistant Professor",
+    "role": "Teaching Faculty",
+    "email": "mangesh.khemnar@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "IMB (Introductory Mathematics for Bioengineering)",
+      "LADC (Linear Algebra and Differential Calculus)"
+    ],
+    "rawSubjects": "IMB (Introductory Mathematics for Bioengineering), LADC (Linear Algebra and Differential Calculus)",
+    "assignedDivisions": [
+      "10 - FY CSE AIDS",
+      "14 - FY CSE CLOUD",
+      "25 - FY MECH ROBO",
+      "32 - FY BIO"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP-2026-842",
+    "name": "Prof. Manisha Ingle",
+    "designation": "Assistant Professor",
+    "role": "Teaching Faculty",
+    "email": "manisha.ingle@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "AEC (Ability Enhancement Course)",
+      "DELD (Digital Electronics and Logic Design)",
+      "IEST (Intro to Electronics and Semiconductor Technology)",
+      "SELF-LEARNING (Self-Learning)",
+      "YOGA (Yoga and Meditation)"
+    ],
+    "rawSubjects": "AEC (Ability Enhancement Course), DELD (Digital Electronics and Logic Design), IEST (Intro to Electronics and Semiconductor Technology), SELF-LEARNING (Self-Learning), YOGA (Yoga and Meditation)",
+    "assignedDivisions": [
+      "20 - FY SEM VLSI"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP-2026-804",
+    "name": "Prof. Manisha Wani",
+    "designation": "Assistant Professor",
+    "role": "Teaching Faculty",
+    "email": "manisha.wani@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "AEC (Ability Enhancement Course)",
+      "SELF-LEARNING (Self-Learning)",
+      "YOGA (Yoga and Meditation)"
+    ],
+    "rawSubjects": "AEC (Ability Enhancement Course), SELF-LEARNING (Self-Learning), YOGA (Yoga and Meditation)",
+    "assignedDivisions": [
+      "16 - FY ECE"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP-2026-993",
+    "name": "Prof. Mrunal Salwadkar",
+    "designation": "Assistant Professor",
+    "role": "Teaching Faculty",
+    "email": "mrunal.salwadkar@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "AEC (Ability Enhancement Course)",
+      "SELF-LEARNING (Self-Learning)",
+      "YOGA (Yoga and Meditation)"
+    ],
+    "rawSubjects": "AEC (Ability Enhancement Course), SELF-LEARNING (Self-Learning), YOGA (Yoga and Meditation)",
+    "assignedDivisions": [
+      "17 - FY ECE AIML"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP76939",
+    "name": "Prof. Nikhil Soniminde",
+    "designation": "Assistant Professor",
+    "role": "Teaching Faculty",
+    "email": "nikhil.soniminde@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "AEC (Ability Enhancement Course)",
+      "IIM (Industry Immersion & Workshop Practice)",
+      "PYTHON PROGRAMMING (Python Programming)",
+      "SELF-LEARNING (Self-Learning)",
+      "YOGA (Yoga and Meditation)"
+    ],
+    "rawSubjects": "AEC (Ability Enhancement Course), IIM (Industry Immersion & Workshop Practice), PYTHON PROGRAMMING (Python Programming), SELF-LEARNING (Self-Learning), YOGA (Yoga and Meditation)",
+    "assignedDivisions": [
+      "11 - FY CSE AIDS"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP55418",
+    "name": "Prof. Pratibha Kshirsagar",
+    "designation": "Assistant Professor",
+    "role": "Teaching Faculty",
+    "email": "pratibha.kshirsagar@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "AEC (Ability Enhancement Course)",
+      "IIM (Industry Immersion & Workshop Practice)",
+      "LADC (Linear Algebra and Differential Calculus)",
+      "PYTHON PROGRAMMING (Python Programming)",
+      "SELF-LEARNING (Self-Learning)",
+      "YOGA (Yoga and Meditation)"
+    ],
+    "rawSubjects": "AEC (Ability Enhancement Course), IIM (Industry Immersion & Workshop Practice), LADC (Linear Algebra and Differential Calculus), PYTHON PROGRAMMING (Python Programming), SELF-LEARNING (Self-Learning), YOGA (Yoga and Meditation)",
+    "assignedDivisions": [
+      "5 - FY CSE"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP17541",
+    "name": "Prof. Ramaa Sandu",
+    "designation": "Assistant Professor",
+    "role": "Teaching Faculty",
+    "email": "ramaa.sandu@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "LADC (Linear Algebra and Differential Calculus)"
+    ],
+    "rawSubjects": "LADC (Linear Algebra and Differential Calculus)",
+    "assignedDivisions": [
+      "21 - FY REN ENE",
+      "3 - FY CSE"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP79559",
+    "name": "Prof. Ravindra Pawarkar",
+    "designation": "Assistant Professor",
+    "role": "Teaching Faculty",
+    "email": "ravindra.pawarkar@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "AEC (Ability Enhancement Course)",
+      "EGR (Engineering Graphics)",
+      "SELF-LEARNING (Self-Learning)",
+      "YOGA (Yoga and Meditation)"
+    ],
+    "rawSubjects": "AEC (Ability Enhancement Course), EGR (Engineering Graphics), SELF-LEARNING (Self-Learning), YOGA (Yoga and Meditation)",
+    "assignedDivisions": [
+      "22 - FY MECH"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP85278",
+    "name": "Prof. Rutuja Lakhe",
+    "designation": "Assistant Professor",
+    "role": "Teaching Faculty",
+    "email": "rutuja.lakhe@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "AEC (Ability Enhancement Course)",
+      "IIM (Industry Immersion & Workshop Practice)",
+      "LADC (Linear Algebra and Differential Calculus)",
+      "PYTHON PROGRAMMING (Python Programming)",
+      "SELF-LEARNING (Self-Learning)",
+      "YOGA (Yoga and Meditation)"
+    ],
+    "rawSubjects": "AEC (Ability Enhancement Course), IIM (Industry Immersion & Workshop Practice), LADC (Linear Algebra and Differential Calculus), PYTHON PROGRAMMING (Python Programming), SELF-LEARNING (Self-Learning), YOGA (Yoga and Meditation)",
+    "assignedDivisions": [
+      "12 - FY CSE AIDS",
+      "23 - FY MECH",
+      "9 - FY CSE AIDS"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP34348",
+    "name": "Prof. Sayali Nikam",
+    "designation": "Assistant Professor",
+    "role": "Teaching Faculty",
+    "email": "sayali.nikam@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "LADC (Linear Algebra and Differential Calculus)"
+    ],
+    "rawSubjects": "LADC (Linear Algebra and Differential Calculus)",
+    "assignedDivisions": [
+      "18 - FY ECE AIML",
+      "4 - FY CSE"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP49601",
+    "name": "Prof. Sayali Thorat",
+    "designation": "Assistant Professor",
+    "role": "Teaching Faculty",
+    "email": "sayali.thorat@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "LADC (Linear Algebra and Differential Calculus)"
+    ],
+    "rawSubjects": "LADC (Linear Algebra and Differential Calculus)",
+    "assignedDivisions": [
+      "16 - FY ECE"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP-2026-613",
+    "name": "Prof. Shrihari Bondar",
+    "designation": "Assistant Professor",
+    "role": "Teaching Faculty",
+    "email": "shrihari.bondar@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "AEC (Ability Enhancement Course)",
+      "SELF-LEARNING (Self-Learning)",
+      "YOGA (Yoga and Meditation)"
+    ],
+    "rawSubjects": "AEC (Ability Enhancement Course), SELF-LEARNING (Self-Learning), YOGA (Yoga and Meditation)",
+    "assignedDivisions": [
+      "23 - FY MECH"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP70731",
+    "name": "Prof. Tanishqa Veer",
+    "designation": "Assistant Professor",
+    "role": "Teaching Faculty",
+    "email": "tanishqa.veer@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "LADC (Linear Algebra and Differential Calculus)"
+    ],
+    "rawSubjects": "LADC (Linear Algebra and Differential Calculus)",
+    "assignedDivisions": [
+      "24 - FY MECH ROBO"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP42600",
+    "name": "Prof. Tarishi Baranwal",
+    "designation": "Assistant Professor",
+    "role": "Teaching Faculty",
+    "email": "tarishi.baranwal@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "LADC (Linear Algebra and Differential Calculus)"
+    ],
+    "rawSubjects": "LADC (Linear Algebra and Differential Calculus)",
+    "assignedDivisions": [
+      "11 - FY CSE AIDS",
+      "19 - FY E&CE"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP65084",
+    "name": "Prof. Vaishali Joshi",
+    "designation": "Assistant Professor",
+    "role": "Teaching Faculty",
+    "email": "vaishali.joshi@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "LADC (Linear Algebra and Differential Calculus)"
+    ],
+    "rawSubjects": "LADC (Linear Algebra and Differential Calculus)",
+    "assignedDivisions": [
+      "6 - FY CSE"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP37834",
+    "name": "Prof. Vrunda Agarkar",
+    "designation": "Assistant Professor",
+    "role": "Teaching Faculty",
+    "email": "vrunda.agarkar@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [],
+    "rawSubjects": "\u2014",
+    "assignedDivisions": [
+      "1 - FY CSE",
+      "2 - FY CSE",
+      "3 - FY CSE",
+      "4 - FY CSE",
+      "5 - FY CSE",
+      "6 - FY CSE",
+      "7 - FY CSE",
+      "8 - FY CSE AIDS",
+      "9 - FY CSE AIDS",
+      "10 - FY CSE AIDS",
+      "11 - FY CSE AIDS",
+      "12 - FY CSE AIDS",
+      "13 - FY CSE CSF",
+      "14 - FY CSE CLOUD",
+      "15 - FY ECE",
+      "16 - FY ECE",
+      "17 - FY ECE AIML",
+      "18 - FY ECE AIML",
+      "19 - FY E&CE",
+      "20 - FY SEM VLSI",
+      "21 - FY REN ENE",
+      "22 - FY MECH",
+      "23 - FY MECH",
+      "24 - FY MECH ROBO",
+      "25 - FY MECH ROBO",
+      "26 - FY CHEM",
+      "27 - FY MSE",
+      "28 - FY PETRO",
+      "29 - FY CIVIL",
+      "30 - FY CIVIL SMART",
+      "31 - FY BIO",
+      "32 - FY BIO"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP64438",
+    "name": "Rajkumar Komati",
+    "designation": "Faculty",
+    "role": "Teaching Faculty",
+    "email": "rajkumar.komati@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "BEEE (Basics of Electrical and Electronics Engineering)"
+    ],
+    "rawSubjects": "BEEE (Basics of Electrical and Electronics Engineering)",
+    "assignedDivisions": [
+      "22 - FY MECH"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP72930",
+    "name": "Shirish Paygude",
+    "designation": "Faculty",
+    "role": "Teaching Faculty",
+    "email": "shirish.paygude@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "PPS (Programming and Problem Solving)"
+    ],
+    "rawSubjects": "PPS (Programming and Problem Solving)",
+    "assignedDivisions": [
+      "15 - FY ECE",
+      "18 - FY ECE AIML"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP-2026-847",
+    "name": "Shrikant Nimbalkar",
+    "designation": "Assistant Professor",
+    "role": "Teaching Faculty",
+    "email": "shrikant.nimbalkar@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "EGR (Engineering Graphics)"
+    ],
+    "rawSubjects": "EGR (Engineering Graphics)",
+    "assignedDivisions": [
+      "29 - FY CIVIL"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP26926",
+    "name": "Shrikant Yadav",
+    "designation": "Faculty",
+    "role": "Teaching Faculty",
+    "email": "shrikant.yadav@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "EGR (Engineering Graphics)"
+    ],
+    "rawSubjects": "EGR (Engineering Graphics)",
+    "assignedDivisions": [
+      "20 - FY SEM VLSI"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP69716",
+    "name": "Smita Lokare",
+    "designation": "Faculty",
+    "role": "Teaching Faculty",
+    "email": "smita.lokare@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "PPS (Programming and Problem Solving)"
+    ],
+    "rawSubjects": "PPS (Programming and Problem Solving)",
+    "assignedDivisions": [
+      "20 - FY SEM VLSI",
+      "22 - FY MECH",
+      "23 - FY MECH"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP-2026-563",
+    "name": "Smita Paithankar",
+    "designation": "Assistant Professor",
+    "role": "Teaching Faculty",
+    "email": "smita.paithankar@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "BEEE (Basics of Electrical and Electronics Engineering)"
+    ],
+    "rawSubjects": "BEEE (Basics of Electrical and Electronics Engineering)",
+    "assignedDivisions": [
+      "18 - FY ECE AIML"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "id": "EMP32820",
+    "name": "Ujjwala Rawandale",
+    "designation": "Faculty",
+    "role": "Teaching Faculty",
+    "email": "ujjwala.rawandale@mitwpu.edu.in",
+    "department": "Department of First Year B. Tech.",
+    "subjects": [
+      "BEEE (Basics of Electrical and Electronics Engineering)"
+    ],
+    "rawSubjects": "BEEE (Basics of Electrical and Electronics Engineering)",
+    "assignedDivisions": [
+      "27 - FY MSE"
+    ],
+    "status": "ACTIVE"
+  }
+]
