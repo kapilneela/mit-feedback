@@ -206,8 +206,53 @@ export function getAllFeedbackResponses() {
   return getStoredItem(KEY_RESPONSES, INITIAL_RESPONSES);
 }
 
+// Helper to persist deleted response tombstones in Supabase portal_settings and delete from feedback_responses
+export async function markFeedbackResponsesDeletedInSupabase(deletedIds) {
+  if (!deletedIds || deletedIds.length === 0 || !isSupabaseConnected()) return;
+  try {
+    const supabase = getSupabase();
+    if (!supabase) return;
+
+    // 1. Fetch current deleted_feedback_ids
+    const { data } = await supabase
+      .from('portal_settings')
+      .select('data')
+      .eq('key', 'deleted_feedback_ids')
+      .maybeSingle();
+
+    const existing = Array.isArray(data?.data) ? data.data : [];
+    const merged = Array.from(new Set([...existing, ...deletedIds]));
+
+    // 2. Persist tombstone list to portal_settings
+    await supabase.from('portal_settings').upsert({
+      key: 'deleted_feedback_ids',
+      data: merged,
+      updated_at: new Date().toISOString()
+    });
+
+    // 3. Attempt direct delete on feedback_responses table
+    for (const id of deletedIds) {
+      await supabase.from('feedback_responses').delete().eq('id', id);
+    }
+  } catch (err) {
+    console.warn('Supabase markFeedbackResponsesDeleted warning:', err);
+  }
+}
+
 export async function removeFeedbackResponse({ responseId, studentPrn, courseCode }) {
   const current = getStoredItem(KEY_RESPONSES, INITIAL_RESPONSES);
+  
+  // Collect matching IDs to ensure complete tombstone & remote deletion
+  const toDelete = current.filter(r => {
+    if (responseId && r.id === responseId) return true;
+    if (studentPrn && courseCode && r.studentPrn === studentPrn && r.courseCode === courseCode) return true;
+    return false;
+  });
+  const deletedIds = toDelete.map(r => r.id).filter(Boolean);
+  if (responseId && !deletedIds.includes(responseId)) {
+    deletedIds.push(responseId);
+  }
+
   const updated = current.filter(r => {
     if (responseId && r.id === responseId) return false;
     if (studentPrn && courseCode && r.studentPrn === studentPrn && r.courseCode === courseCode) return false;
@@ -232,6 +277,13 @@ export async function removeFeedbackResponse({ responseId, studentPrn, courseCod
     } catch (err) {
       console.warn('Supabase remote delete warning:', err);
     }
+    await markFeedbackResponsesDeletedInSupabase(deletedIds);
+  }
+
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent('mitwpu_supabase_synced', {
+      detail: { timestamp: new Date().toISOString(), responseCount: updated.length, status: 'LIVE' }
+    }));
   }
 
   return updated;
@@ -239,8 +291,10 @@ export async function removeFeedbackResponse({ responseId, studentPrn, courseCod
 
 export async function removeStudentAllFeedbacks(studentPrn) {
   const current = getStoredItem(KEY_RESPONSES, INITIAL_RESPONSES);
-  const updated = current.filter(r => r.studentPrn !== studentPrn);
+  const toDelete = current.filter(r => r.studentPrn === studentPrn);
+  const deletedIds = toDelete.map(r => r.id).filter(Boolean);
 
+  const updated = current.filter(r => r.studentPrn !== studentPrn);
   setStoredItem(KEY_RESPONSES, updated);
 
   if (isSupabaseConnected()) {
@@ -252,12 +306,22 @@ export async function removeStudentAllFeedbacks(studentPrn) {
     } catch (err) {
       console.warn('Supabase remote delete student feedback warning:', err);
     }
+    await markFeedbackResponsesDeletedInSupabase(deletedIds);
+  }
+
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent('mitwpu_supabase_synced', {
+      detail: { timestamp: new Date().toISOString(), responseCount: updated.length, status: 'LIVE' }
+    }));
   }
 
   return updated;
 }
 
 export async function clearAllFeedbacks() {
+  const current = getStoredItem(KEY_RESPONSES, INITIAL_RESPONSES);
+  const allIds = current.map(r => r.id).filter(Boolean);
+
   setStoredItem(KEY_RESPONSES, []);
 
   if (isSupabaseConnected()) {
@@ -265,10 +329,29 @@ export async function clearAllFeedbacks() {
       const supabase = getSupabase();
       if (supabase) {
         await supabase.from('feedback_responses').delete().neq('id', 'placeholder');
+        const clearedAt = new Date().toISOString();
+        await supabase.from('portal_settings').upsert([
+          {
+            key: 'all_feedbacks_cleared_at',
+            data: clearedAt,
+            updated_at: clearedAt
+          },
+          {
+            key: 'deleted_feedback_ids',
+            data: allIds,
+            updated_at: clearedAt
+          }
+        ]);
       }
     } catch (err) {
       console.warn('Supabase remote clear all warning:', err);
     }
+  }
+
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent('mitwpu_supabase_synced', {
+      detail: { timestamp: new Date().toISOString(), responseCount: 0, status: 'LIVE' }
+    }));
   }
 
   return [];
@@ -487,6 +570,32 @@ export function getFeedbackQuestions() {
 
 export function saveFeedbackQuestions(questions) {
   setStoredItem(KEY_QUESTIONS, questions);
+  
+  // Sync to Supabase
+  if (isSupabaseConnected()) {
+    try {
+      const supabase = getSupabase();
+      if (supabase) {
+        supabase.from('portal_settings').upsert({
+          key: 'feedback_questions',
+          data: questions,
+          updated_at: new Date().toISOString()
+        }).then(() => {});
+
+        // Direct delete removed questions from feedback_questions table
+        const activeIds = (questions || []).map(q => q.id).filter(Boolean);
+        if (activeIds.length > 0) {
+          supabase.from('feedback_questions')
+            .delete()
+            .not('id', 'in', `(${activeIds.join(',')})`)
+            .then(() => {});
+        }
+      }
+    } catch (e) {
+      console.warn('Supabase saveFeedbackQuestions warning:', e);
+    }
+  }
+
   return questions;
 }
 
@@ -496,17 +605,64 @@ export function getAllCoursesList() {
 
 export function addNewCourse(course) {
   const courses = getAllCoursesList();
-  courses.unshift({
+  const newCourseObj = {
     id: `course-${Date.now()}`,
     ...course
-  });
+  };
+  courses.unshift(newCourseObj);
   setStoredItem(KEY_COURSES, courses);
+
+  if (isSupabaseConnected()) {
+    try {
+      const supabase = getSupabase();
+      if (supabase) {
+        supabase.from('subjects').upsert({
+          code: newCourseObj.code,
+          name: newCourseObj.name,
+          credits: Number(newCourseObj.credits) || 3
+        }).then(() => {});
+
+        supabase.from('portal_settings').upsert({
+          key: 'subjects',
+          data: courses,
+          updated_at: new Date().toISOString()
+        }).then(() => {});
+      }
+    } catch (e) {
+      console.warn('Supabase addNewCourse warning:', e);
+    }
+  }
+
   return courses;
 }
 
 export function deleteCourse(code) {
   const courses = getAllCoursesList().filter(c => c.code !== code);
   setStoredItem(KEY_COURSES, courses);
+
+  // Sync deletion directly to Supabase subjects table & portal_settings
+  if (isSupabaseConnected()) {
+    try {
+      const supabase = getSupabase();
+      if (supabase) {
+        supabase.from('subjects').delete().eq('code', code).then(() => {});
+        supabase.from('portal_settings').upsert({
+          key: 'subjects',
+          data: courses,
+          updated_at: new Date().toISOString()
+        }).then(() => {});
+      }
+    } catch (e) {
+      console.warn('Supabase deleteCourse warning:', e);
+    }
+  }
+
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent('mitwpu_supabase_synced', {
+      detail: { timestamp: new Date().toISOString(), status: 'LIVE' }
+    }));
+  }
+
   return courses;
 }
 
@@ -779,6 +935,26 @@ export function deleteFacultyAllocation(facultyId) {
   const updated = current.filter(f => f.id !== facultyId && f.email.toLowerCase() !== facultyId.toLowerCase());
   setStoredItem(KEY_FACULTY, updated);
   syncFacultyListToSupabase(updated);
+
+  // Direct delete from faculty_allocations table in Supabase
+  if (isSupabaseConnected()) {
+    try {
+      const supabase = getSupabase();
+      if (supabase) {
+        supabase.from('faculty_allocations').delete().eq('id', facultyId).then(() => {});
+        supabase.from('faculty_allocations').delete().eq('email', facultyId).then(() => {});
+      }
+    } catch (e) {
+      console.warn('Supabase deleteFacultyAllocation warning:', e);
+    }
+  }
+
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent('mitwpu_supabase_synced', {
+      detail: { timestamp: new Date().toISOString(), status: 'LIVE' }
+    }));
+  }
+
   return updated;
 }
 

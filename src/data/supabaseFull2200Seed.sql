@@ -102,10 +102,9 @@ DROP POLICY IF EXISTS "Allow anon all settings" ON public.portal_settings;
 CREATE POLICY "Allow anon all settings" ON public.portal_settings FOR ALL USING (true) WITH CHECK (true);
 
 DROP POLICY IF EXISTS "Allow anon read responses" ON public.feedback_responses;
-CREATE POLICY "Allow anon read responses" ON public.feedback_responses FOR SELECT USING (true);
-
 DROP POLICY IF EXISTS "Allow anon insert responses" ON public.feedback_responses;
-CREATE POLICY "Allow anon insert responses" ON public.feedback_responses FOR INSERT WITH CHECK (true);
+DROP POLICY IF EXISTS "Allow anon all responses" ON public.feedback_responses;
+CREATE POLICY "Allow anon all responses" ON public.feedback_responses FOR ALL USING (true) WITH CHECK (true);
 
 -- 3. Initial Portal Settings
 INSERT INTO public.portal_settings (key, data)

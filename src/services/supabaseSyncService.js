@@ -44,11 +44,25 @@ function setLocal(key, val) {
 }
 
 /**
- * 1. Synchronize Feedback Responses (Two-Way Merge)
+ * 1. Synchronize Feedback Responses (Two-Way Merge with Deletion Tombstones)
  */
 async function syncFeedbackResponses(supabase) {
   try {
-    // 1. Fetch all remote responses
+    // 1. Fetch remote tombstone markers from portal_settings to respect any deletions
+    const { data: settingsData } = await supabase
+      .from('portal_settings')
+      .select('*')
+      .in('key', ['deleted_feedback_ids', 'all_feedbacks_cleared_at']);
+
+    const tombstoneMap = new Map((settingsData || []).map(s => [s.key, s.data]));
+    const deletedIdList = Array.isArray(tombstoneMap.get('deleted_feedback_ids'))
+      ? tombstoneMap.get('deleted_feedback_ids')
+      : [];
+    const deletedIdSet = new Set(deletedIdList);
+    const clearedAtStr = tombstoneMap.get('all_feedbacks_cleared_at');
+    const clearedAtTime = clearedAtStr ? new Date(clearedAtStr).getTime() : 0;
+
+    // 2. Fetch all remote responses
     const { data: remoteData, error } = await supabase
       .from('feedback_responses')
       .select('*')
@@ -59,35 +73,56 @@ async function syncFeedbackResponses(supabase) {
       return false;
     }
 
-    const remoteList = (remoteData || []).map(r => ({
-      id: r.id,
-      studentPrn: r.student_prn,
-      studentName: r.student_name,
-      division: r.division,
-      batch: r.batch,
-      courseCode: r.course_code,
-      courseName: r.course_name,
-      faculty: r.faculty,
-      ratings: r.ratings,
-      average_score: r.ratings
-        ? (Object.values(r.ratings).reduce((a, b) => a + Number(b), 0) / Object.values(r.ratings).length).toFixed(1)
-        : '5.0',
-      comment: r.comment || '',
-      submittedAt: r.submitted_at
-    }));
+    // 3. Filter out any remote responses that were marked deleted or cleared
+    const rawRemoteList = remoteData || [];
+    const zombieRows = rawRemoteList.filter(r => 
+      deletedIdSet.has(r.id) || (clearedAtTime && r.submitted_at && new Date(r.submitted_at).getTime() <= clearedAtTime)
+    );
 
-    // 2. Read local responses
-    const localList = getLocal(KEY_RESPONSES, INITIAL_RESPONSES);
+    // Prune zombie rows from Supabase table if possible
+    if (zombieRows.length > 0) {
+      for (const z of zombieRows) {
+        supabase.from('feedback_responses').delete().eq('id', z.id).then(() => {});
+      }
+    }
 
-    // 3. Find any local responses that don't exist in Supabase yet (offline submissions)
+    const remoteList = rawRemoteList
+      .filter(r => !deletedIdSet.has(r.id) && (!clearedAtTime || !r.submitted_at || new Date(r.submitted_at).getTime() > clearedAtTime))
+      .map(r => ({
+        id: r.id,
+        studentPrn: r.student_prn,
+        studentName: r.student_name,
+        division: r.division,
+        batch: r.batch,
+        courseCode: r.course_code,
+        courseName: r.course_name,
+        faculty: r.faculty,
+        ratings: r.ratings,
+        average_score: r.ratings
+          ? (Object.values(r.ratings).reduce((a, b) => a + Number(b), 0) / Object.values(r.ratings).length).toFixed(1)
+          : '5.0',
+        comment: r.comment || '',
+        submittedAt: r.submitted_at
+      }));
+
+    // 4. Read local responses, pruning any deleted ones
+    const rawLocalList = getLocal(KEY_RESPONSES, INITIAL_RESPONSES);
+    const localList = rawLocalList.filter(l => 
+      !deletedIdSet.has(l.id) && (!clearedAtTime || !l.submittedAt || new Date(l.submittedAt).getTime() > clearedAtTime)
+    );
+
+    // 5. Find any local responses that don't exist in Supabase yet (and weren't deleted)
     const remoteIdSet = new Set(remoteList.map(r => r.id));
     const remoteKeySet = new Set(remoteList.map(r => `${r.studentPrn}__${r.courseCode}`));
 
     const unpushedLocal = localList.filter(l => 
-      !remoteIdSet.has(l.id) && !remoteKeySet.has(`${l.studentPrn}__${l.courseCode}`)
+      !deletedIdSet.has(l.id) &&
+      (!clearedAtTime || !l.submittedAt || new Date(l.submittedAt).getTime() > clearedAtTime) &&
+      !remoteIdSet.has(l.id) &&
+      !remoteKeySet.has(`${l.studentPrn}__${l.courseCode}`)
     );
 
-    // 4. Push unpushed local responses to Supabase
+    // 6. Push unpushed valid local responses to Supabase
     if (unpushedLocal.length > 0) {
       for (const item of unpushedLocal) {
         try {
@@ -111,12 +146,14 @@ async function syncFeedbackResponses(supabase) {
       }
     }
 
-    // 5. Deduplicate and store merged list locally
+    // 7. Deduplicate and store merged list locally (ensuring no deleted responses remain)
     const mergedMap = new Map();
     remoteList.forEach(r => {
       const key = `${r.studentPrn}__${r.courseCode}`;
-      if (!mergedMap.has(key)) {
-        mergedMap.set(key, r);
+      if (!mergedMap.has(key) && !deletedIdSet.has(r.id)) {
+        if (!clearedAtTime || !r.submittedAt || new Date(r.submittedAt).getTime() > clearedAtTime) {
+          mergedMap.set(key, r);
+        }
       }
     });
 
@@ -131,7 +168,7 @@ async function syncFeedbackResponses(supabase) {
 }
 
 /**
- * 2. Synchronize Portal Settings & Faculty Allocations
+ * 2. Synchronize Portal Settings, Faculty Allocations, Subjects & Questions
  */
 async function syncPortalSettings(supabase) {
   try {
@@ -168,6 +205,39 @@ async function syncPortalSettings(supabase) {
       if (remotePasswords && typeof remotePasswords === 'object') {
         const localPasswords = getLocal(KEY_PASSWORDS, DEFAULT_PASSWORDS);
         setLocal(KEY_PASSWORDS, { ...localPasswords, ...remotePasswords });
+      }
+    }
+
+    // C. Subjects / Courses
+    if (settingsMap.has('subjects')) {
+      const remoteSubjects = settingsMap.get('subjects');
+      if (Array.isArray(remoteSubjects) && remoteSubjects.length > 0) {
+        setLocal(KEY_COURSES, remoteSubjects);
+      }
+    }
+
+    // D. Feedback Questions
+    if (settingsMap.has('feedback_questions')) {
+      const remoteQuestions = settingsMap.get('feedback_questions');
+      if (Array.isArray(remoteQuestions) && remoteQuestions.length > 0) {
+        setLocal(KEY_QUESTIONS, remoteQuestions);
+      }
+    }
+
+    // E. Apply deletions to local storage immediately if tombstones exist
+    if (settingsMap.has('deleted_feedback_ids') || settingsMap.has('all_feedbacks_cleared_at')) {
+      const deletedIds = new Set(Array.isArray(settingsMap.get('deleted_feedback_ids')) ? settingsMap.get('deleted_feedback_ids') : []);
+      const clearedAtStr = settingsMap.get('all_feedbacks_cleared_at');
+      const clearedAtTime = clearedAtStr ? new Date(clearedAtStr).getTime() : 0;
+
+      const currentResponses = getLocal(KEY_RESPONSES, INITIAL_RESPONSES);
+      const filtered = currentResponses.filter(r => 
+        !deletedIds.has(r.id) && (!clearedAtTime || !r.submittedAt || new Date(r.submittedAt).getTime() > clearedAtTime)
+      );
+
+      if (filtered.length !== currentResponses.length) {
+        setLocal(KEY_RESPONSES, filtered);
+        currentSyncState.responseCount = filtered.length;
       }
     }
 
@@ -294,6 +364,7 @@ export function setupSupabaseRealtime() {
         async (payload) => {
           console.log('[Supabase Realtime] Settings event detected:', payload.eventType);
           await syncPortalSettings(supabase);
+          await syncFeedbackResponses(supabase);
           if (typeof window !== 'undefined') {
             window.dispatchEvent(new CustomEvent('mitwpu_supabase_synced', { detail: { event: payload.eventType } }));
           }
