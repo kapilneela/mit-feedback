@@ -1,14 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import UnifiedLogin from './components/UnifiedLogin';
 import StudentDashboard from './components/student/StudentDashboard';
 import CoordinatorDashboard from './components/coordinator/CoordinatorDashboard';
 import AdminDashboard from './components/admin/AdminDashboard';
 import SupabaseSettingsModal from './components/admin/SupabaseSettingsModal';
+import { initAutoSyncWithSupabase } from './services/supabaseSyncService';
 
 export default function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [isSupabaseModalOpen, setIsSupabaseModalOpen] = useState(false);
+
+  // Initialize automatic Supabase synchronization (Realtime + Polling + Focus sync)
+  useEffect(() => {
+    const cleanup = initAutoSyncWithSupabase();
+    return () => {
+      if (cleanup) cleanup();
+    };
+  }, []);
 
   const handleLogout = () => {
     setCurrentUser(null);

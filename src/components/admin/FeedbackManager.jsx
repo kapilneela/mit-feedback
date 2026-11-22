@@ -19,7 +19,8 @@ import {
   removeFeedbackResponse, 
   clearAllFeedbacks,
   getDivisionsList,
-  getAllCoursesList
+  getAllCoursesList,
+  syncWithSupabase
 } from '../../services/dataService';
 
 export default function FeedbackManager() {
@@ -30,6 +31,7 @@ export default function FeedbackManager() {
   const [confirmDeleteModal, setConfirmDeleteModal] = useState(null); // response to delete
   const [confirmClearAllModal, setConfirmClearAllModal] = useState(false);
   const [actionMessage, setActionMessage] = useState('');
+  const [isSyncing, setIsSyncing] = useState(false);
   const [page, setPage] = useState(1);
   const pageSize = 15;
 
@@ -43,7 +45,18 @@ export default function FeedbackManager() {
 
   useEffect(() => {
     loadData();
+    const handleSync = () => loadData();
+    window.addEventListener('mitwpu_supabase_synced', handleSync);
+    return () => window.removeEventListener('mitwpu_supabase_synced', handleSync);
   }, []);
+
+  const handleManualSync = async () => {
+    setIsSyncing(true);
+    await syncWithSupabase();
+    loadData();
+    setIsSyncing(false);
+    showNotification('Synced with Supabase database successfully.');
+  };
 
   const showNotification = (msg) => {
     setActionMessage(msg);
@@ -106,6 +119,15 @@ export default function FeedbackManager() {
         </div>
 
         <div className="flex items-center gap-2">
+          <button
+            onClick={handleManualSync}
+            disabled={isSyncing}
+            className="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 text-xs font-semibold px-3 py-2 rounded-lg border border-emerald-300 transition flex items-center gap-1.5 cursor-pointer shadow-2xs"
+            title="Sync live records with Supabase"
+          >
+            <RefreshCw className={`w-3.5 h-3.5 text-emerald-600 ${isSyncing ? 'animate-spin' : ''}`} />
+            <span>{isSyncing ? 'Syncing...' : 'Sync Supabase'}</span>
+          </button>
           <button
             onClick={loadData}
             className="bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold px-3 py-2 rounded-lg border border-slate-300 transition flex items-center gap-1.5 cursor-pointer shadow-2xs"

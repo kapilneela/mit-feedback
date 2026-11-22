@@ -27,6 +27,9 @@ export default function StudentDashboard({ student }) {
 
   useEffect(() => {
     loadSubjects();
+    const handleSync = () => loadSubjects();
+    window.addEventListener('mitwpu_supabase_synced', handleSync);
+    return () => window.removeEventListener('mitwpu_supabase_synced', handleSync);
   }, [student?.prn]);
 
   const handleOpenSubjectFeedback = (subj) => {

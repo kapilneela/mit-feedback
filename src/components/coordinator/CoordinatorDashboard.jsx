@@ -51,6 +51,9 @@ export default function CoordinatorDashboard({ coordinator }) {
 
   useEffect(() => {
     loadData();
+    const handleSync = () => loadData();
+    window.addEventListener('mitwpu_supabase_synced', handleSync);
+    return () => window.removeEventListener('mitwpu_supabase_synced', handleSync);
   }, [coordinator?.email]);
 
   if (!data) {

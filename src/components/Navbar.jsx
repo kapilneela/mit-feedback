@@ -30,6 +30,24 @@ export default function Navbar({ currentUser, onOpenLogin, onLogout, onOpenSupab
 
         {/* User status & Actions */}
         <div className="flex items-center gap-3">
+          {/* Supabase Auto-Sync Live Indicator */}
+          <button
+            onClick={onOpenSupabaseSettings}
+            title={isConnected ? "Connected to Supabase PostgreSQL • Live Auto-Sync Active" : "Supabase Offline • Click to configure"}
+            className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-medium border transition cursor-pointer ${
+              isConnected
+                ? 'bg-emerald-950/70 border-emerald-500/40 text-emerald-300 hover:bg-emerald-900/70'
+                : 'bg-slate-800 border-slate-700 text-slate-400 hover:bg-slate-750'
+            }`}
+          >
+            <span className={`w-2 h-2 rounded-full ${isConnected ? 'bg-emerald-400 animate-pulse' : 'bg-slate-500'}`} />
+            <Database className={`w-3.5 h-3.5 ${isConnected ? 'text-emerald-400' : 'text-slate-400'}`} />
+            <span className="hidden md:inline text-slate-300">Supabase Auto-Sync:</span>
+            <span className={`font-bold ${isConnected ? 'text-emerald-300 font-mono' : 'text-slate-400'}`}>
+              {isConnected ? 'Live' : 'Local'}
+            </span>
+          </button>
+
           {currentUser ? (
             <div className="flex items-center gap-3 bg-slate-800/80 p-1.5 pr-3 rounded-lg border border-slate-700">
               <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs border border-blue-400/40">

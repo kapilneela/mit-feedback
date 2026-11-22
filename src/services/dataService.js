@@ -51,6 +51,22 @@ export function updateAuthPassword(role, newPassword) {
   const current = getAuthPasswords();
   current[role] = newPassword;
   setStoredItem(KEY_PASSWORDS, current);
+
+  if (isSupabaseConnected()) {
+    try {
+      const supabase = getSupabase();
+      if (supabase) {
+        supabase.from('portal_settings').upsert({
+          key: 'auth_passwords',
+          data: current,
+          updated_at: new Date().toISOString()
+        }).then(() => {});
+      }
+    } catch (e) {
+      console.warn('Supabase password sync warning:', e);
+    }
+  }
+
   return current;
 }
 
@@ -672,6 +688,7 @@ export function updateFacultyAllocation(facultyId, updatedFields) {
     }
   }
 
+  syncFacultyListToSupabase(updated);
   return updated;
 }
 
@@ -708,6 +725,7 @@ export function toggleFacultyRole(facultyId) {
     }
   }
 
+  syncFacultyListToSupabase(updated);
   return { updatedList: updated, targetName, newRole };
 }
 
@@ -752,6 +770,7 @@ export function addNewFacultyAllocation(newFaculty) {
     }
   }
 
+  syncFacultyListToSupabase(current);
   return current;
 }
 
@@ -759,5 +778,32 @@ export function deleteFacultyAllocation(facultyId) {
   const current = getAllFacultyAllocations();
   const updated = current.filter(f => f.id !== facultyId && f.email.toLowerCase() !== facultyId.toLowerCase());
   setStoredItem(KEY_FACULTY, updated);
+  syncFacultyListToSupabase(updated);
   return updated;
 }
+
+// Helper to keep entire faculty allocations list synced to portal_settings in Supabase
+export function syncFacultyListToSupabase(facultyList) {
+  if (isSupabaseConnected()) {
+    try {
+      const supabase = getSupabase();
+      if (supabase) {
+        supabase.from('portal_settings').upsert({
+          key: 'faculty_allocations',
+          data: facultyList,
+          updated_at: new Date().toISOString()
+        }).then(() => {});
+      }
+    } catch (e) {
+      console.warn('Supabase faculty sync to portal_settings error:', e);
+    }
+  }
+}
+
+// 7. Auto-Sync Re-exports
+export {
+  syncWithSupabase,
+  initAutoSyncWithSupabase,
+  getAutoSyncState,
+  setupSupabaseRealtime
+} from './supabaseSyncService';

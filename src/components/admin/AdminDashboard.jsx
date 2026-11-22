@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   BarChart3, 
   BookOpen, 
@@ -23,6 +23,14 @@ import FeedbackManager from './FeedbackManager';
 
 export default function AdminDashboard({ onOpenSupabaseSettings }) {
   const [activeTab, setActiveTab] = useState('overview');
+  const [syncTick, setSyncTick] = useState(0);
+
+  useEffect(() => {
+    const handleSync = () => setSyncTick(t => t + 1);
+    window.addEventListener('mitwpu_supabase_synced', handleSync);
+    return () => window.removeEventListener('mitwpu_supabase_synced', handleSync);
+  }, []);
+
   const stats = getOverallAdminStats();
   const divisionStats = getAllDivisionsDetailedStats();
 
