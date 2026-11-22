@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Eye, EyeOff, KeyRound, AlertCircle, Info } from 'lucide-react';
+import { Eye, EyeOff, KeyRound, AlertCircle } from 'lucide-react';
 import { unifiedLogin } from '../services/dataService';
 
 export default function UnifiedLogin({ onLoginSuccess }) {
@@ -8,7 +8,6 @@ export default function UnifiedLogin({ onLoginSuccess }) {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-  const [showForgotHelp, setShowForgotHelp] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -70,7 +69,7 @@ export default function UnifiedLogin({ onLoginSuccess }) {
               type="text"
               value={identifier}
               onChange={(e) => setIdentifier(e.target.value)}
-              placeholder="admin@mitwpu.edu.in"
+              placeholder="Enter PRN / Email"
               className="w-full bg-[#eef4ff] text-slate-900 text-xs sm:text-sm px-3.5 py-2.5 rounded-lg border border-transparent focus:border-blue-400 focus:outline-hidden focus:ring-2 focus:ring-[#1d68e3]/20 placeholder:text-slate-400 font-medium transition"
               required
             />
@@ -114,32 +113,6 @@ export default function UnifiedLogin({ onLoginSuccess }) {
             Please use your MIT-WPU email ID as your login username.<br />
             <span className="text-[10px] text-slate-400">(Students: enter your 10-digit PRN)</span>
           </p>
-
-          {/* Forgot Password Link */}
-          <div>
-            <button
-              type="button"
-              onClick={() => setShowForgotHelp(!showForgotHelp)}
-              className="text-xs text-[#1d68e3] hover:underline font-medium cursor-pointer"
-            >
-              Forgot Password?
-            </button>
-
-            {showForgotHelp && (
-              <div className="mt-2.5 p-3 bg-blue-50/70 border border-blue-200 rounded-lg text-[11px] text-slate-700 space-y-1 animate-in fade-in">
-                <div className="font-bold text-blue-900 flex items-center gap-1">
-                  <Info className="w-3.5 h-3.5 text-blue-600" />
-                  <span>Default Institutional Passwords</span>
-                </div>
-                <div>• <strong>Students:</strong> <span className="font-mono text-slate-800">Student@123</span></div>
-                <div>• <strong>Faculty / Coordinators:</strong> <span className="font-mono text-slate-800">Teacher@123</span></div>
-                <div>• <strong>Academic Admin:</strong> <span className="font-mono text-slate-800">Admin@123</span></div>
-                <div className="text-[10px] text-slate-500 pt-1">
-                  (Passwords can also be updated inside the Academic Admin Panel)
-                </div>
-              </div>
-            )}
-          </div>
         </form>
       </div>
     </div>
