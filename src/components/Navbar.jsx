@@ -30,42 +30,28 @@ export default function Navbar({ currentUser, onOpenLogin, onLogout, onOpenSupab
 
         {/* User status & Actions */}
         <div className="flex items-center gap-3">
-          {/* Supabase Auto-Sync Live Indicator */}
-          <button
-            onClick={onOpenSupabaseSettings}
-            title={isConnected ? "Connected to Supabase PostgreSQL • Live Auto-Sync Active" : "Supabase Offline • Click to configure"}
-            className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-medium border transition cursor-pointer ${
-              isConnected
-                ? 'bg-emerald-950/70 border-emerald-500/40 text-emerald-300 hover:bg-emerald-900/70'
-                : 'bg-slate-800 border-slate-700 text-slate-400 hover:bg-slate-750'
-            }`}
-          >
-            <span className={`w-2 h-2 rounded-full ${isConnected ? 'bg-emerald-400 animate-pulse' : 'bg-slate-500'}`} />
-            <Database className={`w-3.5 h-3.5 ${isConnected ? 'text-emerald-400' : 'text-slate-400'}`} />
-            <span className="hidden md:inline text-slate-300">Supabase Auto-Sync:</span>
-            <span className={`font-bold ${isConnected ? 'text-emerald-300 font-mono' : 'text-slate-400'}`}>
-              {isConnected ? 'Live' : 'Local'}
-            </span>
-          </button>
-
           {currentUser ? (
             <div className="flex items-center gap-3 bg-slate-800/80 p-1.5 pr-3 rounded-lg border border-slate-700">
               <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs border border-blue-400/40">
-                {currentUser.name ? currentUser.name.charAt(0).toUpperCase() : 'U'}
+                {currentUser.role === 'admin' ? 'A' : (currentUser.name ? currentUser.name.charAt(0).toUpperCase() : 'U')}
               </div>
               <div className="text-left hidden sm:block">
                 <div className="text-xs font-semibold leading-tight text-white flex items-center gap-1.5">
-                  {currentUser.name}
-                  <span className={`text-[10px] px-1.5 py-0.2 rounded font-medium ${
-                    currentUser.role === 'admin' ? 'bg-purple-900/80 text-purple-200 border border-purple-500/40' :
-                    (currentUser.isCoordinator || currentUser.facultyRole === 'Course Coordinator') ? 'bg-blue-900/80 text-blue-200 border border-blue-500/40' :
-                    currentUser.role === 'teacher' ? 'bg-slate-800 text-slate-300 border border-slate-600' :
-                    'bg-emerald-900/80 text-emerald-200 border border-emerald-500/40'
-                  }`}>
-                    {currentUser.role === 'admin' ? 'Administrator' : 
-                     (currentUser.isCoordinator || currentUser.facultyRole === 'Course Coordinator') ? 'Course Coordinator' : 
-                     currentUser.role === 'teacher' ? 'Teaching Faculty' : 'Student'}
-                  </span>
+                  {currentUser.role === 'admin' ? (
+                    <span className="font-bold text-white">Administrator</span>
+                  ) : (
+                    <>
+                      <span>{currentUser.name}</span>
+                      <span className={`text-[10px] px-1.5 py-0.2 rounded font-medium ${
+                        (currentUser.isCoordinator || currentUser.facultyRole === 'Course Coordinator') ? 'bg-blue-900/80 text-blue-200 border border-blue-500/40' :
+                        currentUser.role === 'teacher' ? 'bg-slate-800 text-slate-300 border border-slate-600' :
+                        'bg-emerald-900/80 text-emerald-200 border border-emerald-500/40'
+                      }`}>
+                        {(currentUser.isCoordinator || currentUser.facultyRole === 'Course Coordinator') ? 'Course Coordinator' : 
+                         currentUser.role === 'teacher' ? 'Teaching Faculty' : 'Student'}
+                      </span>
+                    </>
+                  )}
                 </div>
                 <div className="text-[11px] text-slate-400 font-mono">
                   {currentUser.role === 'student' ? `PRN: ${currentUser.prn} • Div: ${currentUser.division}` : currentUser.email}

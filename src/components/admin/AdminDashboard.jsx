@@ -65,14 +65,6 @@ export default function AdminDashboard({ onOpenSupabaseSettings }) {
               </p>
             </div>
           </div>
-
-          <button
-            onClick={onOpenSupabaseSettings}
-            className="bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold px-3.5 py-2 rounded-lg border border-slate-700 transition flex items-center gap-2 self-start md:self-auto"
-          >
-            <Database className="w-3.5 h-3.5 text-emerald-400" />
-            <span>Supabase Sync & DB</span>
-          </button>
         </div>
 
         {/* Tab Navigation */}

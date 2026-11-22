@@ -85,7 +85,7 @@ export async function unifiedLogin(identifier, password) {
     if (cleanPass === passwords.admin) {
       return {
         role: 'admin',
-        name: 'Dean - Academic Quality & Evaluation',
+        name: 'Administrator',
         email: 'admin@mitwpu.edu.in',
         department: 'Central Academic Administration, MIT-WPU'
       };
