@@ -28,7 +28,9 @@ import {
   getCoordinatorDashboardData, 
   getAllDivisionsDetailedStats, 
   getAllStudentsFeedbackOverview,
-  isCoordinatorSubject
+  isCoordinatorSubject,
+  getAllQuestionsForSubject,
+  getFeedbackQuestions
 } from '../../services/dataService';
 import SubjectFormManager from './SubjectFormManager';
 
@@ -817,6 +819,33 @@ function CoordinatorStudentModal({ student, coordinator, assignedSubjectLabel, o
   const avgRating = submission?.average_score || 
     (submission?.ratings ? (Object.values(submission.ratings).reduce((a, b) => a + Number(b), 0) / Object.values(submission.ratings).length).toFixed(1) : null);
 
+  // Helper to resolve the question name/prompt and category given to it
+  const allQuestions = getAllQuestionsForSubject(course.code, course.name);
+  const getQuestionInfo = (qId) => {
+    const found = allQuestions.find(q => q.id === qId || q.id?.toLowerCase() === qId?.toLowerCase());
+    if (found) {
+      return {
+        category: found.category || '',
+        text: (found.text || found.question || '').trim(),
+        name: (found.text || found.question || found.category || qId).trim()
+      };
+    }
+    const instQs = getFeedbackQuestions();
+    const instFound = instQs.find(q => q.id === qId || q.id?.toLowerCase() === qId?.toLowerCase());
+    if (instFound) {
+      return {
+        category: instFound.category || '',
+        text: (instFound.text || instFound.question || '').trim(),
+        name: (instFound.text || instFound.question || instFound.category || qId).trim()
+      };
+    }
+    return {
+      category: '',
+      text: '',
+      name: qId.replace(/^(q|sq)_?/i, 'Question ').replace(/_/g, ' ')
+    };
+  };
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-xs animate-in fade-in duration-150 overflow-y-auto">
       <div className="bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-2xl overflow-hidden my-8">
@@ -918,17 +947,42 @@ function CoordinatorStudentModal({ student, coordinator, assignedSubjectLabel, o
 
                   {/* Individual ratings breakdown if available */}
                   {submission?.ratings && Object.keys(submission.ratings).length > 0 && (
-                    <div className="space-y-2">
-                      <div className="font-bold text-slate-800 text-xs">Parameter Ratings:</div>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                        {Object.entries(submission.ratings).map(([paramKey, val]) => (
-                          <div key={paramKey} className="p-2.5 bg-slate-50 rounded-lg border border-slate-200 flex items-center justify-between">
-                            <span className="text-[11px] text-slate-700 capitalize font-medium">{paramKey.replace(/_/g, ' ')}</span>
-                            <span className="font-mono font-bold text-xs text-blue-800 bg-blue-100 px-2 py-0.5 rounded">
-                              {val} / 5.0
-                            </span>
-                          </div>
-                        ))}
+                    <div className="space-y-2.5">
+                      <div className="font-bold text-slate-800 text-xs uppercase tracking-wider flex items-center justify-between">
+                        <span className="flex items-center gap-1.5">
+                          <Star className="w-3.5 h-3.5 text-blue-600 fill-blue-600" />
+                          <span>Evaluation Parameters ({Object.keys(submission.ratings).length}):</span>
+                        </span>
+                        <span className="text-[11px] text-slate-500 font-normal">
+                          Rating scale: 1 to 5
+                        </span>
+                      </div>
+                      <div className="space-y-2">
+                        {Object.entries(submission.ratings).map(([paramKey, val], idx) => {
+                          const qInfo = getQuestionInfo(paramKey);
+                          const questionPrompt = qInfo.text || qInfo.name;
+                          return (
+                            <div 
+                              key={paramKey} 
+                              className="p-3 bg-slate-50 rounded-xl border border-slate-200 flex items-start justify-between gap-3 hover:bg-slate-100/70 transition"
+                            >
+                              <div className="space-y-1 min-w-0 flex-1">
+                                <div className="flex items-center gap-1.5 flex-wrap">
+                                  <span className="text-[10px] font-bold text-blue-700 uppercase tracking-wider bg-blue-50 px-2 py-0.5 rounded border border-blue-200">
+                                    {qInfo.category ? qInfo.category : `Question ${idx + 1}`}
+                                  </span>
+                                </div>
+                                <p className="text-xs text-slate-800 font-semibold leading-relaxed">
+                                  {questionPrompt}
+                                </p>
+                              </div>
+                              <div className="shrink-0 flex items-center gap-1 bg-blue-100 text-blue-900 font-mono font-bold text-xs px-2.5 py-1 rounded-lg border border-blue-200 shadow-2xs">
+                                <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-500" />
+                                <span>{val} / 5</span>
+                              </div>
+                            </div>
+                          );
+                        })}
                       </div>
                     </div>
                   )}

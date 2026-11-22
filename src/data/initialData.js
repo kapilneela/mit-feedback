@@ -17265,38 +17265,83 @@ export const COURSES = SUBJECTS;
 export const FEEDBACK_QUESTIONS = [
   {
     "id": "q1",
-    "category": "Teaching & Pedagogy",
-    "text": "The instructor explained core concepts with clarity and demonstrated thorough subject depth.",
+    "category": "A. Common Teaching–Learning Experience",
+    "text": "The course objectives and expected learning outcomes were clearly communicated.",
+    "question": "The course objectives and expected learning outcomes were clearly communicated.",
     "type": "rating_5",
     "order": 1
   },
   {
     "id": "q2",
-    "category": "Delivery & Pace",
-    "text": "The pace of lectures was well-regulated and facilitated active understanding during class.",
+    "category": "A. Common Teaching–Learning Experience",
+    "text": "The topics were explained in a clear and understandable manner.",
+    "question": "The topics were explained in a clear and understandable manner.",
     "type": "rating_5",
     "order": 2
   },
   {
-    "id": "q3",
-    "category": "Practical & Lab Relevance",
-    "text": "Practical laboratory demonstrations, coding sessions, and hands-on examples effectively complemented theoretical topics.",
+    "id": "q1795355997204",
+    "category": "A. Common Teaching–Learning Experience",
+    "text": "Teaching-learning activities and examples helped me understand the concepts.",
+    "question": "Teaching-learning activities and examples helped me understand the concepts.",
     "type": "rating_5",
     "order": 3
   },
   {
-    "id": "q4",
-    "category": "Doubt Resolution & Support",
-    "text": "The faculty was approachable, encouraged questions, and provided timely academic assistance.",
+    "id": "q1795356018269",
+    "category": "A. Common Teaching–Learning Experience",
+    "text": "The course encouraged me to think critically and solve problems independently.",
+    "question": "The course encouraged me to think critically and solve problems independently.",
     "type": "rating_5",
     "order": 4
   },
   {
-    "id": "q5",
-    "category": "Learning Resources & LMS",
-    "text": "Course syllabus, lecture notes, assignments, and digital resources uploaded on LMS were comprehensive and timely.",
+    "id": "q1795356037460",
+    "category": "A. Common Teaching–Learning Experience",
+    "text": "The assessment methods were aligned with the topics covered in the course.",
+    "question": "The assessment methods were aligned with the topics covered in the course.",
     "type": "rating_5",
     "order": 5
+  },
+  {
+    "id": "q1795356056378",
+    "category": "C. Course Improvement",
+    "text": "What is one specific change that would improve your learning experience in this course?",
+    "question": "What is one specific change that would improve your learning experience in this course?",
+    "type": "text",
+    "order": 6
+  },
+  {
+    "id": "q1795356074386",
+    "category": "D. Campus Infrastructure, Cleanliness & Laboratory Facilities",
+    "text": "The classrooms, washrooms and common areas were clean, hygienic and well maintained.",
+    "question": "The classrooms, washrooms and common areas were clean, hygienic and well maintained.",
+    "type": "rating_5",
+    "order": 7
+  },
+  {
+    "id": "q1795356104821",
+    "category": "D. Campus Infrastructure, Cleanliness & Laboratory Facilities",
+    "text": "The laboratories had adequate equipment, functional facilities and a clean, safe environment for practical learning.",
+    "question": "The laboratories had adequate equipment, functional facilities and a clean, safe environment for practical learning.",
+    "type": "rating_5",
+    "order": 8
+  },
+  {
+    "id": "q1795356122196",
+    "category": "E. FY Academic Experience",
+    "text": "I received adequate academic guidance and support whenever I needed it.",
+    "question": "I received adequate academic guidance and support whenever I needed it.",
+    "type": "rating_5",
+    "order": 9
+  },
+  {
+    "id": "q1795356141472",
+    "category": "E. FY Improvement Suggestion",
+    "text": "What is one improvement you would suggest for the overall FYB.Tech academic experience?",
+    "question": "What is one improvement you would suggest for the overall FYB.Tech academic experience?",
+    "type": "text",
+    "order": 10
   }
 ];
 

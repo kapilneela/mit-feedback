@@ -570,10 +570,20 @@ export function updateCoordinatorAssignments(coordinatorId, assignedDivisions, s
 
 export function getFeedbackQuestions() {
   const qs = getStoredItem(KEY_QUESTIONS, FEEDBACK_QUESTIONS);
-  return (qs || []).map(q => ({
+  const mergedMap = new Map();
+  // Guarantee full coverage of standard institutional questions
+  FEEDBACK_QUESTIONS.forEach(q => {
+    if (q.id) mergedMap.set(q.id, q);
+  });
+  // Overlay any customized or stored questions
+  (qs || []).forEach(q => {
+    if (q && q.id) mergedMap.set(q.id, { ...mergedMap.get(q.id), ...q });
+  });
+
+  return Array.from(mergedMap.values()).map(q => ({
     ...q,
-    text: q.text || q.question || '',
-    question: q.text || q.question || ''
+    text: (q.text || q.question || '').trim(),
+    question: (q.text || q.question || '').trim()
   }));
 }
 

@@ -21,13 +21,41 @@ import {
   getAllStudentsFeedbackOverview, 
   getDivisionsList,
   removeFeedbackResponse,
-  removeStudentAllFeedbacks
+  removeStudentAllFeedbacks,
+  getAllQuestionsForSubject,
+  getFeedbackQuestions
 } from '../../services/dataService';
 
 export default function StudentRoster() {
   const [version, setVersion] = useState(0);
   const studentsWithStatus = getAllStudentsFeedbackOverview();
   const allDivisions = getDivisionsList();
+
+  const getQuestionInfo = (qId, courseCode, courseName) => {
+    const allQs = getAllQuestionsForSubject(courseCode, courseName);
+    const found = allQs.find(q => q.id === qId || q.id?.toLowerCase() === qId?.toLowerCase());
+    if (found) {
+      return {
+        category: found.category || '',
+        text: (found.text || found.question || '').trim(),
+        name: (found.text || found.question || found.category || qId).trim()
+      };
+    }
+    const instQs = getFeedbackQuestions();
+    const instFound = instQs.find(q => q.id === qId || q.id?.toLowerCase() === qId?.toLowerCase());
+    if (instFound) {
+      return {
+        category: instFound.category || '',
+        text: (instFound.text || instFound.question || '').trim(),
+        name: (instFound.text || instFound.question || instFound.category || qId).trim()
+      };
+    }
+    return {
+      category: '',
+      text: '',
+      name: qId.replace(/^(q|sq)_?/i, 'Question ').replace(/_/g, ' ')
+    };
+  };
 
   const [search, setSearch] = useState('');
   const [selectedDivision, setSelectedDivision] = useState('ALL');
@@ -475,7 +503,39 @@ function StudentDetailsModal({ student, onClose, onRemoveFeedback, onResetAllFee
                       {submission?.comment && (
                         <div className="mt-2 p-2.5 bg-white rounded-lg border border-emerald-200 text-slate-700 italic flex items-start gap-2">
                           <MessageSquare className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
-                          <span>"{submission.comment}"</span>
+                          <span className="whitespace-pre-line">"{submission.comment}"</span>
+                        </div>
+                      )}
+
+                      {/* Parameter Ratings Breakdown with full Question Name */}
+                      {submission?.ratings && Object.keys(submission.ratings).length > 0 && (
+                        <div className="mt-2.5 pt-2.5 border-t border-emerald-200/60 space-y-1.5">
+                          <div className="text-[11px] font-bold text-slate-700 uppercase tracking-wider flex items-center gap-1">
+                            <Star className="w-3 h-3 text-amber-500 fill-amber-500" />
+                            <span>Evaluation Parameters ({Object.keys(submission.ratings).length}):</span>
+                          </div>
+                          <div className="space-y-1.5">
+                            {Object.entries(submission.ratings).map(([paramKey, val]) => {
+                              const qInfo = getQuestionInfo(paramKey, sub.code, sub.name);
+                              return (
+                                <div key={paramKey} className="p-2 bg-white rounded-lg border border-emerald-200/70 flex items-start justify-between gap-2">
+                                  <div className="min-w-0 flex-1">
+                                    {qInfo.category && (
+                                      <div className="text-[9px] font-bold text-blue-700 uppercase">
+                                        {qInfo.category}
+                                      </div>
+                                    )}
+                                    <p className="text-xs text-slate-800 font-medium leading-snug">
+                                      {qInfo.text || qInfo.name}
+                                    </p>
+                                  </div>
+                                  <span className="shrink-0 font-mono font-bold text-[11px] text-emerald-900 bg-emerald-100 px-2 py-0.5 rounded border border-emerald-300">
+                                    {val} / 5
+                                  </span>
+                                </div>
+                              );
+                            })}
+                          </div>
                         </div>
                       )}
                     </div>

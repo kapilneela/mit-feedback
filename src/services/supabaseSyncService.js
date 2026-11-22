@@ -273,16 +273,45 @@ async function syncFeedbackQuestions(supabase) {
       .select('*')
       .order('display_order', { ascending: true });
 
-    if (!error && Array.isArray(data) && data.length > 0) {
-      const questions = data.map(q => ({
-        id: q.id,
-        category: q.category,
-        text: q.text || q.question || '',
-        question: q.text || q.question || '',
-        type: q.type || 'rating_5',
-        order: q.display_order || q.order || 1
-      }));
-      setLocal(KEY_QUESTIONS, questions);
+    const localQs = getLocal(KEY_QUESTIONS, []);
+
+    if (!error && Array.isArray(data)) {
+      const qMap = new Map();
+      localQs.forEach(q => {
+        if (q && q.id) qMap.set(q.id, q);
+      });
+      data.forEach(q => {
+        const existing = qMap.get(q.id) || {};
+        qMap.set(q.id, {
+          ...existing,
+          id: q.id,
+          category: q.category || existing.category || '',
+          text: q.text || q.question || existing.text || existing.question || '',
+          question: q.text || q.question || existing.text || existing.question || '',
+          type: q.type || existing.type || 'rating_5',
+          order: q.display_order || q.order || existing.order || 1
+        });
+      });
+
+      const merged = Array.from(qMap.values());
+      if (merged.length > 0) {
+        setLocal(KEY_QUESTIONS, merged);
+      }
+
+      // Upsert any questions into remote feedback_questions table if missing
+      const remoteIds = new Set(data.map(q => q.id));
+      const missingInRemote = merged.filter(q => !remoteIds.has(q.id));
+      if (missingInRemote.length > 0) {
+        const toInsert = missingInRemote.map(q => ({
+          id: q.id,
+          category: q.category || 'General',
+          text: q.text || q.question || '',
+          type: q.type || 'rating_5',
+          display_order: q.order || 1
+        }));
+        supabase.from('feedback_questions').upsert(toInsert).then(() => {});
+      }
+
       return true;
     }
   } catch (err) {
