@@ -173,10 +173,6 @@ export default function CoordinatorDashboard({ coordinator }) {
                 <span className="bg-blue-500/20 text-blue-300 text-xs px-2 py-0.5 rounded border border-blue-400/30 font-semibold">
                   Course Coordinator
                 </span>
-                <span className="bg-emerald-500/20 text-emerald-300 text-xs px-2 py-0.5 rounded border border-emerald-400/30 flex items-center gap-1 font-semibold">
-                  <ShieldCheck className="w-3.5 h-3.5" />
-                  <span>Confidential Subject-Restricted View</span>
-                </span>
               </div>
               <p className="text-xs sm:text-sm text-slate-300 mt-1">{data.coordinator.department}</p>
               
@@ -423,16 +419,11 @@ export default function CoordinatorDashboard({ coordinator }) {
         <div className="bg-white rounded-xl shadow-xs border border-slate-200 overflow-hidden space-y-4 p-5">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-200">
             <div>
-              <div className="flex items-center gap-2">
-                <h3 className="font-bold text-base sm:text-lg text-slate-900">
-                  Student Feedback Status for {assignedSubjectLabel}
-                </h3>
-                <span className="text-[11px] bg-blue-50 text-blue-700 border border-blue-200 px-2 py-0.5 rounded font-medium">
-                  Confidential View
-                </span>
-              </div>
+              <h3 className="font-bold text-base sm:text-lg text-slate-900">
+                Student Feedback Status for {assignedSubjectLabel}
+              </h3>
               <p className="text-xs text-slate-500 mt-0.5">
-                Showing student submissions strictly for your assigned subject. Other professors' evaluations are restricted for confidentiality.
+                Showing student feedback submissions for your assigned subject.
               </p>
             </div>
 
@@ -851,14 +842,6 @@ function CoordinatorStudentModal({ student, coordinator, assignedSubjectLabel, o
         </div>
 
         <div className="p-6 space-y-5 text-xs max-h-[75vh] overflow-y-auto">
-          {/* Confidentiality Notice */}
-          <div className="bg-blue-50/80 border border-blue-200 rounded-xl p-3.5 flex items-start gap-3">
-            <ShieldCheck className="w-4 h-4 text-blue-700 shrink-0 mt-0.5" />
-            <div className="text-[11px] text-blue-900 leading-relaxed">
-              <strong className="font-bold">Academic Confidentiality Notice:</strong> In compliance with MIT-WPU evaluation guidelines, course coordinators have access strictly to student feedback for their assigned subject (<strong>{assignedSubjectLabel}</strong>). Evaluations for courses taught by other faculty members remain confidential.
-            </div>
-          </div>
-
           {/* Subject Feedback Status Card */}
           <div className="border border-slate-200 rounded-xl overflow-hidden">
             <div className="bg-slate-100 p-3.5 flex items-center justify-between border-b border-slate-200">

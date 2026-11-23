@@ -52,7 +52,6 @@ export default function SubjectFormManager({ coordinator, assignedSubjects = [] 
 
   // Questions state
   const [subjectQuestions, setSubjectQuestions] = useState([]);
-  const [newCategory, setNewCategory] = useState('Laboratory & Practical Work');
   const [newQuestionText, setNewQuestionText] = useState('');
   const [questionMsg, setQuestionMsg] = useState('');
 
@@ -106,7 +105,7 @@ export default function SubjectFormManager({ coordinator, assignedSubjects = [] 
     if (!newQuestionText.trim()) return;
 
     addSubjectQuestion(selectedSubject, {
-      category: newCategory,
+      category: 'Course-Specific Parameter',
       text: newQuestionText.trim()
     }, currentCourse.name);
 
@@ -311,24 +310,6 @@ export default function SubjectFormManager({ coordinator, assignedSubjects = [] 
 
             <div>
               <label className="block text-[11px] font-bold text-slate-700 mb-1">
-                Evaluation Category
-              </label>
-              <select
-                value={newCategory}
-                onChange={(e) => setNewCategory(e.target.value)}
-                className="w-full text-xs p-2 border border-slate-300 rounded-lg bg-white focus:ring-1 focus:ring-blue-600"
-              >
-                <option value="Laboratory & Practical Work">Laboratory & Practical Work</option>
-                <option value="Coding & Computational Exercises">Coding & Computational Exercises</option>
-                <option value="Tutorials & Problem-Solving">Tutorials & Problem-Solving</option>
-                <option value="Subject Depth & Core Concepts">Subject Depth & Core Concepts</option>
-                <option value="Course Assignments & Projects">Course Assignments & Projects</option>
-                <option value="Contemporary Industry Relevance">Contemporary Industry Relevance</option>
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-[11px] font-bold text-slate-700 mb-1">
                 Question / Evaluation Parameter Prompt
               </label>
               <textarea
@@ -383,9 +364,6 @@ export default function SubjectFormManager({ coordinator, assignedSubjects = [] 
                     <div className="space-y-1 flex-1">
                       <div className="flex items-center gap-2">
                         <span className="text-[10px] font-bold uppercase tracking-wider bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full border border-indigo-200">
-                          {sq.category}
-                        </span>
-                        <span className="text-[10px] text-slate-500 font-medium">
                           Custom Question #{idx + 1}
                         </span>
                       </div>
